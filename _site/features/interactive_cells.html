@@ -8,14 +8,14 @@
   <title>BETA - Adding interactivity to your book pages</title>
   <meta name="description" content="Interactive code in your book Sometimes you'd rather let people interact with code directly on the pageinstead of sending them off to a Binder or a JupyterHu...">
 
-  <link rel="canonical" href="https://jupyter.org/jupyter-book/features/interactive_cells.html">
-  <link rel="alternate" type="application/rss+xml" title="Jupyter Book" href="https://jupyter.org/jupyter-book/feed.xml">
+  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/features/interactive_cells.html">
+  <link rel="alternate" type="application/rss+xml" title="Python para Estatísticos" href="https://tmfilho.github.io/pyestbook/feed.xml">
 
-  <meta property="og:url"         content="https://jupyter.org/jupyter-book/features/interactive_cells.html" />
+  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/features/interactive_cells.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="BETA - Adding interactivity to your book pages" />
 <meta property="og:description" content="Interactive code in your book Sometimes you'd rather let people interact with code directly on the pageinstead of sending them off to a Binder or a JupyterHu..." />
-<meta property="og:image"       content="https://jupyter.org/jupyter-book/images/logo/logo.png" />
+<meta property="og:image"       content="https://tmfilho.github.io/pyestbook/images/logo/logo.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -24,35 +24,35 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://jupyter.org/jupyter-book/features/interactive_cells.html",
+  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/features/interactive_cells.html",
   "headline": "BETA - Adding interactivity to your book pages",
-  "datePublished": "2019-09-23T12:42:13-07:00",
-  "dateModified": "2019-09-23T12:42:13-07:00",
+  "datePublished": "2019-09-30T00:07:24-03:00",
+  "dateModified": "2019-09-30T00:07:24-03:00",
   "description": "Interactive code in your book Sometimes you'd rather let people interact with code directly on the pageinstead of sending them off to a Binder or a JupyterHu...",
   "author": {
     "@type": "Person",
-    "name": "The Jupyter Book Community"
+    "name": "Telmo de Menezes e Silva Filho"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Data 100 at UC Berkeley",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://jupyter.org/jupyter-book",
+      "url": "https://tmfilho.github.io/pyestbook",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "https://jupyter.org/jupyter-book",
+    "url": "https://tmfilho.github.io/pyestbook",
     "height": 60,
     "width": 60
   }
 }
 
   </script>
-  <link rel="stylesheet" href="/jupyter-book/assets/css/styles.css">
+  <link rel="stylesheet" href="/pyestbook/assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/regular.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/solid.css">
 
@@ -63,7 +63,7 @@
   <meta name="theme-color" content="#233947">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/jupyter-book/images/logo/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/pyestbook/images/logo/favicon.ico">
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
@@ -90,19 +90,19 @@ MathJax.Hub.Config({
 
 
   <!-- DOM updating function -->
-  <script src="/jupyter-book/assets/js/dom-update.js"></script>
+  <script src="/pyestbook/assets/js/dom-update.js"></script>
 
   <!-- Selectors for elements on the page -->
-  <script src="/jupyter-book/assets/js/documentSelectors.js"></script>
+  <script src="/pyestbook/assets/js/documentSelectors.js"></script>
 
   <!-- Define some javascript variables that will be useful in other javascript -->
   <script>
-    const site_basename = '/jupyter-book';
+    const site_basename = '/pyestbook';
   </script>
 
   <!-- Add AnchorJS to let headers be linked -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
-  <script src="/jupyter-book/assets/js/anchors.js" async></script>
+  <script src="/pyestbook/assets/js/anchors.js" async></script>
 
   <!-- Include Turbolinks to make page loads fast -->
   <!-- https://github.com/turbolinks/turbolinks -->
@@ -128,7 +128,7 @@ const initializeNbinteract = () => {
     console.log('Initializing nbinteract...')
     interact = new window.NbInteract({
       baseUrl: 'https://mybinder.org',
-      spec: 'jupyter/jupyter-book/gh-pages',
+      spec: 'tmfilho/pyestbook/master',
       provider: 'gh',
     })
     window.interact = interact
@@ -156,7 +156,7 @@ initFunction(initializeNbinteract);
 
 const thebelabCellButton = id =>
   `<a id="thebelab-cell-button-${id}" class="btn thebebtn o-tooltip--left" data-tooltip="Interactive Mode">
-    <img src="/jupyter-book/assets/images/edit-button.svg" alt="Start interactive mode">
+    <img src="/pyestbook/assets/images/edit-button.svg" alt="Start interactive mode">
   </a>`
 
 
@@ -181,8 +181,8 @@ initFunction(addThebelabButtonToCodeCells);
     {
       requestKernel: true,
       binderOptions: {
-        repo: 'jupyter/jupyter-book',
-        ref: 'gh-pages',
+        repo: 'tmfilho/pyestbook',
+        ref: 'master',
       },
       codeMirrorConfig: {
         theme: "abcdef"
@@ -261,11 +261,9 @@ initFunction(addThebelabButtonToCodeCells);
 
             // Find any cells with an initialization tag and ask ThebeLab to run them when ready
             var thebeInitCells = document.querySelectorAll('div.tag_thebelab-init');
-            var thebeOutputCells = document.querySelectorAll('div.tag_thebelab-output');
             thebeInitCells.forEach((cell) => {
                 console.log("Initializing ThebeLab with cell: " + cell.id);
-                const initButton = cell.querySelector('.thebelab-run-button');
-                initButton.click();
+                cell.querySelector('.thebelab-run-button').click();
             });
         }
 
@@ -288,7 +286,7 @@ initFunction(addThebelabButtonToCodeCells);
 
   <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" async></script>
-  <script src="/jupyter-book/assets/js/tocbot.js"></script>
+  <script src="/pyestbook/assets/js/tocbot.js"></script>
 
   <!-- Google analytics -->
   
@@ -308,11 +306,11 @@ initFunction(addThebelabButtonToCodeCells);
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
 
   <!-- Load custom website scripts -->
-  <script src="/jupyter-book/assets/js/scripts.js" async></script>
+  <script src="/pyestbook/assets/js/scripts.js" async></script>
 
   <!-- Load custom user CSS and JS  -->
-  <script src="/jupyter-book/assets/custom/custom.js" async></script>
-  <link rel="stylesheet" href="/jupyter-book/assets/custom/custom.css">
+  <script src="/pyestbook/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/pyestbook/assets/custom/custom.css">
 
   <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
   
@@ -376,7 +374,7 @@ function addParamToInternalLinks(hub) {
   var links = document.querySelectorAll("a").forEach(function(link) {
     var href = link.href;
     // If the link is an internal link...
-    if (href.search("https://jupyter.org") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+    if (href.search("https://tmfilho.github.io") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
       // Assume we're an internal link, add the hub param to it
       var params = getJsonFromUrl(href);
       if (params !== false) {
@@ -547,10 +545,10 @@ initFunction(initQuery);
 </script>
 
   <!-- Load JS that depends on site variables -->
-  <script src="/jupyter-book/assets/js/copy-button.js" async></script>
+  <script src="/pyestbook/assets/js/copy-button.js" async></script>
 
   <!-- Hide cell code -->
-  <script src="/jupyter-book/assets/js/hide-cell.js" async></script>
+  <script src="/pyestbook/assets/js/hide-cell.js" async></script>
 
   <!-- Printing the screen -->
   <!-- Include nbinteract for interactive widgets -->
@@ -570,7 +568,7 @@ printContent = () => {
     printJS({
         printable: 'textbook_content',
         type: 'html',
-        css: "/jupyter-book/assets/css/styles.css",
+        css: "/pyestbook/assets/css/styles.css",
         scanStyles: false,
         targetStyles: ["*"],
         ignoreElements: ignoreAssistList
@@ -594,8 +592,8 @@ initFunction(initPrint)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="https://jupyter.org/jupyter-book/intro.html"><img src="/jupyter-book/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
-  <h2 class="c-sidebar__title">Jupyter Book</h2>
+  <a href="https://jupyter.org/jupyter-book/intro.html"><img src="/pyestbook/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">Python para Estatísticos</h2>
   <ul class="c-sidebar__chapters">
     
       
@@ -608,7 +606,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/jupyter-book/intro.html"
+          href="/pyestbook/intro.html"
         >
           
           Home
@@ -629,7 +627,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/jupyter-book/guide/01_overview.html"
+          href="/pyestbook/guide/01_overview.html"
         >
           
           Getting started
@@ -651,7 +649,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/guide/02_create.html"
+                  href="/pyestbook/guide/02_create.html"
                 >
                   
                   Create your book
@@ -668,7 +666,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/guide/03_build.html"
+                  href="/pyestbook/guide/03_build.html"
                 >
                   
                   Build HTML for each page of your book
@@ -685,7 +683,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/guide/04_publish.html"
+                  href="/pyestbook/guide/04_publish.html"
                 >
                   
                   Build and publish your book online
@@ -702,7 +700,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/guide/05_faq.html"
+                  href="/pyestbook/guide/05_faq.html"
                 >
                   
                   Frequently Asked Questions (FAQ)
@@ -719,7 +717,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/guide/06_advanced.html"
+                  href="/pyestbook/guide/06_advanced.html"
                 >
                   
                   How-to and advanced topics
@@ -747,7 +745,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/jupyter-book/features/features.html"
+          href="/pyestbook/features/features.html"
         >
           
           Features and customization
@@ -769,7 +767,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/features/markdown.html"
+                  href="/pyestbook/features/markdown.html"
                 >
                   
                   Markdown files
@@ -786,7 +784,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/features/notebooks.html"
+                  href="/pyestbook/features/notebooks.html"
                 >
                   
                   Jupyter notebooks
@@ -803,7 +801,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/features/hiding.html"
+                  href="/pyestbook/features/hiding.html"
                 >
                   
                   Hiding code blocks or entire cells
@@ -820,7 +818,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry c-sidebar__entry--active"
-                  href="/jupyter-book/features/interact.html"
+                  href="/pyestbook/features/interact.html"
                 >
                   
                   Connecting content with JupyterHub and Binder
@@ -837,7 +835,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/features/executing.html"
+                  href="/pyestbook/features/executing.html"
                 >
                   
                   Running each page when building your book
@@ -854,7 +852,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry c-sidebar__entry--active"
-                  href="/jupyter-book/features/interactive_cells.html"
+                  href="/pyestbook/features/interactive_cells.html"
                 >
                   
                   BETA - Adding interactivity to your book pages
@@ -871,7 +869,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/features/citations.html"
+                  href="/pyestbook/features/citations.html"
                 >
                   
                   BETA - Citations and bibliographies
@@ -888,7 +886,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/features/jupytext.html"
+                  href="/pyestbook/features/jupytext.html"
                 >
                   
                   BETA - Using Jupytext for text-based Notebook content
@@ -905,7 +903,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/features/layout.html"
+                  href="/pyestbook/features/layout.html"
                 >
                   
                   BETA - Controlling page layout
@@ -922,7 +920,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/features/limits.html"
+                  href="/pyestbook/features/limits.html"
                 >
                   
                   Feature Limits
@@ -950,7 +948,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/jupyter-book/advanced/advanced.html"
+          href="/pyestbook/advanced/advanced.html"
         >
           
           Advanced Topics
@@ -972,7 +970,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/advanced/circleci.html"
+                  href="/pyestbook/advanced/circleci.html"
                 >
                   
                   Building, previewing, and publishing your book with CircleCI
@@ -1029,7 +1027,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/jupyter-book/01/what-is-data-science.html"
+          href="/pyestbook/01/what-is-data-science.html"
         >
           
             1.
@@ -1053,7 +1051,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/01/1/intro.html"
+                  href="/pyestbook/01/1/intro.html"
                 >
                   
                     1.1
@@ -1072,7 +1070,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/01/2/why-data-science.html"
+                  href="/pyestbook/01/2/why-data-science.html"
                 >
                   
                     1.2
@@ -1091,7 +1089,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/01/3/Plotting_the_Classics.html"
+                  href="/pyestbook/01/3/Plotting_the_Classics.html"
                 >
                   
                     1.3
@@ -1106,7 +1104,7 @@ initFunction(initPrint)
 
                   <li class="c-sidebar__subsection">
                     <a class="c-sidebar__entry "
-                      href="/jupyter-book/01/3/subsection/subsections.html"
+                      href="/pyestbook/01/3/subsection/subsections.html"
                     >
                       
                         1.3.1
@@ -1120,7 +1118,7 @@ initFunction(initPrint)
 
                   <li class="c-sidebar__subsection">
                     <a class="c-sidebar__entry "
-                      href="/jupyter-book/01/3/subsection/subsectiontwo.html"
+                      href="/pyestbook/01/3/subsection/subsectiontwo.html"
                     >
                       
                         1.3.2
@@ -1149,7 +1147,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/jupyter-book/02/causality-and-experiments.html"
+          href="/pyestbook/02/causality-and-experiments.html"
         >
           
             2.
@@ -1173,7 +1171,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/02/1/observation-and-visualization-john-snow-and-the-broad-street-pump.html"
+                  href="/pyestbook/02/1/observation-and-visualization-john-snow-and-the-broad-street-pump.html"
                 >
                   
                     2.1
@@ -1192,7 +1190,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/02/2/snow-s-grand-experiment.html"
+                  href="/pyestbook/02/2/snow-s-grand-experiment.html"
                 >
                   
                     2.2
@@ -1211,7 +1209,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/02/3/establishing-causality.html"
+                  href="/pyestbook/02/3/establishing-causality.html"
                 >
                   
                     2.3
@@ -1230,7 +1228,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/02/4/randomization.html"
+                  href="/pyestbook/02/4/randomization.html"
                 >
                   
                     2.4
@@ -1249,7 +1247,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/02/5/endnote.html"
+                  href="/pyestbook/02/5/endnote.html"
                 >
                   
                     2.5
@@ -1279,7 +1277,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/jupyter-book/03/programming-in-python.html"
+          href="/pyestbook/03/programming-in-python.html"
         >
           
             3.
@@ -1303,7 +1301,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/03/1/Expressions.html"
+                  href="/pyestbook/03/1/Expressions.html"
                 >
                   
                     3.1
@@ -1322,7 +1320,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/03/2/Names.html"
+                  href="/pyestbook/03/2/Names.html"
                 >
                   
                     3.2
@@ -1341,7 +1339,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/03/3/Calls.html"
+                  href="/pyestbook/03/3/Calls.html"
                 >
                   
                     3.3
@@ -1360,7 +1358,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/03/4/Introduction_to_Tables.html"
+                  href="/pyestbook/03/4/Introduction_to_Tables.html"
                 >
                   
                     3.4
@@ -1390,7 +1388,7 @@ initFunction(initPrint)
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/jupyter-book/04/Types.html"
+          href="/pyestbook/04/Types.html"
         >
           
             4.
@@ -1414,7 +1412,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/04/1/Numbers.html"
+                  href="/pyestbook/04/1/Numbers.html"
                 >
                   
                     4.1
@@ -1433,7 +1431,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/04/2/Strings.html"
+                  href="/pyestbook/04/2/Strings.html"
                 >
                   
                     4.2
@@ -1452,7 +1450,7 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/jupyter-book/04/3/Comparison.html"
+                  href="/pyestbook/04/3/Comparison.html"
                 >
                   
                     4.3
@@ -1492,7 +1490,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><i class="fa fa-download"></i></button>
     <div class="download-buttons">
-        <a href="/jupyter-book/content/features/interactive_cells.ipynb" download>
+        <a href="/pyestbook/content/features/interactive_cells.ipynb" download>
         <button id="interact-button-download" class="interact-button">ORIG</button>
         </a>
         
@@ -1511,7 +1509,7 @@ initFunction(initPrint)
 
 
 
-<a href="https://mybinder.org/v2/gh/jupyter/jupyter-book/gh-pages?filepath=content%2Ffeatures%2Finteractive_cells.ipynb"><button class="interact-button" id="interact-button-binder"><img class="interact-button-logo" src="/jupyter-book/assets/images/logo_binder.svg" alt="Interact" />Interact</button></a>
+<a href="/v2/gh/tmfilho/pyestbook/master?filepath=content%2Ffeatures%2Finteractive_cells.ipynb"><button class="interact-button" id="interact-button-binder"><img class="interact-button-logo" src="/pyestbook/assets/images/logo_binder.svg" alt="Interact" />Interact</button></a>
   
 
 
@@ -1524,12 +1522,13 @@ initFunction(initPrint)
     <nav class="onthispage">
     </nav>
   </aside>
-  <a href="/jupyter-book/search.html" class="topbar-right-button" id="search-button"><i class="fa fa-search"></i></a>
+  <a href="/pyestbook/search.html" class="topbar-right-button" id="search-button"><i class="fa fa-search"></i></a>
 </div>
 
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
               <main class="jupyter-page">
+
 <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
@@ -1549,7 +1548,7 @@ As an alternative to pressing the Thebelab button at the top of the page, you
 can press the <img src="../images/logo/edit-button.svg" alt="" style="width: 20px; display: inline;" /> symbol in the top right corner of each code cell to start the 
 interactive mode.</p>
 <p>To add a Thebelab button to your Jupyter Book pages, use the following configuration:</p>
-<div class="highlight"><pre><span></span><span class="nt">use_thebelab_button              </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># If &#39;true&#39;, display a button to allow in-page running code cells with Thebelab</span>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">use_thebelab_button</span>              <span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># If &#39;true&#39;, display a button to allow in-page running code cells with Thebelab</span>
 </pre></div>
 <p>In addition, you can configure the Binder settings that are used to provide a kernel for
 Thebelab to run the code. These use the same configuration fields as the BinderHub interact
@@ -1579,7 +1578,7 @@ buttons described above.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -1635,7 +1634,7 @@ cell to print the output of that variable.</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_hidden_variable</span> <span class="o">=</span> <span class="s1">&#39;wow, it worked!&#39;</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -1653,92 +1652,6 @@ cell to print the output of that variable.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_hidden_variable</span><span class="p">)</span>
 </pre></div>
 
-    </div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This can also be used to automatically display the results of running some code cells,
-for example if you'd like to display a Jupyter widget for users to interact with.
-If you click on the <code>thebelab</code> button, the cell below should automatically show its outputs.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell tag_thebelab-init tag_hide_input">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">FloatSlider</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell tag_thebelab-init">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
-<span class="n">jitter</span> <span class="o">=</span> <span class="o">.</span><span class="mi">1</span>
-
-<span class="k">def</span> <span class="nf">update_plot_size</span><span class="p">(</span><span class="n">jitter</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="n">jitter</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
-
-    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
-
-<span class="n">interact</span><span class="p">(</span><span class="n">update_plot_size</span><span class="p">,</span> <span class="n">jitter</span><span class="o">=</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span> <span class="n">step</span><span class="o">=.</span><span class="mi">05</span><span class="p">));</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-
-
- 
- 
-<div id="a48cb5a8-1738-45f4-b5aa-61365b35ece0"></div>
-<div class="output_subarea output_widget_view ">
-<script type="text/javascript">
-var element = $('#a48cb5a8-1738-45f4-b5aa-61365b35ece0');
-</script>
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "1cf9cff5db374b4d9260b6a91c996650", "version_major": 2, "version_minor": 0}
-</script>
-</div>
-
-</div>
 </div>
 </div>
 </div>
@@ -1756,7 +1669,7 @@ static HTML page. It uses a Binder kernel to power the widgets, and displays out
 readers can interact with. For example, below we will show a simple matplotlib plot that can be made
 interactive with <strong>ipywidgets</strong></p>
 <p>To add a <strong>Show Widgets</strong> button to your Jupyter Book pages, use the following configuration:</p>
-<div class="highlight"><pre><span></span><span class="nt">use_show_widgets_button         </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># If &#39;true&#39;, display a button to show widgets backed by a Binder kernel</span>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">use_show_widgets_button</span>         <span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># If &#39;true&#39;, display a button to show widgets backed by a Binder kernel</span>
 </pre></div>
 <p>Then, tell Jupyter Book that you want a cell to display a widget by <strong>adding a tag</strong> to the cell's
 metadata called <code>interactive</code>. When a reader clicks on the "show widgets" button, any cells
@@ -1805,7 +1718,7 @@ the right!</p>
 <span class="n">interact</span><span class="p">(</span><span class="n">update_plot_size</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="o">=.</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">step</span><span class="o">=.</span><span class="mi">1</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="s1">&#39;magma&#39;</span><span class="p">,</span> <span class="s1">&#39;jet&#39;</span><span class="p">]);</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -1820,10 +1733,10 @@ the right!</p>
 
  
  
-<div id="640dd97d-5ceb-4a87-9435-9097dfe4d04c"></div>
+<div id="1c0318cd-885f-4a95-866a-fe4d084ba2d7"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#640dd97d-5ceb-4a87-9435-9097dfe4d04c');
+var element = $('#1c0318cd-885f-4a95-866a-fe4d084ba2d7');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "7db97110f70e4753addb351e55df6af6", "version_major": 2, "version_minor": 0}
@@ -1851,14 +1764,14 @@ var element = $('#640dd97d-5ceb-4a87-9435-9097dfe4d04c');
             <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/jupyter-book/features/executing.html">
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/features/executing.html">
       〈 <span class="u-margin-right-tiny"></span> Running each page when building yo...
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/jupyter-book/features/citations.html">
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/features/citations.html">
       BETA - Citations and bibliographies <span class="u-margin-right-tiny"></span> 〉
     </a>
   
