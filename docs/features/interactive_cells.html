@@ -15,7 +15,7 @@
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="BETA - Adding interactivity to your book pages" />
 <meta property="og:description" content="Interactive code in your book Sometimes you'd rather let people interact with code directly on the pageinstead of sending them off to a Binder or a JupyterHu..." />
-<meta property="og:image"       content="https://tmfilho.github.io/pyestbook/images/logo/logo.png" />
+<meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/features/interactive_cells.html",
   "headline": "BETA - Adding interactivity to your book pages",
-  "datePublished": "2019-09-30T00:33:11-03:00",
-  "dateModified": "2019-09-30T00:33:11-03:00",
+  "datePublished": "2019-09-30T23:56:51-03:00",
+  "dateModified": "2019-09-30T23:56:51-03:00",
   "description": "Interactive code in your book Sometimes you'd rather let people interact with code directly on the pageinstead of sending them off to a Binder or a JupyterHu...",
   "author": {
     "@type": "Person",
@@ -592,7 +592,7 @@ initFunction(initPrint)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="http://www.de.ufpb.br"><img src="/pyestbook/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <a href="http://www.de.ufpb.br"><img src="/pyestbook/assets/images/logo-arte.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
   <h2 class="c-sidebar__title">Python para Estatísticos</h2>
   <ul class="c-sidebar__chapters">
     
@@ -609,7 +609,7 @@ initFunction(initPrint)
           href="/pyestbook/intro.html"
         >
           
-          Home
+          Introdução
         </a>
 
         
@@ -1528,7 +1528,6 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
               <main class="jupyter-page">
-
 <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
@@ -1548,7 +1547,7 @@ As an alternative to pressing the Thebelab button at the top of the page, you
 can press the <img src="../images/logo/edit-button.svg" alt="" style="width: 20px; display: inline;" /> symbol in the top right corner of each code cell to start the 
 interactive mode.</p>
 <p>To add a Thebelab button to your Jupyter Book pages, use the following configuration:</p>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">use_thebelab_button</span>              <span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># If &#39;true&#39;, display a button to allow in-page running code cells with Thebelab</span>
+<div class="highlight"><pre><span></span><span class="nt">use_thebelab_button              </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># If &#39;true&#39;, display a button to allow in-page running code cells with Thebelab</span>
 </pre></div>
 <p>In addition, you can configure the Binder settings that are used to provide a kernel for
 Thebelab to run the code. These use the same configuration fields as the BinderHub interact
@@ -1578,7 +1577,7 @@ buttons described above.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1634,7 +1633,7 @@ cell to print the output of that variable.</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_hidden_variable</span> <span class="o">=</span> <span class="s1">&#39;wow, it worked!&#39;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1652,7 +1651,7 @@ cell to print the output of that variable.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_hidden_variable</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1669,7 +1668,7 @@ static HTML page. It uses a Binder kernel to power the widgets, and displays out
 readers can interact with. For example, below we will show a simple matplotlib plot that can be made
 interactive with <strong>ipywidgets</strong></p>
 <p>To add a <strong>Show Widgets</strong> button to your Jupyter Book pages, use the following configuration:</p>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">use_show_widgets_button</span>         <span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># If &#39;true&#39;, display a button to show widgets backed by a Binder kernel</span>
+<div class="highlight"><pre><span></span><span class="nt">use_show_widgets_button         </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># If &#39;true&#39;, display a button to show widgets backed by a Binder kernel</span>
 </pre></div>
 <p>Then, tell Jupyter Book that you want a cell to display a widget by <strong>adding a tag</strong> to the cell's
 metadata called <code>interactive</code>. When a reader clicks on the "show widgets" button, any cells
@@ -1718,7 +1717,7 @@ the right!</p>
 <span class="n">interact</span><span class="p">(</span><span class="n">update_plot_size</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="o">=.</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">step</span><span class="o">=.</span><span class="mi">1</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="s1">&#39;magma&#39;</span><span class="p">,</span> <span class="s1">&#39;jet&#39;</span><span class="p">]);</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1733,10 +1732,10 @@ the right!</p>
 
  
  
-<div id="1c0318cd-885f-4a95-866a-fe4d084ba2d7"></div>
+<div id="3e0b3612-6487-4c4a-b2f8-d715009da0ed"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#1c0318cd-885f-4a95-866a-fe4d084ba2d7');
+var element = $('#3e0b3612-6487-4c4a-b2f8-d715009da0ed');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "7db97110f70e4753addb351e55df6af6", "version_major": 2, "version_minor": 0}
@@ -1778,7 +1777,7 @@ var element = $('#1c0318cd-885f-4a95-866a-fe4d084ba2d7');
 </nav>
 
             <footer>
-  <p class="footer">Este livro foi escrito por Telmo de Menezes e Silva Filho</p>
+  <p class="footer">Escrito por Telmo de Menezes e Silva Filho (telmo@de.ufpb.br)</p>
 </footer>
 
         </div>

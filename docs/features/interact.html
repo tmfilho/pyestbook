@@ -15,7 +15,7 @@
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Connecting content with JupyterHub and Binder" />
 <meta property="og:description" content="Connecting content with JupyterHub and Binder Because Jupyter Books are built with Jupyter Notebooks, you can connect your onlinebook with a Jupyter kernel r..." />
-<meta property="og:image"       content="https://tmfilho.github.io/pyestbook/images/logo/logo.png" />
+<meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/features/interact.html",
   "headline": "Connecting content with JupyterHub and Binder",
-  "datePublished": "2019-09-30T00:33:11-03:00",
-  "dateModified": "2019-09-30T00:33:11-03:00",
+  "datePublished": "2019-09-30T23:56:51-03:00",
+  "dateModified": "2019-09-30T23:56:51-03:00",
   "description": "Connecting content with JupyterHub and Binder Because Jupyter Books are built with Jupyter Notebooks, you can connect your onlinebook with a Jupyter kernel r...",
   "author": {
     "@type": "Person",
@@ -560,7 +560,7 @@ initFunction(initPrint)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="http://www.de.ufpb.br"><img src="/pyestbook/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <a href="http://www.de.ufpb.br"><img src="/pyestbook/assets/images/logo-arte.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
   <h2 class="c-sidebar__title">Python para Estatísticos</h2>
   <ul class="c-sidebar__chapters">
     
@@ -577,7 +577,7 @@ initFunction(initPrint)
           href="/pyestbook/intro.html"
         >
           
-          Home
+          Introdução
         </a>
 
         
@@ -1495,7 +1495,6 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
               <main class="jupyter-page">
-
 <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
@@ -1513,17 +1512,17 @@ at <a href="https://mybinder.org">https://mybinder.org</a>.</p>
 <p>To automatically include Binder link buttons in each page of your Jupyter Book, use the following
 configuration:</p>
 <div class="highlight"><pre><span></span><span class="c1"># Binder link settings</span>
-<span class="l l-Scalar l-Scalar-Plain">use_binder_button</span>                <span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># If &#39;true&#39;, add a binder button for interactive links</span>
+<span class="nt">use_binder_button                </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># If &#39;true&#39;, add a binder button for interactive links</span>
 </pre></div>
 <p>In addition, you can configure the components of your Binder links, which control things like
 where your BinderHub exists, which repository is used to define the environment, etc. Here's
 an example configuration with some explanation of each field.</p>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">binderhub_url</span>                    <span class="p p-Indicator">:</span> <span class="s">&quot;https://mybinder.org&quot;</span>  <span class="c1"># The URL for your BinderHub.</span>
-<span class="l l-Scalar l-Scalar-Plain">binder_repo_base</span>                 <span class="p p-Indicator">:</span> <span class="s">&quot;https://github.com/&quot;</span>  <span class="c1"># The site on which the textbook repository is hosted</span>
-<span class="l l-Scalar l-Scalar-Plain">binder_repo_org</span>                  <span class="p p-Indicator">:</span> <span class="s">&quot;jupyter&quot;</span>  <span class="c1"># The username or organization that owns this repository</span>
-<span class="l l-Scalar l-Scalar-Plain">binder_repo_name</span>                 <span class="p p-Indicator">:</span> <span class="s">&quot;jupyter-book&quot;</span>  <span class="c1"># The name of the repository on the web</span>
-<span class="l l-Scalar l-Scalar-Plain">binder_repo_branch</span>               <span class="p p-Indicator">:</span> <span class="s">&quot;master&quot;</span>  <span class="c1"># The branch on which your textbook is hosted.</span>
-<span class="l l-Scalar l-Scalar-Plain">binderhub_interact_text</span>          <span class="p p-Indicator">:</span> <span class="s">&quot;Interact&quot;</span>  <span class="c1"># The text that interact buttons will contain.</span>
+<div class="highlight"><pre><span></span><span class="nt">binderhub_url                    </span><span class="p">:</span> <span class="s">&quot;https://mybinder.org&quot;</span>  <span class="c1"># The URL for your BinderHub.</span>
+<span class="nt">binder_repo_base                 </span><span class="p">:</span> <span class="s">&quot;https://github.com/&quot;</span>  <span class="c1"># The site on which the textbook repository is hosted</span>
+<span class="nt">binder_repo_org                  </span><span class="p">:</span> <span class="s">&quot;jupyter&quot;</span>  <span class="c1"># The username or organization that owns this repository</span>
+<span class="nt">binder_repo_name                 </span><span class="p">:</span> <span class="s">&quot;jupyter-book&quot;</span>  <span class="c1"># The name of the repository on the web</span>
+<span class="nt">binder_repo_branch               </span><span class="p">:</span> <span class="s">&quot;master&quot;</span>  <span class="c1"># The branch on which your textbook is hosted.</span>
+<span class="nt">binderhub_interact_text          </span><span class="p">:</span> <span class="s">&quot;Interact&quot;</span>  <span class="c1"># The text that interact buttons will contain.</span>
 </pre></div>
 <h2 id="Creating-interact-buttons-for-JupyterHub">Creating interact buttons for JupyterHub<a class="anchor-link" href="#Creating-interact-buttons-for-JupyterHub"> </a></h2><p>JupyterHub lets you host an online service that gives users their own Jupyter servers
 with an environment that you specify for them. It allows you to give users access to
@@ -1533,11 +1532,11 @@ in order to control who has access to your hardware.</p>
 your readers to a JupyterHub that is running a live, interactive version of your page. This
 is accomplished using the <a href="https://github.com/jupyterhub/nbgitpuller">nbgitpuller</a> server
 extension.</p>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">use_jupyterhub_button</span>            <span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>  <span class="c1"># If &#39;true&#39;, display a button that will direct users to a JupyterHub (that you provide)</span>
+<div class="highlight"><pre><span></span><span class="nt">use_jupyterhub_button            </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>  <span class="c1"># If &#39;true&#39;, display a button that will direct users to a JupyterHub (that you provide)</span>
 </pre></div>
 <p>You can configure the location of the JupyterHub (which you may set up on your own using a guide
 such as <a href="https://z2jh.jupyter.org">zero to jupyterhub for kubernetes</a> or <a href="https://tljh.jupyter.org">the littlest jupyterhub</a>) with the following configuration.</p>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">jupyterhub_url</span>                   <span class="p p-Indicator">:</span> <span class="s">&quot;&quot;</span>  <span class="c1"># The URL for your JupyterHub.</span>
+<div class="highlight"><pre><span></span><span class="nt">jupyterhub_url                   </span><span class="p">:</span> <span class="s">&quot;&quot;</span>  <span class="c1"># The URL for your JupyterHub.</span>
 </pre></div>
 
 </div>
@@ -1588,7 +1587,7 @@ users to run this content wherever they like.</p>
 </nav>
 
             <footer>
-  <p class="footer">Este livro foi escrito por Telmo de Menezes e Silva Filho</p>
+  <p class="footer">Escrito por Telmo de Menezes e Silva Filho (telmo@de.ufpb.br)</p>
 </footer>
 
         </div>

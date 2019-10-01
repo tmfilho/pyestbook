@@ -9,7 +9,7 @@ title: |-
 prev_page:
   url: /intro.html
   title: |-
-    Home
+    Introdução
 next_page:
   url: /guide/02_create.html
   title: |-
@@ -17,7 +17,6 @@ next_page:
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <main class="jupyter-page">
-
 <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
@@ -85,17 +84,17 @@ For example, your chapters, sub-chapters, etc.</p>
     └── toc.yml</code></pre>
 <p>This is a YAML file with a collection of pages, each one linking to a
 file in your <code>content/</code> folder. Here's an example of a few pages defined in <code>toc.yml</code>.</p>
-<div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Features and customization</span>
-  <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/features/features</span>
-  <span class="l l-Scalar l-Scalar-Plain">not_numbered</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="l l-Scalar l-Scalar-Plain">expand_sections</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="l l-Scalar l-Scalar-Plain">sections</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Markdown files</span>
-    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/features/markdown</span>
-    <span class="l l-Scalar l-Scalar-Plain">not_numbered</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Jupyter notebooks</span>
-    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/features/notebooks</span>
-    <span class="l l-Scalar l-Scalar-Plain">not_numbered</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Features and customization</span>
+  <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/features/features</span>
+  <span class="nt">not_numbered</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">expand_sections</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">sections</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Markdown files</span>
+    <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/features/markdown</span>
+    <span class="nt">not_numbered</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Jupyter notebooks</span>
+    <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/features/notebooks</span>
+    <span class="nt">not_numbered</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 <p>The top-most level of your TOC file are <strong>book chapters</strong>. Above, this is the
 "Features and customization" page. Each chapter can have
@@ -108,7 +107,7 @@ should be <strong>relative to the <code>/content/</code> folder and with no exte
 <p>For example, in the example above there is a file in
 <code>mybookname/content/features/notebooks.ipynb</code>. The TOC entry that points to
 this file is here:</p>
-<div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Jupyter notebooks</span>
+<div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Jupyter notebooks</span>
         <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/features/notebooks</span>
 </pre></div>
 <h3 id="A-license-for-your-content">A license for your content<a class="anchor-link" href="#A-license-for-your-content"> </a></h3><p>When you share content online, it's a good idea to add a license so that others know

@@ -15,7 +15,7 @@
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Building, previewing, and publishing your book with CircleCI" />
 <meta property="og:description" content="Automatically building, previewing, and pushing your book with CircleCI CircleCI is a continuous integration service that lets you run various commandsevery ..." />
-<meta property="og:image"       content="https://tmfilho.github.io/pyestbook/images/logo/logo.png" />
+<meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/advanced/circleci.html",
   "headline": "Building, previewing, and publishing your book with CircleCI",
-  "datePublished": "2019-09-30T00:33:11-03:00",
-  "dateModified": "2019-09-30T00:33:11-03:00",
+  "datePublished": "2019-09-30T23:56:51-03:00",
+  "dateModified": "2019-09-30T23:56:51-03:00",
   "description": "Automatically building, previewing, and pushing your book with CircleCI CircleCI is a continuous integration service that lets you run various commandsevery ...",
   "author": {
     "@type": "Person",
@@ -560,7 +560,7 @@ initFunction(initPrint)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="http://www.de.ufpb.br"><img src="/pyestbook/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <a href="http://www.de.ufpb.br"><img src="/pyestbook/assets/images/logo-arte.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
   <h2 class="c-sidebar__title">Python para Estatísticos</h2>
   <ul class="c-sidebar__chapters">
     
@@ -577,7 +577,7 @@ initFunction(initPrint)
           href="/pyestbook/intro.html"
         >
           
-          Home
+          Introdução
         </a>
 
         
@@ -1495,7 +1495,6 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
               <main class="jupyter-page">
-
 <div class="jb_cell">
 
 </div>
@@ -1544,14 +1543,14 @@ but we'll add to it later:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="c1"># Tell CircleCI which version of its API you wish to use</span>
-<span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2.1</span>
-<span class="l l-Scalar l-Scalar-Plain">jobs</span><span class="p p-Indicator">:</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2.1</span>
+<span class="nt">jobs</span><span class="p">:</span>
     <span class="c1"># Jobs define the different parts of your CircleCI workflow</span>
     <span class="c1"># They can depend on one another, use pieces from one another, etc.</span>
     <span class="c1"># We&#39;ll fill them in later</span>
-<span class="l l-Scalar l-Scalar-Plain">workflows</span><span class="p p-Indicator">:</span>
+<span class="nt">workflows</span><span class="p">:</span>
     <span class="c1"># Workflows tell CircleCI the order in which to run your jobs</span>
-<span class="l l-Scalar l-Scalar-Plain">commands</span><span class="p p-Indicator">:</span>
+<span class="nt">commands</span><span class="p">:</span>
     <span class="c1"># Commands are re-usable chunks of steps that can be shared across jobs</span>
 </pre></div>
 
@@ -1595,28 +1594,28 @@ add to the skeleton configuration you've created above:</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">jobs</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">build_page_files</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">docker</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.6-stretch</span>
-    <span class="l l-Scalar l-Scalar-Plain">steps</span><span class="p p-Indicator">:</span>
+<div class="highlight"><pre><span></span><span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">build_page_files</span><span class="p">:</span>
+    <span class="nt">docker</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.6-stretch</span>
+    <span class="nt">steps</span><span class="p">:</span>
       <span class="c1"># Get our data and merge with upstream</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">checkout</span>
 
       <span class="c1"># Install the packages needed to build our documentation</span>
       <span class="c1"># This will depend on your particular package!</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">pip install --user -r requirements.txt</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pip install --user -r requirements.txt</span>
 
       <span class="c1"># Build the page intermediate HTML files</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Build page intermediate HTML files</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">jupyter-book build .</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build page intermediate HTML files</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jupyter-book build .</span>
 
       <span class="c1"># Persist the specified paths to be used in subsequent jobs</span>
       <span class="c1"># (see https://circleci.com/docs/2.0/workflows/#using-workspaces-to-share-data-among-jobs)</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">persist_to_workspace</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">root</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
-          <span class="l l-Scalar l-Scalar-Plain">paths</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">persist_to_workspace</span><span class="p">:</span>
+          <span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
+          <span class="nt">paths</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./_build/</span>
 </pre></div>
 
@@ -1663,25 +1662,25 @@ install Jekyll and the dependencies needed to build your book's HTML using
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">commands</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">prepare_jekyll_installation</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">steps</span><span class="p p-Indicator">:</span>
+<div class="highlight"><pre><span></span><span class="nt">commands</span><span class="p">:</span>
+  <span class="nt">prepare_jekyll_installation</span><span class="p">:</span>
+    <span class="nt">steps</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">checkout</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">attach_workspace</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">attach_workspace</span><span class="p">:</span>
           <span class="c1"># Must be absolute path or relative path from working_directory</span>
-          <span class="l l-Scalar l-Scalar-Plain">at</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/tmp/workspace</span>
+          <span class="nt">at</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/tmp/workspace</span>
 
       <span class="c1"># Grab the the built intermediate files from the last step</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Copy over built site files</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Copy over built site files</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
             <span class="no">rm -rf _build</span>
             <span class="no">cp -r /tmp/workspace/_build .</span>
 
       <span class="c1"># Install miniconda to test install</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">install miniconda</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">install miniconda</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
             <span class="no">export MINICONDA=$HOME/miniconda</span>
             <span class="no">echo &quot;export PATH=$MINICONDA/bin:$PATH&quot; &gt;&gt; $BASH_ENV</span>
             <span class="no">source $BASH_ENV</span>
@@ -1696,14 +1695,14 @@ install Jekyll and the dependencies needed to build your book's HTML using
             <span class="no">rm miniconda.sh</span>
 
       <span class="c1"># Install Ruby/Jekyll dependencies</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Installing Ruby/Jekyll from conda-forge</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">conda install -c conda-forge rb-github-pages</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Installing Ruby/Jekyll from conda-forge</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">conda install -c conda-forge rb-github-pages</span>
 
       <span class="c1"># Build the book&#39;s HTML w/ the base_url for CircleCI artifacts</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Install book Ruby dependencies</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle install</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install book Ruby dependencies</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle install</span>
 </pre></div>
 
 </div>
@@ -1717,20 +1716,20 @@ install Jekyll and the dependencies needed to build your book's HTML using
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Step-3:-Build-and-preview-your-book's-HTML-with-Circle-artifacts">Step 3: Build and preview your book's HTML with Circle artifacts<a class="anchor-link" href="#Step-3:-Build-and-preview-your-book's-HTML-with-Circle-artifacts"> </a></h2><p>We'll re-use the command from above in order to preview our built site
 using Circle artifacts. Add the job below to your CircleCI configuration file.</p>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">jobs</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">doc</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">docker</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.7-stretch</span>
-    <span class="l l-Scalar l-Scalar-Plain">steps</span><span class="p p-Indicator">:</span>
+<div class="highlight"><pre><span></span><span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">doc</span><span class="p">:</span>
+    <span class="nt">docker</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.7-stretch</span>
+    <span class="nt">steps</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">prepare_jekyll_installation</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the website</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle exec jekyll build --baseurl /0/html/</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the website</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle exec jekyll build --baseurl /0/html/</span>
 
       <span class="c1"># Tell Circle to store the documentation output in a folder that we can access later</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">store_artifacts</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">path</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">_site/</span>
-          <span class="l l-Scalar l-Scalar-Plain">destination</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">html</span>
+      <span class="p p-Indicator">-</span> <span class="nt">store_artifacts</span><span class="p">:</span>
+          <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">_site/</span>
+          <span class="nt">destination</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">html</span>
 </pre></div>
 
 </div>
@@ -1771,25 +1770,25 @@ to tell Circle to automatically push to this repository.</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">jobs</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">docker</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.7-stretch</span>
-    <span class="l l-Scalar l-Scalar-Plain">steps</span><span class="p p-Indicator">:</span>
+<div class="highlight"><pre><span></span><span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">deploy</span><span class="p">:</span>
+    <span class="nt">docker</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.7-stretch</span>
+    <span class="nt">steps</span><span class="p">:</span>
       <span class="c1"># Add deployment key fingerprint for CircleCI to use for a push</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">add_ssh_keys</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">fingerprints</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">add_ssh_keys</span><span class="p">:</span>
+          <span class="nt">fingerprints</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">YOUR</span><span class="nv"> </span><span class="s">SSH</span><span class="nv"> </span><span class="s">KEY</span><span class="nv"> </span><span class="s">FINGERPRINT</span><span class="nv"> </span><span class="s">}}&quot;</span>
 
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">prepare_jekyll_installation</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the website for deploy</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle exec jekyll build</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the website for deploy</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle exec jekyll build</span>
 
       <span class="c1"># Deploy the built site with ghp-import</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Deploying site using ghp-import</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deploying site using ghp-import</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
             <span class="no">pip install ghp-import</span>
             <span class="no">ghp-import -p -f -n ./_site/</span>
 </pre></div>
@@ -1844,30 +1843,30 @@ Here's the configuration for this:</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">workflows</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
-  <span class="l l-Scalar l-Scalar-Plain">default</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">jobs</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">build_page_html</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">branches</span><span class="p p-Indicator">:</span>
-              <span class="l l-Scalar l-Scalar-Plain">ignore</span><span class="p p-Indicator">:</span>
+<div class="highlight"><pre><span></span><span class="nt">workflows</span><span class="p">:</span>
+  <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+  <span class="nt">default</span><span class="p">:</span>
+    <span class="nt">jobs</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">build_page_html</span><span class="p">:</span>
+          <span class="nt">filters</span><span class="p">:</span>
+            <span class="nt">branches</span><span class="p">:</span>
+              <span class="nt">ignore</span><span class="p">:</span>
                 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">gh-pages</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">doc</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">requires</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">doc</span><span class="p">:</span>
+          <span class="nt">requires</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">build_page_html</span>
-          <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">branches</span><span class="p p-Indicator">:</span>
-              <span class="l l-Scalar l-Scalar-Plain">ignore</span><span class="p p-Indicator">:</span>
+          <span class="nt">filters</span><span class="p">:</span>
+            <span class="nt">branches</span><span class="p">:</span>
+              <span class="nt">ignore</span><span class="p">:</span>
                 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">gh-pages</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">requires</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">deploy</span><span class="p">:</span>
+          <span class="nt">requires</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">build_page_html</span>
-          <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
-              <span class="l l-Scalar l-Scalar-Plain">branches</span><span class="p p-Indicator">:</span>
-                <span class="l l-Scalar l-Scalar-Plain">only</span><span class="p p-Indicator">:</span>
+          <span class="nt">filters</span><span class="p">:</span>
+              <span class="nt">branches</span><span class="p">:</span>
+                <span class="nt">only</span><span class="p">:</span>
                   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
-                <span class="l l-Scalar l-Scalar-Plain">ignore</span><span class="p p-Indicator">:</span>
+                <span class="nt">ignore</span><span class="p">:</span>
                   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">gh-pages</span>
 </pre></div>
 
@@ -1902,107 +1901,107 @@ step above in a <em>single</em> file.</p>
 <span class="c1"># You will probably have to modify it in order to get it working</span>
 <span class="c1"># just the way you want. See https://jupyter.org/jupyter-book/advanced/circleci.html</span>
 <span class="c1"># for more information</span>
-<span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2.1</span>
-<span class="l l-Scalar l-Scalar-Plain">jobs</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">build_page_html</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">docker</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.7-stretch</span>
-    <span class="l l-Scalar l-Scalar-Plain">steps</span><span class="p p-Indicator">:</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2.1</span>
+<span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">build_page_html</span><span class="p">:</span>
+    <span class="nt">docker</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.7-stretch</span>
+    <span class="nt">steps</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">checkout</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">pip install --user -r requirements.txt</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Build site intermediate files</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">jupyter-book build .</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pip install --user -r requirements.txt</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build site intermediate files</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jupyter-book build .</span>
 
       <span class="c1"># Persist the built files for the deploy step</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">persist_to_workspace</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">root</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
-          <span class="l l-Scalar l-Scalar-Plain">paths</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">persist_to_workspace</span><span class="p">:</span>
+          <span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
+          <span class="nt">paths</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">_build/</span>
 
-  <span class="l l-Scalar l-Scalar-Plain">doc</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">docker</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.7-stretch</span>
-    <span class="l l-Scalar l-Scalar-Plain">steps</span><span class="p p-Indicator">:</span>
+  <span class="nt">doc</span><span class="p">:</span>
+    <span class="nt">docker</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.7-stretch</span>
+    <span class="nt">steps</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">prepare_jekyll_installation</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the website</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle exec jekyll build --baseurl /0/html/</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the website</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle exec jekyll build --baseurl /0/html/</span>
 
       <span class="c1"># Tell Circle to store the documentation output in a folder that we can access later</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">store_artifacts</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">path</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">_site/</span>
-          <span class="l l-Scalar l-Scalar-Plain">destination</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">html</span>
+      <span class="p p-Indicator">-</span> <span class="nt">store_artifacts</span><span class="p">:</span>
+          <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">_site/</span>
+          <span class="nt">destination</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">html</span>
 
   <span class="c1"># Deploy the built site to jupyter-book.github.io</span>
-  <span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">docker</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.7-stretch</span>
-    <span class="l l-Scalar l-Scalar-Plain">steps</span><span class="p p-Indicator">:</span>
+  <span class="nt">deploy</span><span class="p">:</span>
+    <span class="nt">docker</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circleci/python:3.7-stretch</span>
+    <span class="nt">steps</span><span class="p">:</span>
       <span class="c1"># Add deployment key fingerprint for CircleCI to use for a push</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">add_ssh_keys</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">fingerprints</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">add_ssh_keys</span><span class="p">:</span>
+          <span class="nt">fingerprints</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">YOUR</span><span class="nv"> </span><span class="s">SSH</span><span class="nv"> </span><span class="s">FINGERPRINT</span><span class="nv"> </span><span class="s">}}&quot;</span>
 
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">prepare_jekyll_installation</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the website for deploy</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle exec jekyll build</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the website for deploy</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle exec jekyll build</span>
 
       <span class="c1"># Deploy the built site with ghp-import</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Deploying site using ghp-import</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deploying site using ghp-import</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
             <span class="no">pip install ghp-import</span>
             <span class="no">ghp-import -p -f -n ./_site/</span>
 
 
 <span class="c1"># Tell CircleCI to use this workflow when it builds the site</span>
-<span class="l l-Scalar l-Scalar-Plain">workflows</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
-  <span class="l l-Scalar l-Scalar-Plain">default</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">jobs</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">build_page_html</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">branches</span><span class="p p-Indicator">:</span>
-              <span class="l l-Scalar l-Scalar-Plain">ignore</span><span class="p p-Indicator">:</span>
+<span class="nt">workflows</span><span class="p">:</span>
+  <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+  <span class="nt">default</span><span class="p">:</span>
+    <span class="nt">jobs</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">build_page_html</span><span class="p">:</span>
+          <span class="nt">filters</span><span class="p">:</span>
+            <span class="nt">branches</span><span class="p">:</span>
+              <span class="nt">ignore</span><span class="p">:</span>
                 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">gh-pages</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">doc</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">requires</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">doc</span><span class="p">:</span>
+          <span class="nt">requires</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">build_page_html</span>
-          <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">branches</span><span class="p p-Indicator">:</span>
-              <span class="l l-Scalar l-Scalar-Plain">ignore</span><span class="p p-Indicator">:</span>
+          <span class="nt">filters</span><span class="p">:</span>
+            <span class="nt">branches</span><span class="p">:</span>
+              <span class="nt">ignore</span><span class="p">:</span>
                 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">gh-pages</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">requires</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">deploy</span><span class="p">:</span>
+          <span class="nt">requires</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">build_page_html</span>
-          <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
-              <span class="l l-Scalar l-Scalar-Plain">branches</span><span class="p p-Indicator">:</span>
-                <span class="l l-Scalar l-Scalar-Plain">only</span><span class="p p-Indicator">:</span>
+          <span class="nt">filters</span><span class="p">:</span>
+              <span class="nt">branches</span><span class="p">:</span>
+                <span class="nt">only</span><span class="p">:</span>
                   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
-                <span class="l l-Scalar l-Scalar-Plain">ignore</span><span class="p p-Indicator">:</span>
+                <span class="nt">ignore</span><span class="p">:</span>
                   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">gh-pages</span>
 
-<span class="l l-Scalar l-Scalar-Plain">commands</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">prepare_jekyll_installation</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">steps</span><span class="p p-Indicator">:</span>
+<span class="nt">commands</span><span class="p">:</span>
+  <span class="nt">prepare_jekyll_installation</span><span class="p">:</span>
+    <span class="nt">steps</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">checkout</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">attach_workspace</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">attach_workspace</span><span class="p">:</span>
           <span class="c1"># Must be absolute path or relative path from working_directory</span>
-          <span class="l l-Scalar l-Scalar-Plain">at</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/tmp/workspace</span>
+          <span class="nt">at</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/tmp/workspace</span>
 
       <span class="c1"># Grab the the built intermediate files from the last step</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Copy over built site files</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Copy over built site files</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
             <span class="no">rm -rf ./_build</span>
             <span class="no">cp -r /tmp/workspace/_build .</span>
 
       <span class="c1"># Install miniconda to test install</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">install miniconda</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">install miniconda</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
             <span class="no">export MINICONDA=$HOME/miniconda</span>
             <span class="no">echo &quot;export PATH=$MINICONDA/bin:$PATH&quot; &gt;&gt; $BASH_ENV</span>
             <span class="no">source $BASH_ENV</span>
@@ -2017,14 +2016,14 @@ step above in a <em>single</em> file.</p>
             <span class="no">rm miniconda.sh</span>
 
       <span class="c1"># Install Ruby/Jekyll dependencies</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Installing Ruby/Jekyll from conda-forge</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">conda install -c conda-forge rb-github-pages</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Installing Ruby/Jekyll from conda-forge</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">conda install -c conda-forge rb-github-pages</span>
 
       <span class="c1"># Build the book&#39;s HTML w/ the base_url for CircleCI artifacts</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Install book Ruby dependencies</span>
-          <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle install</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install book Ruby dependencies</span>
+          <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle install</span>
 </pre></div>
 
 </div>
@@ -2063,7 +2062,7 @@ step above in a <em>single</em> file.</p>
 </nav>
 
             <footer>
-  <p class="footer">Este livro foi escrito por Telmo de Menezes e Silva Filho</p>
+  <p class="footer">Escrito por Telmo de Menezes e Silva Filho (telmo@de.ufpb.br)</p>
 </footer>
 
         </div>
