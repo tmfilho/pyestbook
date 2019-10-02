@@ -25,7 +25,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div style="clear:both;"></div>-->
 
 <p>Este material foi escrito com o objetivo de introduzir estatísticos e estudantes de Estatística aos conceitos fundamentais da linguagem Python, bem como apresentá-los às ferramentas que mais lhe podem ser úteis, incluindo bibliotecas de computação matemática, visualização de dados, manipulação de bases e bancos de dados, ferramentas de  aprendizagem de máquina, computação paralela, computação em GPU, inferência Bayesiana e criação e consumo de API's Web.</p>
-<p>Python é uma linguagem de programação interpretada, de alto nível e de propósito geral. Seu criador, Guido van Rossum, enfatizou legibilidade de código e sua abordagem de orientação a objetos permite que projetos de diversos tamanhos sejam desenvolvidos usando código simples, lógico e fácil de entender, devido a sua sintaxe clara. Além da orientação a objetos, Python também oferece suporte a outros paradigmas de programação, como programação estruturada e programação funcional.</p>
+<p>Python é uma linguagem de programação interpretada, de alto nível e de propósito geral. Seu criador, Guido van Rossum, enfatizou <strong>legibilidade</strong> de código e sua abordagem de orientação a objetos permite que projetos de diversos tamanhos sejam desenvolvidos usando código simples, lógico e <strong>fácil de entender</strong>, devido a sua sintaxe clara. Além da orientação a objetos, Python também oferece suporte a outros paradigmas de programação, como programação estruturada e programação funcional.</p>
 <p>A filosofia central da linguagem foi resumida no documento <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python (PEP 20)</a> {% cite petersZen2004 %}, que inclui frases como:</p>
 <ul>
 <li>Belo é melhor do que feio.</li>
@@ -47,7 +47,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-evolu&#231;&#227;o-do-interesse-em-Python">A evolu&#231;&#227;o do interesse em Python<a class="anchor-link" href="#A-evolu&#231;&#227;o-do-interesse-em-Python"> </a></h2><p>Em 2017, o Stack Overflow, website de perguntas e respostas destinado a desenvolvedores, publicou um estudo sobre o rápido crescimento no interesse pela linguagem Python {% cite robinsonBlog2017 %}. O estudo considerou apenas o interesse de usuários de países de alta renda e naturalmente avaliou apenas resultados até a sua publicação. A Figura 1, obtida por meio da ferramenta <a href="https://insights.stackoverflow.com/trends">Stack Overflow Trends</a>, apresenta as curvas para as mesmas linguagens, considerando usuários de todo o mundo (o que muda as curvas em relação ao estudo citado) e resultados até o meio de 2019. Até o meio de 2012, Python era a sexta linguagem menos buscada das 7 analisadas, tornando-se a linguagem de maior interesse apenas 6 anos depois, no meio de 2018.</p>
+<h2 id="Por-que-estudar-Python?">Por que estudar Python?<a class="anchor-link" href="#Por-que-estudar-Python?"> </a></h2><p>Em 2017, o Stack Overflow, website de perguntas e respostas destinado a desenvolvedores, publicou um estudo sobre o rápido crescimento no interesse pela linguagem Python {% cite robinsonBlog2017 %}. O estudo considerou apenas o interesse de usuários de países de alta renda e naturalmente avaliou apenas resultados até a sua publicação. A Figura 1, obtida por meio da ferramenta <a href="https://insights.stackoverflow.com/trends">Stack Overflow Trends</a>, apresenta as curvas para as mesmas linguagens, considerando usuários de todo o mundo (o que muda as curvas em relação ao estudo citado) e resultados até o meio de 2019. Até o meio de 2012, Python era a sexta linguagem menos buscada das 7 analisadas, tornando-se a linguagem de maior interesse apenas 6 anos depois, no meio de 2018.</p>
 
 </div>
 </div>
@@ -62,6 +62,41 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
   <img src="images/python-growth.svg" alt="Crescimento da porcentagem de perguntas de várias linguagens de programação no Stack Overflow"/>
   <figcaption>Figura 1: Crescimento da porcentagem de perguntas de várias linguagens de programação no Stack Overflow.</figcaption>
 </figure>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Esse crescimento do interesse por Python extremamente acentuado a partir de 2012 está conectado ao avanço da área de ciência de dados e conhecimentos relacionados, como aprendizagem de máquina, big data, business analytics, entre outras. Python e R costumam ser as linguagens <strong>mais citadas</strong> por cientistas de dados em seus perfis em redes sociais como LinkedIn. Segundo análise da Initiative for Analytics and Data Science Standards (IADSS) {% cite fayyadSkill2019 %}, <strong>100%</strong> dos cientistas de dados mencionam conhecimento de Python em seus perfis, enquanto 84% mencionam R. Além disso, como mostra a Figura 2, o mercado de trabalho abraçou essas duas linguagens, com <strong>mais de 70%</strong> dos anúncios de vagas para cientistas de dados, retirados de sites como LinkedIn, Indeed, SimplyHired e Monster em outubro de 2018, mencionando Python e mais de 60% mencionando R.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+  <img src="images/job-listings.png" alt="20 habilidades mais mencionadas em anúncios de vagas para cientistas de dados"/>
+  <figcaption>Figura 2: 20 habilidades mais mencionadas em anúncios de vagas para cientistas de dados {% cite haleSkill2018 %}.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para completar esta motivação, geramos a tabela abaixo usando Python e a biblioteca Pandas, dando um gostinho do que vem por aí. Os dados foram obtidos por meio da plataforma <a href="https://trends.google.com.br/trends/">Google Trends</a> e representam o interesse mundial por quatro tópicos de buscas no Google: Python, R, aprendizagem de máquina e ciência de dados. A quantidade de buscas de cada tópico foi medida semanalmente. O código abaixo calcula o índice de correlação de Spearman do interesse semanal de cada um dos tópicos e todos os outros. Os valores calculados indicam que há relação entre o crescimento do interesse em ciência de dados e aprendizagem de máquina e a quantidade de buscas relacionadas a R e Python. Esta última apresentou correlações quase perfeitas com ciência de dados e aprendizagem de máquina, mostrando que o seu crescimento nos últimos 5 anos está <strong>diretamente conectado</strong> ao crescimento da importância dessas áreas.</p>
+
 </div>
 </div>
 </div>
