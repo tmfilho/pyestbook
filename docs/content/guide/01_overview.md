@@ -4,12 +4,16 @@ Este Capítulo tem o objetivo de orientar o(a) leitor(a) sobre a instalação de
 
 ## Instalando Python com Anaconda
 
-Anaconda é um gerenciador de pacotes para Python (e R). Gratuito e simples de instalar, ele permite instalar milhares de pacotes curados em versões estáveis. A sua instalação inclui mais de 200 pacotes automaticamente, com os outros podendo ser instalados conforme necessidade de uso. Caso o(a) usuário(a) necessite realizar uma instalação mais leve (cerca de 5 GB são necessários para download e instalação), também é possível instalar a versão mínima, chamada de [Miniconda](https://conda.pydata.org/miniconda.html). Para realizar o download, basta seguir para a [página de instalação](https://docs.anaconda.com/anaconda/). Depois é só seguir os passos do instalador.
+Anaconda é um gerenciador de pacotes de ciência de dados para Python (e R). Gratuito e simples de instalar, ele permite instalar milhares de pacotes curados em versões estáveis. A sua instalação inclui mais de 200 pacotes automaticamente, com os outros podendo ser instalados conforme necessidade de uso. Caso o(a) usuário(a) necessite realizar uma instalação mais leve (cerca de 5 GB são necessários para download e instalação), também é possível instalar a versão mínima, chamada de [Miniconda](https://conda.pydata.org/miniconda.html). Para realizar o download, basta seguir para a [página de instalação](https://docs.anaconda.com/anaconda/). Depois é só seguir os passos do instalador.
+
+A instalação básica do Anaconda vem com vários pacotes que iremos cobrir neste livro, incluindo NumPy, pandas e SciPy, para computação matemática e análise de dados; Matplotlib para visualização de dado; scikit-learn, para aprendizagem de máquina. Além disso, Anaconda conta também com a ferramenta Jupyter Notebooks, um ambiente computacional composto de células que podem conter código, texto (usando [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)), fórmulas e mídias, permitindo um rápido e interativo desenvolvimento exploratório de soluções em diversas linguagens, como Python, R, Julia, Haskell, etc. 
+
+Jupyter Notebooks são inclusive a base para a construção deste material, permitindo, por exemplo, que a célula de código abaixo seja totalmente interativa, caso o(a) leitor(a) esteja acessando a versão online do livro. Para modificar o código, basta clicar no ícone em formato de lápis que aparece à direita da célula quando o ponteiro do mouse é posicionado sobre ela. Pode-se também clicar no botão "Interagir", posicionado no topo da tela. Para testar a(s) modificação(ões), basta clicar em _Run_. O resultado da primeira execução pode demorar um pouco.
 
 
-
-
-
+```python
+print('Hello World!')
+```
 
 Uma outra vantagem de obter Python via Anaconda é a possibilidade de instalar e gerenciar diversos ambientes de desenvolvimento, com versões diferentes da linguagem e diferentes pacotes instalados, por exemplo uma versão para cada grande projeto desenvolvido, para evitar choques de dependências.
 
