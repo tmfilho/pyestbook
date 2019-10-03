@@ -21,9 +21,9 @@
   url: /intro
   not_numbered: true
 
-- title: Getting started
+- title: Primeiros Passos
   url: /guide/01_overview
-  not_numbered: true
+  # not_numbered: true
   expand_sections: true
   sections:
   - title: Create your book
