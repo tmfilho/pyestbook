@@ -26,8 +26,8 @@
   # not_numbered: true
   expand_sections: true
   sections:
-  - title: Create your book
-    url: /guide/02_create
+  - title: Ambientes de Trabalho
+    url: /guide/02_ides
   - title: Build HTML for each page of your book
     url: /guide/03_build
   - title: Build and publish your book online

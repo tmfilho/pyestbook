@@ -11,9 +11,9 @@ prev_page:
   title: |-
     Introdução
 next_page:
-  url: /guide/02_create.html
+  url: /guide/02_ides.html
   title: |-
-    Create your book
+    Ambientes de Trabalho
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <main class="jupyter-page">
@@ -23,115 +23,6 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Primeiros-Passos">Primeiros Passos<a class="anchor-link" href="#Primeiros-Passos"> </a></h1><p>Este Capítulo tem o objetivo de orientar o(a) leitor(a) sobre a instalação de Python e seus diversos ambientes de trabalho. Python já vem instalado de fábrica na maior parte das distribuições Linux, além de macOS e algumas instalações de Windows (a depender do fabricante). No entanto, essas instalações de Python não necessariamente fornecem a versão mais atualizada da linguagem. Assim, recomenda-se a instalação de Python por meio da distribuição <a href="https://docs.anaconda.com/anaconda/">Anaconda</a>.</p>
 <h2 id="Instalando-Python-com-Anaconda">Instalando Python com Anaconda<a class="anchor-link" href="#Instalando-Python-com-Anaconda"> </a></h2><p>Anaconda é um gerenciador de pacotes de ciência de dados para Python (e R). Gratuito e simples de instalar, ele permite instalar milhares de pacotes curados em versões estáveis. A sua instalação inclui mais de 200 pacotes automaticamente, com os outros podendo ser instalados conforme necessidade de uso. Caso o(a) usuário(a) necessite realizar uma instalação mais leve (cerca de 5 GB são necessários para download e instalação), também é possível instalar a versão mínima, chamada de <a href="https://conda.pydata.org/miniconda.html">Miniconda</a>. Para realizar o download, basta seguir para a <a href="https://docs.anaconda.com/anaconda/">página de instalação</a>. Depois é só seguir os passos do instalador.</p>
-<h2 id="Jupyter-notebooks">Jupyter notebooks<a class="anchor-link" href="#Jupyter-notebooks"> </a></h2><p>A instalação básica do Anaconda vem com vários pacotes que iremos cobrir neste livro, incluindo NumPy, pandas e SciPy, para computação matemática e análise de dados; Matplotlib para visualização de dado; scikit-learn, para aprendizagem de máquina. Além disso, Anaconda conta também com a ferramenta Jupyter Notebooks, um ambiente computacional Web, composto de células que podem conter código, texto (usando <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a>), fórmulas e mídias, permitindo um rápido e interativo desenvolvimento exploratório de soluções em diversas linguagens, como Python, R, Julia, Haskell, Javascript, etc (o termo Jupyter vem de Julia, Python e R).</p>
-<p>Jupyter notebooks são inclusive a base para a construção deste material, permitindo, por exemplo, que a célula de código abaixo seja totalmente interativa, caso o(a) leitor(a) esteja acessando a versão online do livro. Para modificar o código, basta clicar no ícone em formato de lápis que aparece à direita da célula quando o ponteiro do mouse é posicionado sobre ela. Pode-se também clicar no botão "Interagir", posicionado no topo da tela. Para testar a(s) modificação(ões), basta clicar em <em>run</em>. O resultado da primeira execução pode demorar um pouco.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello World!
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Usando-Jupyter-notebooks">Usando Jupyter notebooks<a class="anchor-link" href="#Usando-Jupyter-notebooks"> </a></h3><p>Devido a sua característica de interatividade e sua capacidade de misturar vários tipos diferentes de conteúdos, os notebooks são ideais para estudar e praticar Python. Portanto, é interessante aprender a usá-los antes mesmo de começar o estudo da linguagem de programação em si. Para começar, crie uma pasta para os seus notebooks, abra um terminal (ou prompt de comandos no Windows) e faça:</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> meusnotebooks
-jupyter notebooks
-</pre></div>
-<p>O segundo comando irá iniciar um servidor jupyter automaticamente e abrirá uma aba no seu navegador com o conteúdo mostrado na Figura 3.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-  <img src="../images/jupyter-home.png" alt="Tela inicial da ferramenta Jupyter notebooks"/>
-  <figcaption>Figura 3: Tela inicial da ferramenta Jupyter notebooks.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Esta tela lista os notebooks que forem salvos na pasta <em>meusnotebooks</em>. Além disso, é possível criar novos notebooks, bastando clicar no botão <em>New</em> e escolher a opção <em>Python 3</em> (ou a opção que corresponde à versão de Python que está sendo executada), o que irá abrir outra aba no seu navegador, como mostra a Figura 4.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-  <img src="../images/jupyter-notebook.png" alt="Jupyter notebook recém criado"/>
-  <figcaption>Figura 4: Jupyter notebook recém criado.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Para dar um nome ao seu notebook, basta clicar em <em>Untitled</em>, no topo da tela. O notebook já é criado com uma célula de código. Usando o menu <em>Insert</em>, é possível adicionar novas células acima (<em>above</em>) ou abaixo (<em>below</em>) da célula selecionada. No menu <em>Cell</em> é possível executar a célula selecionada, o que também pode ser feito por meio do botão <em>Run</em> ou apertando as teclas <em>shift + Enter</em>.</p>
-<p>O menu <em>Cell</em> também permite mudar o tipo da célula selecionada, incluindo células de <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a> e de código. Ao executar células Markdown, seu conteúdo é processado e transformado em texto formatado de acordo com as marcações usadas. Já as células de código podem ter saídas de texto, gráficos ou nenhuma saída. Variáveis inicializadas (mais sobre isso mais à frente) em células executadas podem ser lidas em células posicionadas mais abaixo no notebook.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Outros-ambientes-de-desenvolvimento">Outros ambientes de desenvolvimento<a class="anchor-link" href="#Outros-ambientes-de-desenvolvimento"> </a></h2><p>Há muitos outros ambientes de desenvolvimento disponíveis para Python.</p>
 
 </div>
 </div>
