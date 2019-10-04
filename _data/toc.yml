@@ -28,8 +28,8 @@
   sections:
   - title: Ambientes de Trabalho
     url: /guide/02_ides
-  - title: Build HTML for each page of your book
-    url: /guide/03_build
+  - title: Conceitos Fundamentais
+    url: /guide/03_fundamentals
   - title: Build and publish your book online
     url: /guide/04_publish
   - title: Frequently Asked Questions (FAQ)

@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Running each page when building your book</title>
-  <meta name="description" content="Executing pages of your book ✨experimental✨Sometimes you'd like to execute each page's content before building its HTML - thisensures that the outputs are up...">
+  <title>Conceitos Fundamentais</title>
+  <meta name="description" content="Conceitos Fundamentais if (x){    if (y)    {        f1()    }    f2()}if x:    if y:        f1()    f2() ">
 
-  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/features/executing.html">
+  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/guide/03_fundamentals.html">
   <link rel="alternate" type="application/rss+xml" title="Python para Estatísticos" href="https://tmfilho.github.io/pyestbook/feed.xml">
 
-  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/features/executing.html" />
+  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/guide/03_fundamentals.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Running each page when building your book" />
-<meta property="og:description" content="Executing pages of your book ✨experimental✨Sometimes you'd like to execute each page's content before building its HTML - thisensures that the outputs are up..." />
+<meta property="og:title"       content="Conceitos Fundamentais" />
+<meta property="og:description" content="Conceitos Fundamentais if (x){    if (y)    {        f1()    }    f2()}if x:    if y:        f1()    f2() " />
 <meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/features/executing.html",
-  "headline": "Running each page when building your book",
+  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/guide/03_fundamentals.html",
+  "headline": "Conceitos Fundamentais",
   "datePublished": "2019-10-03T22:58:44-03:00",
   "dateModified": "2019-10-03T22:58:44-03:00",
-  "description": "Executing pages of your book ✨experimental✨Sometimes you'd like to execute each page's content before building its HTML - thisensures that the outputs are up...",
+  "description": "Conceitos Fundamentais if (x){    if (y)    {        f1()    }    f2()}if x:    if y:        f1()    f2() ",
   "author": {
     "@type": "Person",
     "name": "Telmo de Menezes e Silva Filho"
@@ -496,7 +496,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/pyestbook/guide/03_fundamentals.html"
                 >
                   
@@ -673,7 +673,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
+                <a class="c-sidebar__entry "
                   href="/pyestbook/features/executing.html"
                 >
                   
@@ -1329,7 +1329,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><i class="fa fa-download"></i></button>
     <div class="download-buttons">
-        <a href="/pyestbook/content/features/executing.ipynb" download>
+        <a href="/pyestbook/content/guide/03_fundamentals.ipynb" download>
         <button id="interact-button-download" class="interact-button">ORIG</button>
         </a>
         
@@ -1363,17 +1363,25 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Executing-pages-of-your-book">Executing pages of your book<a class="anchor-link" href="#Executing-pages-of-your-book"> </a></h1><p>✨<strong>experimental</strong>✨</p>
-<p>Sometimes you'd like to execute each page's content before building its HTML - this
-ensures that the outputs are up-to-date and that they still run. Jupyter Book
-has the ability to execute any code in your content when you build each page's HTML although by default this is disabled for notebook and simple markdown documents.</p>
-<h2 id="Default-execution-behavior">Default execution behavior<a class="anchor-link" href="#Default-execution-behavior"> </a></h2><p>Jupyter Book will decide whether to execute your book's content based on the types of files used to store your content. By default, Jupyter Book assumes that :</p>
-<ul>
-<li>notebook outputs are already present in an <code>.ipynb</code> file, and consequently any <strong>Jupyter Notebooks</strong> (<code>.ipynb</code> documents), will <strong>not be executed</strong>; (see below for how to change this behavior);</li>
-<li><strong>simple raw markdown files</strong> (<code>.md</code>, no Jupytext header) will also <strong>not be executed</strong>: Jupyter Book assumes that any code blocks were meant for viewing only, not running;</li>
-<li>any <strong>Jupytext documents</strong> (currently, <code>.py</code>, <code>.md</code>, or <code>.Rmd</code> files that have jupytext YAML front-matter content) <strong>will be executed</strong> when the page's HTML is built.</li>
-</ul>
-<p>There are a few ways to alter this behavior in order to <strong>execute your book content at build time</strong> using several convenience functions and options which we'll cover below.</p>
+<h1 id="Conceitos-Fundamentais">Conceitos Fundamentais<a class="anchor-link" href="#Conceitos-Fundamentais"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="nf">if </span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">if </span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nf">f1</span><span class="p">()</span>
+    <span class="p">}</span>
+    <span class="nf">f2</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
 
 </div>
 </div>
@@ -1384,65 +1392,11 @@ has the ability to execute any code in your content when you build each page's H
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Run-a-single-page-in-place:-jupyter-book-run">Run a single page in-place: <strong><code>jupyter-book run</code></strong><a class="anchor-link" href="#Run-a-single-page-in-place:-jupyter-book-run"> </a></h2><p>Jupyter Book provides a convenience command-line function that executes
-one or more Jupyter Notebooks and stores the outputs inline within the same <code>ipynb</code> file. This provides a straightforward way of ensuring that source notebook files contain freshly computed cell outputs when you create your Jupyter Book.</p>
-<p>This <code>jupyter-book run</code> command-line function can be called with the path to a single
-book page like so:</p>
-
-<pre><code>jupyter-book run path/to/notebook.ipynb</code></pre>
-<p>It will simply execute the notebook and insert the code cell outputs in-place.</p>
-<p>You can also specify a folder with a <strong>collection</strong> of pages as the first argument:</p>
-
-<pre><code>jupyter-book run path/to/notebook_folder</code></pre>
-<p>In this case, all notebooks in this folder and sub-folders will be run in-place.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Run-all-your-book's-content-when-building:-jupyter-book-build---execute">Run all your book's content when building: <strong><code>jupyter-book build --execute</code></strong><a class="anchor-link" href="#Run-all-your-book's-content-when-building:-jupyter-book-build---execute"> </a></h2><p>If you'd like to run each page of your book (where possible) when building the
-HTML for your book pages <em>without</em> modifying the original source document, use the <code>--execute</code> flag when building each page's HTML:</p>
-<p><code>jupyter-book build --execute</code></p>
-<p>This will cause each <code>.ipynb</code> and jupytext-formatted page to be <strong>executed</strong> when it is built.
-In this case, the source content files will <strong>not</strong> be modified, but the code execution outputs will be placed in each page's HTML.</p>
-<p>Remember that the HTML for each page is cached until you update your content. The
-first time you run <code>jupyter-book build --execute</code>, each page of your book will be run
-and converted to HTML which may take some time. However, after the first run, only the pages that have been updated will be executed and converted to HTML, which should lead to subsequently faster build times as you update your content.</p>
-<p>Here's a quick summary of this behavior:</p>
-<table>
-<thead><tr>
-<th>Type</th>
-<th><code>jupyter run</code></th>
-<th><code>jupyter-book build</code></th>
-<th><code>jupyter-book build --execute</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Jupyter Notebooks (<code>.ipynb</code>)</td>
-<td>Code executes; fresh outputs inserted inline in source notebook</td>
-<td>Code doesn't execute; outstanding outputs displayed inline in HTML</td>
-<td>Code executes; fresh outputs displayed inline in HTML</td>
-</tr>
-<tr>
-<td>Raw markdown (<code>.md</code>)</td>
-<td>Code doesn't execute</td>
-<td>Code doesn't execute; generated code outputs not supported in raw markdown documents</td>
-<td>Code doesn't execute; generated code outputs not available for HTML</td>
-</tr>
-<tr>
-<td>Jupytext pages (<code>.md</code>, <code>.Rmd</code>, <code>.py</code>)</td>
-<td>Code outputs not supported in Jupytext documents</td>
-<td>Code executes; fresh outputs displayed inline in HTML</td>
-<td>Code executes; fresh outputs displayed inline in HTML</td>
-</tr>
-</tbody>
-</table>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">y</span><span class="p">:</span>
+        <span class="n">f1</span><span class="p">()</span>
+    <span class="n">f2</span><span class="p">()</span>
+</pre></div>
 
 </div>
 </div>
@@ -1451,10 +1405,6 @@ and converted to HTML which may take some time. However, after the first run, on
 
  
 
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {}, "version_major": 2, "version_minor": 0}
-</script>
-
 
 </main>
 
@@ -1462,15 +1412,15 @@ and converted to HTML which may take some time. However, after the first run, on
             <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/features/interact.html">
-      〈 <span class="u-margin-right-tiny"></span> Connecting content with JupyterHub...
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/guide/02_ides.html">
+      〈 <span class="u-margin-right-tiny"></span> Ambientes de Trabalho
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/features/interactive_cells.html">
-      BETA - Adding interactivity to you... <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/guide/04_publish.html">
+      Build and publish your book online <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
