@@ -83,29 +83,121 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Operadores-relacionais">Operadores relacionais<a class="anchor-link" href="#Operadores-relacionais"> </a></h3><p>There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x &lt; y &lt;= z is equivalent to x &lt; y and y &lt;= z, except that y is evaluated only once (but in both cases z is not evaluated at all when x &lt; y is found to be false).</p>
-<p>This table summarizes the comparison operations:</p>
-<p>Operation</p>
-<p>Meaning</p>
-<p>&lt;</p>
-<p>strictly less than</p>
-<p>&lt;=</p>
-<p>less than or equal</p>
-<p>&gt;</p>
-<p>strictly greater than</p>
-<blockquote><p>=</p>
-</blockquote>
-<p>greater than or equal</p>
-<p>==</p>
-<p>equal</p>
-<p>!=</p>
-<p>not equal</p>
-<p>is</p>
-<p>object identity</p>
-<p>is not</p>
-<p>negated object identity</p>
-<p>Objects of different types, except different numeric types, never compare equal. Furthermore, some types (for example, function objects) support only a degenerate notion of comparison where any two objects of that type are unequal. The &lt;, &lt;=, &gt; and &gt;= operators will raise a TypeError exception when comparing a complex number with another built-in numeric type, when the objects are of different types that cannot be compared, or in other cases where there is no defined ordering.</p>
+<h3 id="Operadores-relacionais">Operadores relacionais<a class="anchor-link" href="#Operadores-relacionais"> </a></h3><p>O(a) usuário(a) de Python tem oito operadores de comparação (operadores relacionais) a sua disposição, descritos na Tabela abaixo. Os dois últimos operadores são casos especiais de igualdade e diferença para objetos que investigaremos mais à frente no livro. Também veremos mais à frente que objetos de diferentes tipos (exceto números) nunca serão iguais</p>
+<table>
+<thead><tr>
+<th>Operador</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;, &gt;</td>
+<td>menor/maior que</td>
+</tr>
+<tr>
+<td>&lt;=, &gt;=</td>
+<td>menor/maior ou igual a</td>
+</tr>
+<tr>
+<td>==, !=</td>
+<td>igual/diferente</td>
+</tr>
+<tr>
+<td><strong>is</strong>, <strong>is</strong> <strong>not</strong></td>
+<td>igualdade/diferença de objetos</td>
+</tr>
+</tbody>
+</table>
+<p>Comparações podem ser encadeadas livremente, o que permite verificar, por exemplo, se o valor de uma variável <em>y</em> cai dentro do intervalo <em>(0, 3]</em> da seguinte maneira:</p>
 
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O código acima é equivalente ao código abaixo, que corresponde a uma forma mais comum em outras linguagens de programação. No entanto, no formato encadeado acima, a variável <em>y</em> é avaliada apenas uma vez, o que produz um código mais eficiente. Além disso, como essas comparações incluem um <strong>and</strong>, a segunda parte (<em>y &lt;= 3</em>) só será avaliada se a primeira (<em>0 &lt; y</em>) for <strong>True</strong>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Operadores-num&#233;ricos">Operadores num&#233;ricos<a class="anchor-link" href="#Operadores-num&#233;ricos"> </a></h2>
 </div>
 </div>
 </div>
