@@ -32,8 +32,8 @@
     url: /guide/03_ident
   - title: Operadores
     url: /guide/04_oper
-#   - title: Frequently Asked Questions (FAQ)
-#     url: /guide/05_faq
+  - title: Definindo Funções
+    url: /guide/05_func
 #   - title: How-to and advanced topics
 #     url: /guide/06_advanced
 

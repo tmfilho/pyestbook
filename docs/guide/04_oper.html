@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/guide/04_oper.html",
   "headline": "Operadores",
-  "datePublished": "2019-10-11T19:31:45-03:00",
-  "dateModified": "2019-10-11T19:31:45-03:00",
+  "datePublished": "2019-10-11T21:56:53-03:00",
+  "dateModified": "2019-10-11T21:56:53-03:00",
   "description": "Operadores Operadores l&#243;gicos Python oferece três operadores lógicos: or (ou), and (e) e not (não). Os primeiros dois operadores (or e and) recebem dois...",
   "author": {
     "@type": "Person",
@@ -530,6 +530,25 @@ initFunction(initPrint)
               </li>
               
             
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/pyestbook/guide/05_func.html"
+                >
+                  
+                    1.4
+                  
+                  Definindo Funções
+                </a>
+
+                
+                
+
+              </li>
+              
+            
           </ul>
         
       </li>
@@ -600,7 +619,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Operadores-l&#243;gicos">Operadores l&#243;gicos<a class="anchor-link" href="#Operadores-l&#243;gicos"> </a></h3><p>Python oferece três operadores lógicos: <strong>or</strong> (ou), <strong>and</strong> (e) e <strong>not</strong> (não). Os primeiros dois operadores (<strong>or</strong> e <strong>and</strong>) recebem dois operandos e retornam um valor binário <strong>True</strong> (Verdadeiro) ou <strong>False</strong> (Falso). O terceiro operador (<strong>not</strong>) recebe apenas um operando e retorna o valor binário oposto. A tabela verdade abaixo apresenta os valores retornados pelos operadores para diferentes valores dos operandos.</p>
+<h2 id="Operadores-l&#243;gicos">Operadores l&#243;gicos<a class="anchor-link" href="#Operadores-l&#243;gicos"> </a></h2><p>Python oferece três operadores lógicos: <strong>or</strong> (ou), <strong>and</strong> (e) e <strong>not</strong> (não). Os primeiros dois operadores (<strong>or</strong> e <strong>and</strong>) recebem dois operandos e retornam um valor lógico <strong>True</strong> (Verdadeiro) ou <strong>False</strong> (Falso). O terceiro operador (<strong>not</strong>) recebe apenas um operando e retorna o valor lógico oposto. A tabela verdade abaixo apresenta os valores retornados pelos operadores para diferentes valores dos operandos.</p>
 <table>
 <thead><tr>
 <th>x</th>
@@ -652,7 +671,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Operadores-relacionais">Operadores relacionais<a class="anchor-link" href="#Operadores-relacionais"> </a></h3><p>O(a) usuário(a) de Python tem oito operadores de comparação (operadores relacionais) a sua disposição, descritos na Tabela abaixo. Os dois últimos operadores são casos especiais de igualdade e diferença para objetos que investigaremos mais à frente no livro. Também veremos mais à frente que objetos de diferentes tipos (exceto números) nunca serão iguais</p>
+<h2 id="Operadores-relacionais">Operadores relacionais<a class="anchor-link" href="#Operadores-relacionais"> </a></h2><p>O(a) usuário(a) de Python tem oito operadores de comparação (operadores relacionais) a sua disposição, descritos na Tabela abaixo. Os dois últimos operadores são casos especiais de igualdade e diferença para objetos que investigaremos mais à frente no livro. Também veremos mais à frente que objetos de diferentes tipos (exceto números) nunca serão iguais</p>
 <table>
 <thead><tr>
 <th>Operador</th>
@@ -694,7 +713,7 @@ initFunction(initPrint)
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="mi">0</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">3</span>
 </pre></div>
 
     </div>
@@ -707,10 +726,12 @@ initFunction(initPrint)
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>True
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
 </div>
+
 </div>
 </div>
 </div>
@@ -737,7 +758,7 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">3</span>
 </pre></div>
 
     </div>
@@ -750,92 +771,14 @@ initFunction(initPrint)
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>True
-</pre>
-</div>
-</div>
-</div>
-</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
 </div>
 
 </div>
 </div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Operadores-num&#233;ricos">Operadores num&#233;ricos<a class="anchor-link" href="#Operadores-num&#233;ricos"> </a></h2>
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Prioridade-de-operadores">Prioridade de operadores<a class="anchor-link" href="#Prioridade-de-operadores"> </a></h3><p>or                        Boolean OR
-and                       Boolean AND
-not x                     Boolean NOT
-in, not in                Membership tests
-is, is not                Identity tests
-&lt;, &lt;=, &gt;, &gt;=, &lt;&gt;, !=, ==  Comparisons
-|                         Bitwise OR
-^                         Bitwise XOR
-&amp;                         Bitwise AND
-&lt;&lt;, &gt;&gt;                    Shifts
-+, -                      Addition and subtraction
-*, /, %                   Multiplication, division, remainder
-+x, -x                    Positive, negative
-~x                        Bitwise not
-**                        Exponentiation</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Blocos-e-indenta&#231;&#227;o">Blocos e indenta&#231;&#227;o<a class="anchor-link" href="#Blocos-e-indenta&#231;&#227;o"> </a></h2><p>A principal diferença de Python para outras linguagens, como R, C e Java, é a representação de blocos de código usando níveis de indentação, dispensando o uso de chaves para marcar o início e o fim dos blocos. Essa diferença pode ser vista nos blocos de código abaixo, representando a mesma função para calcular a média aritmética de dois valores. O primeiro código está escrito em R e o segundo contém exatamente a mesma função escrita em Python.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="n">mean</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">result</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span><span class="p">)</span> <span class="o">/</span> <span class="m">2</span>
-  <span class="nf">return</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-    <span class="k">return</span> <span class="n">result</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -846,15 +789,140 @@ is, is not                Identity tests
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>O uso de indentação para indicar estrutura tem vários benefícios, incluindo:</p>
-<ol>
-<li>Reduz a necessidade de padrões de código extra: a indentação sempre será de 4 espaços e a IDE usada para escrever o código cuidará de manter essa consistência;</li>
-<li>Códigos de diferentes fontes são forçados a seguir o mesmo estilo de indentação;</li>
-<li>Reduz trabalho, pois não é necessário se preocupar com o padrão das chaves <strong>e</strong> da indentação;</li>
-<li>Mantém um código mais limpo;</li>
-<li>O código só executará se a indentação estiver correta, portanto, se o código parece correto, ele está correto;</li>
-<li>Não há como confundir escopos de blocos de código aninhados.</li>
-</ol>
+<h2 id="Operadores-aritm&#233;ticos">Operadores aritm&#233;ticos<a class="anchor-link" href="#Operadores-aritm&#233;ticos"> </a></h2><p>Python suporta diferentes tipos de números, mas os principais são os inteiros (<strong>int</strong>) e pontos flutuantes (<strong>float</strong>). Além disso, valores lógicos (<strong>bool</strong>) são um subtipo dos inteiros, com <strong>True</strong> equivalendo a <em>1</em> e <strong>False</strong> a <em>0</em>. Tipos númericos diferentes podem ser usados em uma mesma operação aritmética, com a resposta pertencendo ao tipo mais geral. Os operadores aritméticos incluem:</p>
+<table>
+<thead><tr>
+<th>Operador</th>
+<th>Exemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x + y</td>
+<td>1 + 2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>x + y</td>
+<td>True + 2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>x - y</td>
+<td>2 - 1.2</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>x * y</td>
+<td>2 * 1e-1</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>x / y</td>
+<td>1 / 2</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>x // y</td>
+<td>10 // 6</td>
+<td>1</td>
+</tr>
+<tr>
+<td>x // y</td>
+<td>7 // 2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>x % y</td>
+<td>7 % 2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>x % y</td>
+<td>6 % 2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>x ** y</td>
+<td>6 **2</td>
+<td>36</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>-6</td>
+<td>-6</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Prioridade-de-operadores">Prioridade de operadores<a class="anchor-link" href="#Prioridade-de-operadores"> </a></h2><p>Assim como na matemática, operadores seguem uma ordem de precedência. Naturalmente, é possível realizar operações na ordem desejada com o uso de parênteses. A tabela abaixo apresenta os operadores em ordem crescente de precedência, com operadores na mesma linha recebendo a mesma prioridade. Alguns desses operadores ainda serão vistos neste material.</p>
+<table>
+<thead><tr>
+<th>Operador</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>lambda</strong></td>
+<td>Expressões lambda</td>
+</tr>
+<tr>
+<td><strong>if - else</strong></td>
+<td>Expressões condicionais</td>
+</tr>
+<tr>
+<td><strong>or</strong></td>
+<td>OU lógico</td>
+</tr>
+<tr>
+<td><strong>and</strong></td>
+<td>E lógico</td>
+</tr>
+<tr>
+<td><strong>not</strong></td>
+<td>NÃO lógico</td>
+</tr>
+<tr>
+<td><strong>in</strong>, <strong>not in</strong>, <strong>is</strong>, <strong>is not</strong>, &lt;, &lt;=, &gt;, &gt;=, !=, ==</td>
+<td>Comparações/pertencimento/identidade</td>
+</tr>
+<tr>
+<td>+, -</td>
+<td>Adição/subtração</td>
+</tr>
+<tr>
+<td>*, @, /, //, %</td>
+<td>Multiplicações/divisões</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>Negativo</td>
+</tr>
+<tr>
+<td>**</td>
+<td>Exponenciação</td>
+</tr>
+<tr>
+<td>x[indice]</td>
+<td>Indexação de sequências</td>
+</tr>
+<tr>
+<td>(expressao)</td>
+<td>Expressões entre parênteses</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -877,8 +945,8 @@ is, is not                Identity tests
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="">
-       <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/guide/05_func.html">
+      Definindo Funções <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
