@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/guide/05_cole.html",
   "headline": "Coleções",
-  "datePublished": "2019-10-12T14:03:34-03:00",
-  "dateModified": "2019-10-12T14:03:34-03:00",
+  "datePublished": "2019-10-12T17:21:15-03:00",
+  "dateModified": "2019-10-12T17:21:15-03:00",
   "description": "Cole&#231;&#245;es Coleções são estruturas que permitem armazenar múltiplos valores, que podem ser do mesmo tipo ou não. Os principais tipos de coleções são:...",
   "author": {
     "@type": "Person",
@@ -1724,10 +1724,10 @@ initFunction(initPrint)
 </pre></div>
 </li>
 <li>Três aspas simples ou duplas:<div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; </span>
-<span class="sd">         strings neste formato</span>
-<span class="sd">         podem ocupar múltiplas linhas e</span>
-<span class="sd">         incluem todos os espaços em branco    </span>
-<span class="sd">     &#39;&#39;&#39;</span>
+<span class="sd">strings neste formato</span>
+<span class="sd">podem ocupar múltiplas linhas e</span>
+<span class="sd">incluem todos os espaços em branco    </span>
+<span class="sd">&#39;&#39;&#39;</span>
 </pre></div>
 </li>
 </ol>
@@ -1820,7 +1820,165 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Concatenando-strings">Concatenando <em>strings</em><a class="anchor-link" href="#Concatenando-strings"> </a></h3><p><em>Strings</em> podem ser concatenadas usando o operador de adição ou colocando apenas um espaço branco entre elas.</p>
+<p>Assim como as tuplas, as <em>strings</em> suportam todas as operações de sobre coleções que não modificam seus valores. Além dessas operações comuns a todos os tipos de coleções, as <em>strings</em> também implementam várias operações que facilitam o processamento de texto. Aqui, listaremos algumas dessas operações. Mais opções estão disponíveis na <a href="https://docs.python.org/3.7/library/stdtypes.html#string-methods">documentação de Python</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Verificando-a-presen&#231;a-de-caracteres">Verificando a presen&#231;a de caracteres<a class="anchor-link" href="#Verificando-a-presen&#231;a-de-caracteres"> </a></h3><p>Diferente das outras coleções, o operador <strong>in</strong> e sua negação <strong>not in</strong> funcionam não só para checar se um caractere pertence à <em>string</em>, mas também pode checar se uma <em>string</em> menor pertence ou não a outra, ou seja se uma <em>string</em> é <em>substring</em> da outra ou não. Note que essas operações diferenciam minúsculas e maiúsculas.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Estatística&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;b&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;Estatística&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Est&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Estatística&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;est&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Estatística&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Concatenando-strings">Concatenando <em>strings</em><a class="anchor-link" href="#Concatenando-strings"> </a></h3><p><em>Strings</em> podem ser concatenadas usando o operador de adição ou colocando apenas um espaço branco entre elas. Além disso, é possível usar a operação <strong>join</strong> para concatenar <em>strings</em>, intercalando-as com a <em>string</em> sobre a qual faz-se a operação.</p>
 
 </div>
 </div>
@@ -1885,6 +2043,696 @@ initFunction(initPrint)
 
 <div class="output_text output_subarea output_execute_result">
 <pre>&#39;ciência de dados&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;pêra&#39;</span><span class="p">,</span> <span class="s1">&#39;uva&#39;</span><span class="p">,</span> <span class="s1">&#39;maçã&#39;</span><span class="p">,</span> <span class="s1">&#39;salada mista&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;pêra, uva, maçã, salada mista&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Formatando-strings">Formatando <em>strings</em><a class="anchor-link" href="#Formatando-strings"> </a></h3><p>Uma das operações mais frequentes sobre <em>strings</em> é a formatação, que permite inserir certos valores em posições pré-definidas de uma <em>string</em>. Existem duas formas principais de fomatar <em>strings</em> em Python. A primeira e mais flexível é a operação <strong>format</strong>. A segunda, que não cobriremos neste material, é baseada no comando <strong>printf</strong> de <em>C</em>. Para começar, considere a seguinte <em>string</em>, que poderia ser usada para descrever os parâmetros de uma distribuição Normal:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Média: 1, Variância: 4&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Suponha que, em uma aplicação, fosse necessário listar os parâmetros de várias Normais diferentes. As únicas partes que precisariam mudar na <em>string</em> acima seriam os valores associados aos parâmetros. Assim, seria interessante definir a <em>string</em> <em>s</em> como um modelo, com lacunas que serão preenchidas plos valores de média e variância. Para isso, podemos definir <em>s</em> como:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Média: </span><span class="si">{0}</span><span class="s1">, Variância: </span><span class="si">{1}</span><span class="s1">&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Uma vez definida a <em>string</em> modelo, basta aplicar a operação <strong>format</strong>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Média: 2, Variância: 9&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Em detalhes, as chaves delimitam campos que serão preenchidos. Os números <em>0</em> e <em>1</em> dentro das chaves indicam a ordem de preenchimento dos valores. Se tivéssemos definido o campo relacionado à média com <em>{1}</em> e o da variância com <em>{0}</em>, a ordem de preenchimento teria sido trocada:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Média: </span><span class="si">{1}</span><span class="s1">, Variância: </span><span class="si">{0}</span><span class="s1">&#39;</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Média: 9, Variância: 2&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Também é possível marcar os valores que serão preenchidos por meio de palavras-chave, por exemplo:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Média: </span><span class="si">{mean}</span><span class="s1">, Variância: </span><span class="si">{var:.2f}</span><span class="s1">&#39;</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">2.576</span><span class="p">,</span> <span class="n">var</span><span class="o">=</span><span class="mf">9.375</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Média: 2.576, Variância: 9.38&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note que no caso da variância, o valor foi arredondado para duas casas decimais. Há muitas opções de formatação diferentes, incluindo a limitação do número de casas decimais, formatação específica para datas, porcentagens, opções estéticas, etc. A <a href="https://docs.python.org/3.7/library/string.html#formatstrings">documentação de Python</a> especifica todas as opções.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Outras-opera&#231;&#245;es-com-strings">Outras opera&#231;&#245;es com <em>strings</em><a class="anchor-link" href="#Outras-opera&#231;&#245;es-com-strings"> </a></h3><p>Outras operações comuns com <em>strings</em> incluem <strong>split</strong>, <strong>replace</strong>, <strong>find</strong>, <strong>lower</strong>, <strong>upper</strong>, <strong>title</strong>. A operação <strong>split</strong> divide a <em>string</em> em uma lista contendo <em>substrings</em> delimitadas pela <em>string</em> <em>sep</em>. Caso <em>sep</em> não seja informada, espaços em branco consecutivos serão tratados como delimitadores.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Média: 1, Variância: 4&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;Média: 1&#39;, &#39;Variância: 4&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Média: 1,     Variância: 4&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;Média:&#39;, &#39;1,&#39;, &#39;Variância:&#39;, &#39;4&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As operações podem ser encadeadas, sendo executadas em ordem. Por exemplo, o código abaixo formata uma <em>string</em> e depois a separa em <em>substrings</em> delimitadas por uma vírgula seguida de um espaço em branco.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Média: </span><span class="si">{mean}</span><span class="s1">, Variância: </span><span class="si">{var:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">mean</span><span class="o">=</span><span class="mf">2.576</span><span class="p">,</span> <span class="n">var</span><span class="o">=</span><span class="mf">9.375</span>
+<span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;, &#39;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;Média: 2.576&#39;, &#39;Variância: 9.38&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A operação <strong>replace</strong> substitui todas as ocorrências de uma <em>substring</em> por uma nova <em>substring</em>. Opcionalmente, pode-se informar quantas substituições deseja-se fazer.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Média: 1, Variância: 4&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Média=1, Variância=4&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Média: 1, Variância: 4&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Média=1, Variância: 4&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A operação <strong>find</strong> permite encontrar o índice da primeira ocorrência de uma <em>substring</em> em uma <em>string</em> ou em uma fatia de uma <em>string</em>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Estatística&#39;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Estatística&#39;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note que o código acima não retorna o mesmo resultado que o código abaixo:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Estatística&#39;</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Isso acontece porque o primeiro código busca a <em>substring</em> na <em>string</em> original, porém desconsidera qualquer ocorrência fora da fatia especificada. Por outro lado, o segundo código primeiro extrai a fatia entre os índices [<em>3</em>, <em>7</em>), gerando uma nova <em>string</em>, e só depois aplica a operação <strong>find</strong>.</p>
+<p>As operações <strong>lower</strong>, <strong>upper</strong>, <strong>title</strong> servem para modificar a caixa dos caracteres de uma <em>string</em>.</p>
+<ol>
+<li><strong>lower</strong>: coloca todos os caracteres em caixa baixa (minúsculas)</li>
+<li><strong>upper</strong>: coloca todos os caracteres em caixa alta (maiúsculas)</li>
+<li><strong>title</strong>: coloca a <em>string</em> em formato de título, i.e. as primeiras letras das palavras ficam maiúsculas e as demais minúsculas (note que o algoritmo faz essa transformação em todas as palavras da <em>string</em>)</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;CIÊNCIA DE DADOS&#39;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;ciência de dados&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;ciência de dados&#39;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;CIÊNCIA DE DADOS&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;ciência de dados&#39;</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Ciência De Dados&#39;</pre>
 </div>
 
 </div>
