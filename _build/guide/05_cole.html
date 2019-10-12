@@ -36,8 +36,10 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <ol>
 <li>Para criar uma lista vazia: [] ou <strong>list</strong>()</li>
 <li>Para criar uma lista com valores: [1, 5, 2]</li>
-<li>A partir de outra coleção: <strong>list(colecao)</strong>
-*. Esta operação irá construir uma lista cujos itens são os mesmos e na mesma ordem que os itens da coleção original</li>
+<li>A partir de outra coleção: <strong>list(colecao)</strong><ul>
+<li>Esta operação irá construir uma lista cujos itens são os mesmos e na mesma ordem que os itens da coleção original</li>
+</ul>
+</li>
 </ol>
 <h3 id="Verificando-a-presen&#231;a-de-um-item">Verificando a presen&#231;a de um item<a class="anchor-link" href="#Verificando-a-presen&#231;a-de-um-item"> </a></h3><p>Para verificar se um valor <em>x</em> pertence à lista ou vetor <em>s</em>, usa-se o operador <strong>in</strong>, que equivale à notação matemática $x \in \vec{s}$, como mostra o código abaixo.</p>
 
@@ -566,7 +568,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Modificando-elementos">Modificando elementos<a class="anchor-link" href="#Modificando-elementos"> </a></h3><p>Como mencionado acima, listas são coleções mutáveis, portanto seus valores podem ser modificados ou removidos e novos valores podem ser adicionados. Para modificar um valor da lista, basta atribuir um novo valor a sua posição:</p>
+<h3 id="Modificando-a-lista">Modificando a lista<a class="anchor-link" href="#Modificando-a-lista"> </a></h3><p>Como mencionado acima, listas são coleções mutáveis, portanto seus valores podem ser modificados ou removidos e novos valores podem ser adicionados. Para modificar um valor da lista, basta atribuir um novo valor a sua posição:</p>
 
 </div>
 </div>
@@ -693,6 +695,125 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="output_text output_subarea output_execute_result">
 <pre>[4, 2, 2, 9, 1, 12]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para adicionar novos elementos pode-se usar as operações <strong>append</strong> (adiciona elemento ao final da lista), <strong>insert</strong> (adiciona elemento na posição desejada) e <strong>extend</strong> (adiciona elementos de outra lista ao final da lista).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">s</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[4, 2, 2, 9, 1, 12, 3]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">s</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[4, 5, 2, 2, 9, 1, 12, 3]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+
+<span class="n">s</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[4, 5, 2, 2, 9, 1, 12, 3, 6, 7]</pre>
 </div>
 
 </div>
