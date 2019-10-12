@@ -35,7 +35,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <h2 id="Listas">Listas<a class="anchor-link" href="#Listas"> </a></h2><p>As listas são coleções mutáveis normalmente (mas não obrigatoriamente) usadas para armazenar itens homogêneos. Uma lista pode ser criada de várias formas:</p>
 <ol>
 <li>Para criar uma lista vazia: [] ou <strong>list</strong>()</li>
-<li>Para criar uma lista com valores: [1, 5, 2]</li>
+<li>Para criar uma lista com valores: [<em>1</em>, <em>5</em>, <em>2</em>]</li>
 <li>A partir de outra coleção: <strong>list(colecao)</strong><ul>
 <li>Esta operação irá construir uma lista cujos itens são os mesmos e na mesma ordem que os itens da coleção original</li>
 </ul>
@@ -55,9 +55,9 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="mi">2</span> <span class="ow">in</span> <span class="n">x</span>
+<span class="mi">2</span> <span class="ow">in</span> <span class="n">s</span>
 </pre></div>
 
     </div>
@@ -102,7 +102,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">3</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">x</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">3</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span>
 </pre></div>
 
     </div>
@@ -568,7 +568,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Modificando-a-lista">Modificando a lista<a class="anchor-link" href="#Modificando-a-lista"> </a></h3><p>Como mencionado acima, listas são coleções mutáveis, portanto seus valores podem ser modificados ou removidos e novos valores podem ser adicionados. Para modificar um valor da lista, basta atribuir um novo valor a sua posição:</p>
+<h3 id="Modificando-a-lista">Modificando a lista<a class="anchor-link" href="#Modificando-a-lista"> </a></h3><p>Como mencionado acima, listas são coleções mutáveis, portanto seus valores podem ser modificados ou removidos e novos valores podem ser adicionados. As operações discutidas nesta Seção são implementadas apenas pelas coleções mutáveis. Para modificar um valor da lista, basta atribuir um novo valor a sua posição:</p>
 
 </div>
 </div>
@@ -821,6 +821,27 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </div>
 </div>
 
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tuplas">Tuplas<a class="anchor-link" href="#Tuplas"> </a></h2><p>Tuplas são coleções imutáveis, tipicamente usadas para armazenar dados heterogêneos. Essas estruturas são bastante usadas para permitir o retorno de múltiplos valores em funções. Uma tupla pode ser criada de várias formas:</p>
+<ol>
+<li>Para criar uma tupla vazia: () ou <strong>tuple</strong>()</li>
+<li>Para criar uma tupla com valores: <em>1</em>, 'a', <em>2</em> ou (<em>1</em>, 'a', <em>2</em>)</li>
+<li>A partir de outra coleção: <strong>tuple(colecao)</strong><ul>
+<li>Esta operação irá construir uma tupla cujos itens são os mesmos e na mesma ordem que os itens da coleção original</li>
+</ul>
+</li>
+</ol>
+<p>Como se pode ver no item 2 acima, parênteses na definição da tupla com valores são opcionais, exceto para evitar situações de ambiguidade, e.g. <strong>func</strong>(<em>1</em>, <em>2</em>, <em>3</em>), ou seja uma chamada de função com três parâmetros, é diferente de <strong>func</strong>((<em>1</em>, <em>2</em>, <em>3</em>)), i.e. uma chamada de função com apenas com parâmetro do tipo tupla.</p>
+<p>As tuplas implementam todas as operações de coleções que não modificam valores, incluindo <strong>in</strong>, <strong>not in</strong>, concatenação, <strong>len</strong> e acesso de elementos por fatias de índices.</p>
+
+</div>
+</div>
 </div>
 </div>
 
