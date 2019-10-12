@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/guide/05_cole.html",
   "headline": "Coleções",
-  "datePublished": "2019-10-12T18:38:50-03:00",
-  "dateModified": "2019-10-12T18:38:50-03:00",
+  "datePublished": "2019-10-12T19:16:04-03:00",
+  "dateModified": "2019-10-12T19:16:04-03:00",
   "description": "Cole&#231;&#245;es Coleções são estruturas que permitem armazenar múltiplos valores, que podem ser do mesmo tipo ou não. Os principais tipos de coleções são:...",
   "author": {
     "@type": "Person",
@@ -2749,7 +2749,7 @@ initFunction(initPrint)
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Conjuntos">Conjuntos<a class="anchor-link" href="#Conjuntos"> </a></h2><p>Coleções do tipo conjunto (<strong>set</strong>) são exatamente o que se espera: uma coleção não-ordenada de elementos únicos que suporta operações matemáticas em conjuntos, como união, interseção, diferença, etc.</p>
 <ol>
-<li>Para criar um conjunto vazio: {} ou <strong>set</strong>()</li>
+<li>Para criar um conjunto vazio: <strong>set</strong>()</li>
 <li>Para criar um conjunto com valores: {<em>1</em>, <em>5</em>, <em>2</em>}</li>
 <li>A partir de outra coleção: <strong>set(colecao)</strong><ul>
 <li>Esta operação irá construir um conjunto composto pelos valores únicos da coleção original, característica que pode ser usada para remover duplicatas em uma coleção</li>
@@ -3487,6 +3487,603 @@ initFunction(initPrint)
 
 <div class="output_text output_subarea output_execute_result">
 <pre>{1, 4}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dicion&#225;rios">Dicion&#225;rios<a class="anchor-link" href="#Dicion&#225;rios"> </a></h2><p>O último tipo de coleção que cobriremos neste livro são os dicionários (<strong>dict</strong>), coleções mutáveis que permitem realizar mapeamento de valores usando chaves únicas, que podem ser de vários tipos, mas são comumente <em>strings</em> ou números. Dicionários com chaves do tipo <em>string</em> são muito parecidos e facilmente convertidos de/para objetos do tipo <em>JSON</em>, muito utilizados em arquivos de configuração e para comunicação entre serviços Web. Um dicionário pode ser criado de várias formas, incluindo, mas não limitado a:</p>
+<ol>
+<li>Para criar um dicionário vazio: {} ou <strong>dict</strong>()</li>
+<li>Para criar um dicionário com valores: <ol>
+<li>{'one': <em>1</em>, 'two': <em>2</em>, 'three': <em>3</em>}</li>
+<li><strong>dict</strong>(one=<em>1</em>, two=<em>2</em>, three=<em>3</em>)</li>
+<li><strong>dict</strong>([(one, <em>1</em>), (two, <em>2</em>), (three, <em>3</em>)])</li>
+</ol>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Opera&#231;&#245;es-em-dicion&#225;rios">Opera&#231;&#245;es em dicion&#225;rios<a class="anchor-link" href="#Opera&#231;&#245;es-em-dicion&#225;rios"> </a></h3><p>Valores armazendos em dicionários são inseridos, acessados e removidos pelas suas chaves.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+
+<span class="n">d</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;one&#39;: 1, &#39;two&#39;: 2, &#39;three&#39;: 3}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">d</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;one&#39;: 1, &#39;two&#39;: 2, &#39;three&#39;: 3, &#39;four&#39;: 4}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;two&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">d</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;one&#39;: 1, &#39;two&#39;: 2, &#39;three&#39;: 3, &#39;four&#39;: 5}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">]</span>
+
+<span class="n">d</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;one&#39;: 1, &#39;two&#39;: 2, &#39;three&#39;: 3}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A operação <strong>del</strong> retorna erro do tipo <strong>KeyError</strong> se a chave não existir no dicionário.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-162-6e2c6fb38be5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">del</span> d<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;four&#39;</span><span class="ansi-blue-fg">]</span>
+
+<span class="ansi-red-fg">KeyError</span>: &#39;four&#39;</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para evitar esse erro, é importante checar se a chave existe dentro do dicionário. Como sempre, para checar pertinência, pode-se usar os operadores <strong>in</strong> e <strong>not in</strong>, que nesse caso operam sobre as chaves do dicionário.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;one&#39;</span> <span class="ow">in</span> <span class="n">d</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;four&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O erro <strong>KeyError</strong> também acontece ao tentar acessar uma chave que não existe no dicionário. Para evitar esse erro, pode-se usar a operação <strong>get</strong>, que retorna um valor padrão, caso a chave não esteja disponível. Caso o valor padrão não seja informado, <strong>get</strong> retorna o valor <strong>None</strong>, também conhecido como <strong>null</strong> em outras linguagens de programação.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-169-99f82dfe25e5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>d<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;four&#39;</span><span class="ansi-blue-fg">]</span>
+
+<span class="ansi-red-fg">KeyError</span>: &#39;four&#39;</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;four&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>None
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A operação <strong>keys</strong> retorna todas as chaves de um dicionário em um tipo de coleção (<strong>dict_keys</strong>), que nada mais é do que uma lista que atualiza automaticamente se as chaves do dicionário forem modificadas. No código abaixo, as chaves do dicionário serão obtidas e depois um novo mapeamento vai ser adicionado ao dicionário, modificando a lista de chaves obtida anteriormente.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;five&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">keys</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_keys([&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;five&#39;])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A operação <strong>values</strong> é similar à operação <strong>keys</strong>, mas retorna os valores dos mapeamentos do dicionário em um tipo de coleção (<strong>dict_values</strong>) que também se mantém atualizado quando o dicionário é modificado. No código abaixo, os valores do dicionário serão obtidos e depois um novo mapeamento vai ser adicionado, modificando a lista de valores obtida anteriormente.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;six&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">values</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_values([1, 2, 3, 5, 6])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Por fim, a operação <strong>items</strong> retorna os mapeamentos do dicionário em forma de tuplas em um tipo de coleção (<strong>dict_items</strong>) que também se mantém atualizado quando o dicionário é modificado. No código abaixo, os itens do dicionário serão obtidos e depois um novo mapeamento vai ser adicionado, modificando a lista de itens obtida anteriormente.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">items</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;seven&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="n">items</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_items([(&#39;one&#39;, 1), (&#39;two&#39;, 2), (&#39;three&#39;, 3), (&#39;five&#39;, 5), (&#39;six&#39;, 6), (&#39;seven&#39;, 7)])</pre>
 </div>
 
 </div>
