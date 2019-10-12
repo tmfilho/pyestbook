@@ -32,10 +32,12 @@
     url: /guide/03_ident
   - title: Operadores
     url: /guide/04_oper
-  - title: Definindo Funções
-    url: /guide/05_func
-#   - title: How-to and advanced topics
-#     url: /guide/06_advanced
+  - title: Coleções
+    url: /guide/05_cole
+  - title: Condições e Laços
+    url: /guide/06_cond
+  - title: Funções
+    url: /guide/07_func
 
 # - title: Features and customization
 #   url: /features/features

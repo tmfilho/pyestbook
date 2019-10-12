@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Markdown files</title>
-  <meta name="description" content="Creating book content The two kinds of files that contain course content are:Jupyter NotebooksMarkdown filesEach are contained in the content/ folder and ref...">
+  <title>Coleções</title>
+  <meta name="description" content="Cole&#231;&#245;es Coleções são estruturas que permitem armazenar múltiplos valores, que podem ser do mesmo tipo ou não. Os principais tipos de coleções são:...">
 
-  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/features/markdown.html">
+  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/guide/05_cole.html">
   <link rel="alternate" type="application/rss+xml" title="Python para Estatísticos" href="https://tmfilho.github.io/pyestbook/feed.xml">
 
-  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/features/markdown.html" />
+  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/guide/05_cole.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Markdown files" />
-<meta property="og:description" content="Creating book content The two kinds of files that contain course content are:Jupyter NotebooksMarkdown filesEach are contained in the content/ folder and ref..." />
+<meta property="og:title"       content="Coleções" />
+<meta property="og:description" content="Cole&#231;&#245;es Coleções são estruturas que permitem armazenar múltiplos valores, que podem ser do mesmo tipo ou não. Os principais tipos de coleções são:..." />
 <meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/features/markdown.html",
-  "headline": "Markdown files",
+  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/guide/05_cole.html",
+  "headline": "Coleções",
   "datePublished": "2019-10-12T00:40:18-03:00",
   "dateModified": "2019-10-12T00:40:18-03:00",
-  "description": "Creating book content The two kinds of files that contain course content are:Jupyter NotebooksMarkdown filesEach are contained in the content/ folder and ref...",
+  "description": "Cole&#231;&#245;es Coleções são estruturas que permitem armazenar múltiplos valores, que podem ser do mesmo tipo ou não. Os principais tipos de coleções são:...",
   "author": {
     "@type": "Person",
     "name": "Telmo de Menezes e Silva Filho"
@@ -534,7 +534,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/pyestbook/guide/05_cole.html"
                 >
                   
@@ -613,7 +613,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><i class="fa fa-download"></i></button>
     <div class="download-buttons">
-        <a href="/pyestbook/content/features/markdown.md" download>
+        <a href="/pyestbook/content/guide/05_cole.ipynb" download>
         <button id="interact-button-download" class="interact-button">ORIG</button>
         </a>
         
@@ -647,14 +647,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Creating-book-content">Creating book content<a class="anchor-link" href="#Creating-book-content"> </a></h1><p>The two kinds of files that contain course content are:</p>
-<ul>
-<li>Jupyter Notebooks</li>
-<li>Markdown files</li>
-</ul>
-<p>Each are contained in the <code>content/</code> folder and referenced from <code>_data/toc.yml</code>.</p>
-<p>If the file is markdown, it will be copied over with front-matter YAML added so
-that Jekyll can parse it.</p>
+<h1 id="Cole&#231;&#245;es">Cole&#231;&#245;es<a class="anchor-link" href="#Cole&#231;&#245;es"> </a></h1><p>Coleções são estruturas que permitem armazenar múltiplos valores, que podem ser do mesmo tipo ou não. Os principais tipos de coleções são: listas (<em>list</em>), tuplas (<em>tuple</em>), intervalos (<em>range</em>), dicionários (<em>dict</em>), conjuntos (<em>set</em>) e textos (<em>str</em>). As coleções podem ser de dois tipos, dependendo das operações permitidas sobre seus valores: mutáveis e imutáveis.</p>
 
 </div>
 </div>
@@ -665,10 +658,61 @@ that Jekyll can parse it.</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Python (and any language-specific) code still works as expected&quot;</span><span class="p">)</span>
+<h2 id="Listas">Listas<a class="anchor-link" href="#Listas"> </a></h2><p>As listas são coleções mutáveis normalmente (mas não obrigatoriamente) usadas para armazenar itens homogêneos. Uma lista pode ser criada de várias formas:</p>
+<ol>
+<li>Para criar uma lista vazia: [] ou <strong>list</strong>()</li>
+<li>Para criar uma lista com valores: [1, 5, 2]</li>
+<li>A partir de outra coleção: <strong>list(colecao)</strong>
+*. Esta operação irá construir uma lista cujos itens são os mesmos e na mesma ordem que os itens da coleção original</li>
+</ol>
+<h3 id="Verificando-a-presen&#231;a-de-um-item">Verificando a presen&#231;a de um item<a class="anchor-link" href="#Verificando-a-presen&#231;a-de-um-item"> </a></h3><p>Para verificar se um valor <em>x</em> pertence à lista ou vetor <em>s</em>, usa-se o operador <strong>in</strong>, que equivale à notação matemática $x \in \vec{s}$, como mostra o código abaixo.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="mi">2</span> <span class="ow">in</span> <span class="n">x</span>
 </pre></div>
 
-<pre><code>As does non-language code.</code></pre>
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Por outro lado, para verificar se o elemento não pertence à lista, i.e. $x \notin \vec{s}$:</p>
 
 </div>
 </div>
@@ -677,53 +721,43 @@ that Jekyll can parse it.</p>
 
 <div class="jb_cell">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Page-navigation-Table-of-Contents">Page navigation Table of Contents<a class="anchor-link" href="#Page-navigation-Table-of-Contents"> </a></h2><p>You may notice that there's a sidebar to the right (if your screen is wide enough).
-These are automatically generated from the headers that are present in your page.
-The sidebar will automatically capture all 2nd and 3rd level section headers.
-The best way to designate these headers is with <code>#</code> characters at the beginning
-of a line.</p>
-<h3 id="Here's-a-third-level-header">Here's a third-level header<a class="anchor-link" href="#Here's-a-third-level-header"> </a></h3><p>This section is here purely to demonstrate the third-level header of the
-rendered page in the sidebar!</p>
-<h2 id="Mathematics">Mathematics<a class="anchor-link" href="#Mathematics"> </a></h2><p>Jupyter Book uses the excellent <a href="http://docs.mathjax.org/en/latest/">MathJax</a> library,
-along with the default Jupyter Notebook configuration, for rendering mathematics from
-latex-style syntax. For example, here's a mathematical expression rendered with MathJax:</p>
-\begin{align*}
-P(A_1 \cup A_2 \cup A_3) ~ = ~ P(B \cup A_3) &amp;= ~ P(B) + P(A_3) - P(BA_3) \\
-&amp;= ~ P(A_1) + P(A_2) - P(A_1A_2) + P(A_3) - P(A_1A_3 \cup A_2A_3)\\
-&amp;= ~ \sum_{i=1}^3 P(A_i) - \mathop{\sum \sum}_{1 \le i &lt; j \le 3} P(A_iA_j) + P(A_1A_2A_3)
-\end{align*}<p>And here is the code that was used to generate it:</p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
-<span class="n">P</span><span class="p">(</span><span class="n">A_1</span> \<span class="n">cup</span> <span class="n">A_2</span> \<span class="n">cup</span> <span class="n">A_3</span><span class="p">)</span> <span class="o">~</span> <span class="o">=</span> <span class="o">~</span> <span class="n">P</span><span class="p">(</span><span class="n">B</span> \<span class="n">cup</span> <span class="n">A_3</span><span class="p">)</span> <span class="o">&amp;=</span> <span class="o">~</span> <span class="n">P</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">A_3</span><span class="p">)</span> <span class="o">-</span> <span class="n">P</span><span class="p">(</span><span class="n">BA_3</span><span class="p">)</span> \\
-<span class="o">&amp;=</span> <span class="o">~</span> <span class="n">P</span><span class="p">(</span><span class="n">A_1</span><span class="p">)</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">A_2</span><span class="p">)</span> <span class="o">-</span> <span class="n">P</span><span class="p">(</span><span class="n">A_1A_2</span><span class="p">)</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">A_3</span><span class="p">)</span> <span class="o">-</span> <span class="n">P</span><span class="p">(</span><span class="n">A_1A_3</span> \<span class="n">cup</span> <span class="n">A_2A_3</span><span class="p">)</span>\\
-<span class="o">&amp;=</span> <span class="o">~</span> \<span class="n">sum_</span><span class="p">{</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span><span class="o">^</span><span class="mi">3</span> <span class="n">P</span><span class="p">(</span><span class="n">A_i</span><span class="p">)</span> <span class="o">-</span> \<span class="n">mathop</span><span class="p">{</span>\<span class="nb">sum</span> \<span class="nb">sum</span><span class="p">}</span><span class="n">_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">le</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span> \<span class="n">le</span> <span class="mi">3</span><span class="p">}</span> <span class="n">P</span><span class="p">(</span><span class="n">A_iA_j</span><span class="p">)</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">A_1A_2A_3</span><span class="p">)</span>
-\<span class="n">end</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">3</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">x</span>
 </pre></div>
 
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
 </div>
 </div>
 </div>
 </div>
 
-<div class="jb_cell tag_popout">
+</div>
+</div>
+
+<div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Note</strong>: If you print your page (using the print button), then mathematics may not show
-up properly in an output PDF. This is because MathJax isn't able to render the math
-before converting to PDF. If you have a good idea for how to get around this, please do
-<a href="https://github.com/jupyter/jupyter-book/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">open an issue</a>!</p>
+<h3 id="Concatenando-listas">Concatenando listas<a class="anchor-link" href="#Concatenando-listas"> </a></h3><p>Dadas duas listas <em>s1</em> e <em>s2</em>, pode-se concatená-las, produzindo uma terceira lista, usando-se o operador de adição:</p>
 
 </div>
 </div>
@@ -732,29 +766,566 @@ before converting to PDF. If you have a good idea for how to get around this, pl
 
 <div class="jb_cell">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Embedding-media">Embedding media<a class="anchor-link" href="#Embedding-media"> </a></h2><h3 id="Adding-images">Adding images<a class="anchor-link" href="#Adding-images"> </a></h3><p>You can reference external media like images from your markdown file. If you use
-relative paths, then they will continue to work when the markdown files are copied over,
-so long as they point to a file that's inside of the repository.</p>
-<p>Here's an image relative to the book content root</p>
-<p><img src="../images/C-3PO_droid.png" alt=""></p>
-<h3 id="Adding-movies">Adding movies<a class="anchor-link" href="#Adding-movies"> </a></h3><p>You can even embed references to movies on the web! For example, here's a little gif for you!</p>
-<p><img src="https://media.giphy.com/media/yoJC2A59OCZHs1LXvW/giphy.gif" alt=""></p>
-<p>This will be included in your book when it is built.</p>
-<h2 id="Downloading-and-Printing-pages">Downloading and Printing pages<a class="anchor-link" href="#Downloading-and-Printing-pages"> </a></h2><p>✨<strong>experimental</strong>✨</p>
-<p>While interactivity is nice, sometimes you need a static version of your book
-that's suitable for printing. Currently, Jupyter Book uses a tool called
-<a href="https://printjs.crabbly.com">PrintJS</a> to create rendered PDF versions of your
-book's content.</p>
-<p>In the top of each page you'll find a "download" button. Hovering over this button
-gives the reader an option to print to PDF. When clicked, PrintJS will convert
-<em>only the book's content</em> (so no sidebar or in-page navigation) to PDF, and trigger
-a print action. Note that results for this vary between devices or browsers, and
-PRs that improve this functionality are welcome!</p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">s1</span> <span class="o">+</span> <span class="n">s2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4]</pre>
+</div>
 
 </div>
 </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O operador de multiplicação tem o efeito de repetir <em>s1</em> um número de vezes igual a <em>n</em>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">s1</span> <span class="o">*</span> <span class="n">n</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 1, 2]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Obtendo-o-tamanho-da-lista">Obtendo o tamanho da lista<a class="anchor-link" href="#Obtendo-o-tamanho-da-lista"> </a></h3><p>Para obter o tamanho da lista, basta usar o operador <strong>len</strong>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Acessando-elementos-da-lista">Acessando elementos da lista<a class="anchor-link" href="#Acessando-elementos-da-lista"> </a></h3><p>Listas tem acesso direto aos seus elementos por meio de índices inteiros, com o índice <em>0</em> correspondendo ao primeiro elemento.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Listas permitem acessar fatias (<em>slices</em>) dos seus valores, e.g para obter a fatia da lista <em>s</em> compreendida entre os índices [<em>1</em>, <em>3</em>):</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[5, 0]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note que o lado direito do intervalo dos índices é aberto. Também é possível definir o intervalo da fatia com início, fim e incremento. O código abaixo seleciona os índices {<em>1</em>, <em>3</em> e <em>5</em>}.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[5, 2, 9]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nenhum dos três valores para definição da fatia é obrigatório. Se o início não for fornecido, a fatia irá iniciar do índice <em>0</em>. Se o fim não for definido, a fatia irá até a última posição da lista. Por fim, se o incremento não for informado, ele receberá o valor <em>1</em>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[4, 5, 0]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 2, 3, 9, 7, 1, 12]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python também permite que os elementos sejam acessados usando índices negativos. Para entender esses índices, basta imaginar que a origem deixa de ser o <em>0</em> e passa a ser o tamanho da lista, <strong>len</strong>(<em>s</em>). Por exemplo, o índice <em>-1</em> corresponderá a <strong>len</strong>(<em>s</em>) - <em>1</em>, ou seja, a última posição da lista. O índice <em>-2</em> equivalerá à penúltima posição da lista, i.e. <strong>len</strong>(<em>s</em>) - <em>2</em>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>12</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Modificando-elementos">Modificando elementos<a class="anchor-link" href="#Modificando-elementos"> </a></h3><p>Como mencionado acima, listas são coleções mutáveis, portanto seus valores podem ser modificados ou removidos e novos valores podem ser adicionados. Para modificar um valor da lista, basta atribuir um novo valor a sua posição:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">11</span>
+
+<span class="n">s</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[4, 5, 11, 2, 3, 9, 7, 1, 12]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Uma fatia inteira pode ser substituída pelos valores de uma outra lista do mesmo tamanho, como mostra o código abaixo.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="n">s</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[4, 2, 8, 2, 3, 9, 7, 1, 12]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O operador <strong>del</strong> permite remover uma fatia inteira da lista, reduzindo seu tamanho:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">s</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[4, 2, 2, 9, 1, 12]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -767,15 +1338,15 @@ PRs that improve this functionality are welcome!</p>
             <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/features/features.html">
-      〈 <span class="u-margin-right-tiny"></span> Features and customization
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/guide/04_oper.html">
+      〈 <span class="u-margin-right-tiny"></span> Operadores
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/features/notebooks.html">
-      Jupyter notebooks <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/guide/06_cond.html">
+      Condições e Laços <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
