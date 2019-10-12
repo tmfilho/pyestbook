@@ -21,7 +21,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Cole&#231;&#245;es">Cole&#231;&#245;es<a class="anchor-link" href="#Cole&#231;&#245;es"> </a></h1><p>Coleções são estruturas que permitem armazenar múltiplos valores, que podem ser do mesmo tipo ou não. Os principais tipos de coleções são: listas (<em>list</em>), tuplas (<em>tuple</em>), intervalos (<em>range</em>), dicionários (<em>dict</em>), conjuntos (<em>set</em>) e textos (<em>str</em>). As coleções podem ser de dois tipos, dependendo das operações permitidas sobre seus valores: mutáveis e imutáveis.</p>
+<h1 id="Cole&#231;&#245;es">Cole&#231;&#245;es<a class="anchor-link" href="#Cole&#231;&#245;es"> </a></h1><p>Coleções são estruturas que permitem armazenar múltiplos valores, que podem ser do mesmo tipo ou não. Os principais tipos de coleções são: listas (<em>list</em>), tuplas (<em>tuple</em>), intervalos (<em>range</em>), textos (<em>str</em>), dicionários (<em>dict</em>) e conjuntos (<em>set</em>). As coleções podem ser de dois tipos, dependendo das operações permitidas sobre seus valores: mutáveis e imutáveis.</p>
 
 </div>
 </div>
@@ -885,7 +885,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Intervalos">Intervalos<a class="anchor-link" href="#Intervalos"> </a></h2><p>Coleções do tipo <strong>range</strong> são imutáveis e contêm sequências de números que são comumente usados em laços com quantidades definidas de repetições (<strong>for</strong>). Intervalos são construídos de forma parecida com as fatias de índices, i.e. por meio de três valores inteiros que definem início, fim (intervalo aberto) e incremento do intervalo. Também de forma similar, se o início for omitido, ele recebe o valor <em>0</em> e se o incremento não for informado, assume-se <em>1</em>. De forma geral, o <strong>range</strong> com início <em>j</em>, fim <em>k</em> e incremento <em>t</em> retornará os elementos $\left\{j \leq r_i &lt; k~|~r_i =j + t * i, i \geq 0\right\}$.</p>
+<h2 id="Intervalos">Intervalos<a class="anchor-link" href="#Intervalos"> </a></h2><p>Coleções do tipo <strong>range</strong> são imutáveis e contêm sequências de números que são comumente usados em laços com quantidades definidas de repetições (<strong>for</strong>). Intervalos são construídos de forma parecida com as fatias de índices, i.e. por meio de três valores inteiros que definem início, fim (intervalo aberto) e incremento do intervalo. Também de forma similar, se o início for omitido, ele recebe o valor <em>0</em> e se o incremento não for informado, assume-se <em>1</em>. De forma geral, o <strong>range</strong> $r$, com início $j$, fim $k$ e incremento $t$ retornará os elementos $r = \left\{j \leq r_i &lt; k~|~r_i =j + t * i, i \geq 0\right\}$.</p>
 <p>Um detalhe importante das coleções <strong>range</strong> é que ele sempre ocupa a mesma quantidade de memória, independente do tamanho do intervalo. Isso é possível porque ele apenas armazena os valores de início, fim e incremento. Todos os valores que pertencem ao intervalo são calculados apenas quando necessário. Isso significa que para obter os elementos do <strong>range</strong>, é preciso acessá-los explicitamente. Por exemplo, o código abaixo cria um <strong>range</strong> [<em>0</em>, <em>10</em>). Diferente das outras coleções, o retorno do comando que cria o <strong>range</strong> não imprime todos os elementos.</p>
 
 </div>
@@ -1075,6 +1075,190 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="output_text output_subarea output_execute_result">
 <pre>5</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Textos">Textos<a class="anchor-link" href="#Textos"> </a></h2><p>Dados do tipo texto, também chamados de <em>strings</em> são representados por variáveis do tipo <strong>str</strong>, que são coleções imutáveis de caracteres Unicode. Existem três formas de definir variáveis do tipo <strong>str</strong>, diferenciadas pelo tipo de aspas:</p>
+<ol>
+<li>Aspas simples: <div class="highlight"><pre><span></span><span class="s1">&#39;nesse caso, as aspas &quot;internas&quot; devem ser duplas&#39;</span>
+</pre></div>
+</li>
+<li>Aspas duplas:<div class="highlight"><pre><span></span><span class="s2">&quot;nesse caso, as aspas &#39;internas&#39; devem ser simples&quot;</span>
+</pre></div>
+</li>
+<li>Três aspas simples ou duplas:<div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; </span>
+<span class="sd">         strings neste formato</span>
+<span class="sd">         podem ocupar múltiplas linhas e</span>
+<span class="sd">         incluem todos os espaços em branco    </span>
+<span class="sd">     &#39;&#39;&#39;</span>
+</pre></div>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Caracteres e fatias de <em>strings</em> podem ser acessados, assim como em listas e tuplas. Não há um tipo específico para caracteres, como em outras linguagens de programação. Assim, um caractere é apenas uma <em>string</em> de tamanho <em>1</em>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Estatística&#39;</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;t&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Estatística&#39;</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;tsE&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Concatenando-strings">Concatenando <em>strings</em><a class="anchor-link" href="#Concatenando-strings"> </a></h3><p><em>Strings</em> podem ser concatenadas usando o operador de adição ou colocando apenas um espaço branco entre elas.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;ciência &#39;</span> <span class="o">+</span> <span class="s1">&#39;de &#39;</span> <span class="o">+</span> <span class="s1">&#39;dados&#39;</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;ciência de dados&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;ciência &#39;</span> <span class="s1">&#39;de &#39;</span> <span class="s1">&#39;dados&#39;</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;ciência de dados&#39;</pre>
 </div>
 
 </div>
