@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Python para Estatísticos</title>
-  <meta name="description" content="# Jupytext with Jupyter Book✨**experimental**✨It's also possible to build Jupyter Books using [Jupytext](https://jupytext.readthedocs.io), a tool fortwo-way ...">
+  <title>Variáveis</title>
+  <meta name="description" content="Vari&#225;veis Variáveis são estruturas que permitem armazenar valores para leitura e uso posterior. Do ponto de vista computacional, elas funcionam como "ap...">
 
-  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/content/features/jupytext.html">
+  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/guide/03_var.html">
   <link rel="alternate" type="application/rss+xml" title="Python para Estatísticos" href="https://tmfilho.github.io/pyestbook/feed.xml">
 
-  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/content/features/jupytext.html" />
+  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/guide/03_var.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Python para Estatísticos" />
-<meta property="og:description" content="# Jupytext with Jupyter Book✨**experimental**✨It's also possible to build Jupyter Books using [Jupytext](https://jupytext.readthedocs.io), a tool fortwo-way ..." />
+<meta property="og:title"       content="Variáveis" />
+<meta property="og:description" content="Vari&#225;veis Variáveis são estruturas que permitem armazenar valores para leitura e uso posterior. Do ponto de vista computacional, elas funcionam como "ap..." />
 <meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/content/features/jupytext.html",
-  "headline": "Python para Estatísticos",
+  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/guide/03_var.html",
+  "headline": "Variáveis",
   "datePublished": "2019-10-14T12:30:23-03:00",
   "dateModified": "2019-10-14T12:30:23-03:00",
-  "description": "# Jupytext with Jupyter Book✨**experimental**✨It's also possible to build Jupyter Books using [Jupytext](https://jupytext.readthedocs.io), a tool fortwo-way ...",
+  "description": "Vari&#225;veis Variáveis são estruturas que permitem armazenar valores para leitura e uso posterior. Do ponto de vista computacional, elas funcionam como "ap...",
   "author": {
     "@type": "Person",
     "name": "Telmo de Menezes e Silva Filho"
@@ -496,7 +496,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/pyestbook/guide/03_var.html"
                 >
                   
@@ -613,10 +613,20 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><i class="fa fa-download"></i></button>
     <div class="download-buttons">
+        <a href="/pyestbook/content/guide/03_var.ipynb" download>
+        <button id="interact-button-download" class="interact-button">ORIG</button>
+        </a>
         
         <a id="interact-button-print"><button id="interact-button-download" class="interact-button">PDF</button></a>
     </div>
 </div>
+
+  <button id="interact-button-thebelab" class="interact-button">Interagir</button>
+
+  
+  
+  
+
 
 </div>
 
@@ -632,74 +642,291 @@ initFunction(initPrint)
 
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
-              <h1 id="jupytext-with-jupyter-book">Jupytext with Jupyter Book</h1>
+              <main class="jupyter-page">
+<div class="jb_cell">
 
-<p>✨<strong>experimental</strong>✨</p>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Vari&#225;veis">Vari&#225;veis<a class="anchor-link" href="#Vari&#225;veis"> </a></h1><p>Variáveis são estruturas que permitem armazenar valores para leitura e uso posterior. Do ponto de vista computacional, elas funcionam como "apelidos", compreensíveis por humanos, para endereços de memória. Para facilitar a compreensão do conceito, podemos imaginar que a memória do computador é uma espécie de armário e as variáveis indicam as gavetas ou portas onde os valores estão armazenados.</p>
 
-<p>It’s also possible to build Jupyter Books using <a href="https://jupytext.readthedocs.io">Jupytext</a>, a tool for
-two-way conversion between Jupyter Notebooks an text-based versions of a Jupyter Notebook (e.g., <code class="highlighter-rouge">.md</code> or <code class="highlighter-rouge">.py</code>).</p>
+</div>
+</div>
+</div>
+</div>
 
-<p>Using Jupytext allows you to store your Jupyter Notebooks as <strong>text files</strong>, which makes them much better for
-collaboration and “diffing” using a tool like Git. The drawbacks are that you no longer keep the outputs with
-your files, which means building your book with outputs requires running each file at build-time.</p>
+<div class="jb_cell">
 
-<h2 id="this-notebook-is-stored-in-jupytext-format">This notebook is stored in Jupytext format!</h2>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+  <img src="../images/cabinet.svg" alt="Armário com variáveis"/>
+  <figcaption>Figura 6: Representação da memória como um armário e variáveis como endereços para as gavetas.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
-<p>For example, the notebook for this page is stored in a Jupytext format. In this case, we’ve used
-a markdown file. <a href="https://github.com/jupyter/jupyter-book/blob/master/jupyter_book/book_template/content/features/jupytext.md">You can find the original (text-based) format here</a>.</p>
+<div class="jb_cell">
 
-<p>Below we’ll show some Python code, which Jupyter Book can execute at build time.</p>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Nomes-e-Identificadores">Nomes e Identificadores<a class="anchor-link" href="#Nomes-e-Identificadores"> </a></h2><p>Como na maior parte das linguagens, identificadores (nomes de variáveis, funções, classes, etc) permitem letras minúsculas e maiúsculas, dígitos e traço baixo ou <em>underline</em> (_). Identificadores não possuem limite de tamanho e diferenciam entre minúsculas e maiúsculas (<em>case sensitive</em>), ou seja <em>variavel</em> é diferente de <em>Variavel</em>. Identificadores especiais costumam começar e terminar com duplos traços baixos, e.g. __init__. Seguem algumas convenções para nomeação de identificadores:</p>
+<table>
+<thead><tr>
+<th>Identificador</th>
+<th>Convenção</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Módulos/pacotes</td>
+<td>caracteres minúsculos</td>
+<td><em>projetopython</em></td>
+</tr>
+<tr>
+<td>Métodos/funções/variáveis</td>
+<td>minúsculos_separados_por_underlines</td>
+<td><em>variavel</em>_<em>aleatoria</em></td>
+</tr>
+<tr>
+<td>Globais/constantes</td>
+<td>maiúsculos_separados_por_underlines</td>
+<td><em>CONSTANTE</em></td>
+</tr>
+<tr>
+<td>Classes</td>
+<td>Iniciais Maiúsculas</td>
+<td>NormalDistribution</td>
+</tr>
+</tbody>
+</table>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Import some data</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
-</code></pre></div></div>
+</div>
+</div>
+</div>
+</div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># We'll make a simple plot!</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<div class="jb_cell">
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">"Jupytext is great!"</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s">'size'</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s">'horizontalalignment'</span><span class="p">:</span> <span class="s">'center'</span><span class="p">})</span>
-</code></pre></div></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Atribui&#231;&#227;o-de-valores">Atribui&#231;&#227;o de valores<a class="anchor-link" href="#Atribui&#231;&#227;o-de-valores"> </a></h2><p>Em Python não há um comando exclusivo para declaração de variáveis e seus tipos. Na verdade, não são as variáveis que tem tipo, mas sim os valores armazenados nelas por meio do operador de atribuição (<em>=</em>). Por exemplo, podemos criar uma variável <em>idade</em> e armazenar nela o valor 30. Se essa for a primeira vez que o identificador idade aparecer neste trecho de código, a variável será criada nesse momento. Como este material está escrito usando Jupyter Notebooks, para avaliar o valor da variável, basta digitar seu nome embaixo da declaração (em outras situações, será necessário usar o comando <strong>print</strong>, mas ainda veremos isso).</p>
 
-<h2 id="jupytext-works-with-cell-tags">Jupytext works with cell tags</h2>
+</div>
+</div>
+</div>
+</div>
 
-<p>You can still use cell tags in your Jupytext files by using the format that Jupytext expects.
-For example, the Python code below will have its code cell hidden:</p>
+<div class="jb_cell">
 
-<p>```python tags=[“hide_input”]</p>
-<h1 id="well-make-a-simple-plot">We’ll make a simple plot!</h1>
-<p>data = np.random.randn(2, 100)</p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-<p>fig, ax = plt.subplots()
-ax.scatter(*data, c=data[1], s=500, cmap=’coolwarm’)
-ax.text(0, 0, “Jupytext is great!”, fontdict={‘size’: 40, ‘horizontalalignment’: ‘center’})
-```</p>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span>
 
-<h2 id="supported-jupytext-formats">Supported Jupytext formats</h2>
+<span class="n">idade</span>
+</pre></div>
 
-<p>There are <a href="https://jupytext.readthedocs.io/en/latest/formats.html">many supported formats in Jupytext</a>. Jupyter
-Book works with a subset of common ones:</p>
+    </div>
+</div>
+</div>
 
-<ul>
-  <li>Markdown files (<code class="highlighter-rouge">.md</code> or <code class="highlighter-rouge">.markdown</code>)</li>
-  <li>Python files meant for Jupytext (<code class="highlighter-rouge">.py</code> with Sphinx-Gallery or <code class="highlighter-rouge">%%</code> syntax to break cells)</li>
-  <li>RMarkdown files (<code class="highlighter-rouge">.Rmd</code>)</li>
-</ul>
+<div class="output_wrapper">
+<div class="output">
 
-<h2 id="a-recommended-workflow-with-jupytext-and-notebooks">A recommended workflow with Jupytext and notebooks</h2>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
 
-<p>Even if you’re storing your content in a text-based file, it’s useful to <strong>write your content in notebooks</strong>
-and convert them to text format before committing them in Git. This allows you to add <strong>tags</strong> to your notebooks
-that propagate to your Jupytext format. This allows you to use the editing capabilities of a Jupyter interface, but
-the version-control benefits of a text-based file.</p>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>30</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O símbolo <em>=</em> não está testando igualdade no comando acima. A operação deve ser lida como:</p>
+
+<pre><code>A variável idade recebe o valor 30.</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para verificarmos o tipo do valor armazenado na variável, podemos fazer:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">idade</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>int</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Se mudarmos o valor armazenado para um texto, e.g. 'Estatística', veremos que não ocorrerá erro e a operação de verificação de tipo retornará o tipo correto.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idade</span> <span class="o">=</span> <span class="s1">&#39;Estatística&#39;</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">idade</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>str</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O código à direita do operador de atribuição não precisa ser apenas um valor, podendo conter uma expressão complexa (incluindo várias operações e chamadas de funções), cujo resultado será armazenado na variável. Como um exemplo simples, vamos adicionar <em>1</em> ao valor armazenado na variável <em>idade</em> e armazenar o resultado na própria variável, substituindo o valor anterior.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">idade</span> <span class="o">=</span> <span class="n">idade</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">idade</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>31</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+</main>
 
             </div>
             <nav class="c-page__nav">
   
+    
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/guide/02_ides.html">
+      〈 <span class="u-margin-right-tiny"></span> Ambientes de Trabalho
+    </a>
+  
 
+  
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/guide/04_oper.html">
+      Operadores <span class="u-margin-right-tiny"></span> 〉
+    </a>
   
 </nav>
 

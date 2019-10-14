@@ -28,8 +28,8 @@
   sections:
   - title: Ambientes de Trabalho
     url: /guide/02_ides
-  - title: Nomes e Identificadores
-    url: /guide/03_ident
+  - title: Variáveis
+    url: /guide/03_var
   - title: Operadores
     url: /guide/04_oper
   - title: Coleções
