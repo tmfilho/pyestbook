@@ -27,6 +27,290 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </div>
 </div>
 
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nesta Seção, veremos os primeiros tipos de blocos de códigos que podem ser definidos em Python. Blocos são regiões de código que realizam uma tarefa ou um conjunto de tarefas relacionadas. Essas regiões podem definir operações condicionais, iterações (operações repetidas), funções e tipos de dados. Blocos podem ser aninhados, ou seja, é possível definir blocos dentro de blocos, o que equivale à definição de sub-tarefas. Na maior parte das linguagens, os blocos de código são delimitados por algum marcador, como um par de chaves {} ou marcadores de início (<em>begin</em>) e fim (<em>end</em>), mas Python adota uma abordagem diferente.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Blocos-e-indenta&#231;&#227;o">Blocos e indenta&#231;&#227;o<a class="anchor-link" href="#Blocos-e-indenta&#231;&#227;o"> </a></h2><p>A principal diferença de Python para outras linguagens, como R, C e Java, é a representação de blocos de código usando níveis de indentação, dispensando o uso de chaves para marcar o início e o fim dos blocos. Essa diferença pode ser vista nos blocos de código abaixo, representando a mesma função para calcular a média aritmética de dois valores. O primeiro código está escrito em R e o segundo contém exatamente a mesma função escrita em Python.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">mean</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">result</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span><span class="p">)</span> <span class="o">/</span> <span class="m">2</span>
+  <span class="nf">return</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O uso de indentação para indicar estrutura tem vários benefícios, incluindo:</p>
+<ol>
+<li>Reduz a necessidade de padrões de código extra: a indentação sempre será de 4 espaços e a IDE usada para escrever o código cuidará de manter essa consistência;</li>
+<li>Códigos de diferentes fontes são forçados a seguir o mesmo estilo de indentação;</li>
+<li>Reduz trabalho, pois não é necessário se preocupar com o padrão das chaves <strong>e</strong> da indentação;</li>
+<li>Mantém um código mais limpo;</li>
+<li>O código só executará se a indentação estiver correta, portanto, se o código parece correto, ele está correto;</li>
+<li>Não há como confundir escopos de blocos de código aninhados.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Condi&#231;&#245;es">Condi&#231;&#245;es<a class="anchor-link" href="#Condi&#231;&#245;es"> </a></h2><p>Os operadores condicionais <strong>if</strong> (se), <strong>elif</strong> (senão se) e <strong>else</strong> (senão) são usados para definir blocos de código que serão executados apenas se certas condições forem satisfeitas, sendo, portanto, blocos de <strong>controle de fluxo</strong>, pois alteram o fluxo de execução do código, como mostra o fluxograma da Figura 7.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+  <img width="520" height="436" src="../images/flow-if.svg" alt="Fluxograma com estrutura condicional"/>
+  <figcaption>Figura 7: Fluxograma com estrutura condicional.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O fluxograma acima simula uma entrevista de emprego em que a única pergunta é se a pessoa que se candidatou à vaga entende de Python ou não. Em caso afirmativo, a pessoa é imediatamente contratada. Caso contrário, continuará desempregada. Esse tipo de situação pode ser lido como "<strong>se</strong> (<strong>if</strong>) a pessoa sabe Python, então está contratada; <strong>senão</strong> (<strong>else</strong>), está desempregada. Isso pode ser escrito em Python da seguinte forma:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">knows_python</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">if</span> <span class="n">knows_python</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">situation</span> <span class="o">=</span> <span class="s1">&#39;hired&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">situation</span> <span class="o">=</span> <span class="s1">&#39;unemployed&#39;</span>
+
+<span class="n">situation</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;hired&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note que a variável <em>situation</em> não foi definida antes do bloco condicional. Isso não resulta em erro porque só há dois fluxos possíveis para o código, i.e. <em>knows_python ==</em> <strong>True</strong> ou <em>knows_python ==</em> <strong>False</strong>. Caso uma variável não seja definida em todos os fluxos possíveis, é possível que ocorra um erro. Por exemplo, suponha que, caso seja contratada, a pessoa receberá um salário de R$10000,00. Se a pessoa não souber Python e tentarmos acessar o salário, causaremos um erro.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">knows_python</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">if</span> <span class="n">knows_python</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">situation</span> <span class="o">=</span> <span class="s1">&#39;hired&#39;</span>
+    <span class="n">salary</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">situation</span> <span class="o">=</span> <span class="s1">&#39;unemployed&#39;</span>
+
+<span class="n">salary</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">-----------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>     Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-a57fd5684b67&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span>     situation <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;unemployed&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> 
+<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> </span>salary
+
+<span class="ansi-red-fg">NameError</span>: name &#39;salary&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Perceba que a linha que define o bloco condicional inicia com o operador <strong>if</strong>, seguido de uma expressão, e termina com dois pontos. A linha que define o caso contrário contém apenas <strong>else:</strong>. De um modo geral, o <strong>if</strong> testa se a expressão que o segue é <strong>True</strong> ou <strong>False</strong> e executa o bloco de código associado apenas se o resultado da expressão for <strong>True</strong>. Note que, como o operador <strong>if</strong> verifica se a expressão associada é <strong>True</strong>, o código acima é redundante e equivale ao seguinte teste: (<em>knows_python ==</em> <strong>True</strong>) <em>==</em> <strong>True</strong>. Em outras palavras, a condição poderia ser definida de forma mais simples da seguinte forma:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">knows_python</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">if</span> <span class="n">knows_python</span><span class="p">:</span>
+    <span class="n">situation</span> <span class="o">=</span> <span class="s1">&#39;hired&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">situation</span> <span class="o">=</span> <span class="s1">&#39;unemployed&#39;</span>
+
+<span class="n">situation</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;hired&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ao dispensar a necessidade de escrever o teste de igualdade explicitamente, Python faz com que o código resultante seja escrito de forma próxima à linguagem natural.</p>
+<p>Como vimos, o código acima testa se o valor de uma variável booleana é verdadeiro ou falso. Mas, curiosamente, Python também permite testar <strong>True</strong> ou <strong>False</strong> para outros tipos de valores, algo que, apesar de não muito intuitivo, se mostra frequentemente útil.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A expressão associada ao <strong>if</strong> pode ser tão complexa quanto necessário, usando os operadores que vimos na <a href="https://tmfilho.github.io/pyestbook/guide/04_oper.html">Seção 1.3</a> e chamadas de funções, que veremos na <a href="https://tmfilho.github.io/pyestbook/guide/07_func.html">Seção 1.6</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
  
 
 
