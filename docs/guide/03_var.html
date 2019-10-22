@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/guide/03_var.html",
   "headline": "Variáveis",
-  "datePublished": "2019-10-19T11:15:52-03:00",
-  "dateModified": "2019-10-19T11:15:52-03:00",
+  "datePublished": "2019-10-21T21:39:35-03:00",
+  "dateModified": "2019-10-21T21:39:35-03:00",
   "description": "Vari&#225;veis Variáveis são estruturas que permitem armazenar valores para leitura e uso posterior. Do ponto de vista computacional, elas funcionam como "ap...",
   "author": {
     "@type": "Person",
@@ -898,6 +898,338 @@ initFunction(initPrint)
 
 <div class="output_text output_subarea output_execute_result">
 <pre>31</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Atribui&#231;&#245;es-com-opera&#231;&#245;es">Atribui&#231;&#245;es com opera&#231;&#245;es<a class="anchor-link" href="#Atribui&#231;&#245;es-com-opera&#231;&#245;es"> </a></h3><p>Assim como outras linguagens de programação, Python suporta atribuições associadas a certas operações, como soma ou concatenação (+=), subtração (-=), multiplicação (*=), divisão (/=) e outras operações que veremos na próxima Seção. Quando essas atribuições especiais são usadas, a operação associada é realizada sobre os valores da expressão à direita do operador e da variável à esquerda e o novo valor é atribuído à mesma variável. Por exemplo, o código acima pode ser reescrito como:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">idade</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">idade</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>31</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Outros exemplos:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">idade</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="n">idade</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>29</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">idade</span> <span class="o">*=</span> <span class="mi">2</span>
+
+<span class="n">idade</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>60</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">idade</span> <span class="o">/=</span> <span class="mi">2</span>
+
+<span class="n">idade</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>15.0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Atribui&#231;&#245;es-m&#250;ltiplas">Atribui&#231;&#245;es m&#250;ltiplas<a class="anchor-link" href="#Atribui&#231;&#245;es-m&#250;ltiplas"> </a></h3><p>Python permite que múltiplas atribuições sejam feitas na mesma linha de algumas formas. Primeiro, pode-se simplesmente usar vírgulas para separar os identificadores de variáveis à esquerda do operador de atribuição e os valores à direita do operador de atribuição. Na prática, essa operação de atribuição é realizada por meio de variáveis do tipo Tupla, que veremos mais à frente.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idade</span><span class="p">,</span> <span class="n">altura</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="mf">1.78</span>
+
+<span class="n">idade</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>30</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">altura</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.78</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pode-se também envolver os identificadores e os valores em colchetes [ ]. Na prática, essa operação de atribuição é realizada por meio de variáveis do tipo Lista, que também veremos mais à frente.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">idade</span><span class="p">,</span> <span class="n">altura</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mf">1.78</span><span class="p">]</span>
+
+<span class="n">idade</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>30</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">altura</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.78</pre>
 </div>
 
 </div>
