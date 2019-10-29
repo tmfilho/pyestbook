@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Python para Estatísticos</title>
-  <meta name="description" content="# Creating book contentThe two kinds of files that contain course content are:* Jupyter Notebooks* Markdown filesEach are contained in the `content/` folder ...">
+  <title>Objetos e Classes</title>
+  <meta name="description" content="Objetos e Classes A programação orientada a objetos (OOP - do inglês object oriented programming) é um paradigma de programação baseado no conceito de objeto...">
 
-  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/content/features/markdown.html">
+  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/objects/01_first.html">
   <link rel="alternate" type="application/rss+xml" title="Python para Estatísticos" href="https://tmfilho.github.io/pyestbook/feed.xml">
 
-  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/content/features/markdown.html" />
+  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/objects/01_first.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Python para Estatísticos" />
-<meta property="og:description" content="# Creating book contentThe two kinds of files that contain course content are:* Jupyter Notebooks* Markdown filesEach are contained in the `content/` folder ..." />
+<meta property="og:title"       content="Objetos e Classes" />
+<meta property="og:description" content="Objetos e Classes A programação orientada a objetos (OOP - do inglês object oriented programming) é um paradigma de programação baseado no conceito de objeto..." />
 <meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/content/features/markdown.html",
-  "headline": "Python para Estatísticos",
-  "datePublished": "2019-10-24T12:02:25-03:00",
-  "dateModified": "2019-10-24T12:02:25-03:00",
-  "description": "# Creating book contentThe two kinds of files that contain course content are:* Jupyter Notebooks* Markdown filesEach are contained in the `content/` folder ...",
+  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/objects/01_first.html",
+  "headline": "Objetos e Classes",
+  "datePublished": "2019-10-29T13:54:08-03:00",
+  "dateModified": "2019-10-29T13:54:08-03:00",
+  "description": "Objetos e Classes A programação orientada a objetos (OOP - do inglês object oriented programming) é um paradigma de programação baseado no conceito de objeto...",
   "author": {
     "@type": "Person",
     "name": "Telmo de Menezes e Silva Filho"
@@ -612,6 +612,29 @@ initFunction(initPrint)
 
       
     
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry c-sidebar__entry--active"
+          href="/pyestbook/objects/01_first.html"
+        >
+          
+            2.
+          
+          Objetos e Classes
+        </a>
+
+        
+      </li>
+
+      
+    
   </ul>
   <p class="sidebar_footer">Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a></p>
 </nav>
@@ -632,10 +655,20 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><i class="fa fa-download"></i></button>
     <div class="download-buttons">
+        <a href="/pyestbook/content/objects/01_first.ipynb" download>
+        <button id="interact-button-download" class="interact-button">ORIG</button>
+        </a>
         
         <a id="interact-button-print"><button id="interact-button-download" class="interact-button">PDF</button></a>
     </div>
 </div>
+
+  <button id="interact-button-thebelab" class="interact-button">Interagir</button>
+
+  
+  
+  
+
 
 </div>
 
@@ -651,110 +684,92 @@ initFunction(initPrint)
 
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
-              <h1 id="creating-book-content">Creating book content</h1>
+              <main class="jupyter-page">
+<div class="jb_cell">
 
-<p>The two kinds of files that contain course content are:</p>
-
-<ul>
-  <li>Jupyter Notebooks</li>
-  <li>Markdown files</li>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Objetos-e-Classes">Objetos e Classes<a class="anchor-link" href="#Objetos-e-Classes"> </a></h1><p>A programação orientada a objetos (OOP - do inglês <em>object oriented programming</em>) é um paradigma de programação baseado no conceito de objetos, que, na maior parte das linguagens OOP, são manifestações concretas de abstrações, chamadas classes. As classes representam tipos de dados e quais são seus atributos ou propriedades, de forma que cada objeto é uma instância de uma classe e pode ter valores diferentes para seus atributos. Além disso, as classes determinam que ações os seus objetos podem realizar, por meio de funções chamadas de métodos. Os métodos são frequentemente definidos de forma que os dados armazenados nos atributos do objeto associado ou de outro objeto são modificados. Programas OOP são então desenvolvidos por meio da criação e da interação de objetos. Alguns exemplos de classes incluem:</p>
+<ol>
+<li>Carro:<ul>
+<li>Atributos:<ol>
+<li>Marca</li>
+<li>Modelo</li>
+<li>Ano</li>
+<li>Placa</li>
+<li>Opcionais (lista)</li>
+</ol>
+</li>
+<li>Métodos:<ol>
+<li>Ligar</li>
+<li>Desligar</li>
+<li>Acelerar</li>
+<li>Frear</li>
+<li>Ligar rádio</li>
+</ol>
+</li>
 </ul>
+</li>
+<li>Distribuição Normal<ul>
+<li>Atributos:<ol>
+<li>Média</li>
+<li>Variância </li>
+</ol>
+</li>
+<li>Métodos<ol>
+<li>Calcular fdp</li>
+<li>Gerar amostra </li>
+<li>Calcular função de distribuição acumulada</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Regressão Linear<ul>
+<li>Atributos:<ol>
+<li>Coeficientes</li>
+<li>Intercepto </li>
+</ol>
+</li>
+<li>Métodos<ol>
+<li>Ajustar a uma amostra</li>
+<li>Estimar valores para nova amostra </li>
+<li>Calcular $R^2$</li>
+<li>Realizar testes de hipótese</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<p>Note que cada classe representa um conceito, sua descrição (atributos) e suas ações associadas (métodos). Assim, um objeto é uma realização concreta de um conceito de classe, i.e. uma instância de classe. Por exemplo: $X \sim N(3, 4)$ é um objeto que é uma instância de distribuição Normal com média <em>3</em> e variância <em>4</em>. Com esse objeto, podemos calcular o valor da fdp ou da função de distribuição acumulada para um dado valor (ou uma lista de valores) e gerar amostra(s) aleatórias.</p>
 
-<p>Each are contained in the <code class="highlighter-rouge">content/</code> folder and referenced from <code class="highlighter-rouge">_data/toc.yml</code>.</p>
+</div>
+</div>
+</div>
+</div>
 
-<p>If the file is markdown, it will be copied over with front-matter YAML added so
-that Jekyll can parse it.</p>
+ 
 
-<!-- #region -->
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Python (and any language-specific) code still works as expected"</span><span class="p">)</span>
-</code></pre></div></div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>As does non-language code.
-</code></pre></div></div>
-<!-- #endregion -->
 
-<h2 id="page-navigation-table-of-contents">Page navigation Table of Contents</h2>
-
-<p>You may notice that there’s a sidebar to the right (if your screen is wide enough).
-These are automatically generated from the headers that are present in your page.
-The sidebar will automatically capture all 2nd and 3rd level section headers.
-The best way to designate these headers is with <code class="highlighter-rouge">#</code> characters at the beginning
-of a line.</p>
-
-<h3 id="heres-a-third-level-header">Here’s a third-level header</h3>
-
-<p>This section is here purely to demonstrate the third-level header of the
-rendered page in the sidebar!</p>
-
-<h2 id="mathematics">Mathematics</h2>
-
-<p>Jupyter Book uses the excellent <a href="http://docs.mathjax.org/en/latest/">MathJax</a> library,
-along with the default Jupyter Notebook configuration, for rendering mathematics from
-latex-style syntax. For example, here’s a mathematical expression rendered with MathJax:</p>
-
-<p>\begin{align<em>}
-P(A_1 \cup A_2 \cup A_3) ~ = ~ P(B \cup A_3) &amp;= ~ P(B) + P(A_3) - P(BA_3) <br />
-&amp;= ~ P(A_1) + P(A_2) - P(A_1A_2) + P(A_3) - P(A_1A_3 \cup A_2A_3)<br />
-&amp;= ~ \sum_{i=1}^3 P(A_i) - \mathop{\sum \sum}_{1 \le i &lt; j \le 3} P(A_iA_j) + P(A_1A_2A_3)
-\end{align</em>}</p>
-
-<p>And here is the code that was used to generate it:</p>
-
-<!-- #region -->
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\<span class="n">begin</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
-<span class="n">P</span><span class="p">(</span><span class="n">A_1</span> \<span class="n">cup</span> <span class="n">A_2</span> \<span class="n">cup</span> <span class="n">A_3</span><span class="p">)</span> <span class="o">~</span> <span class="o">=</span> <span class="o">~</span> <span class="n">P</span><span class="p">(</span><span class="n">B</span> \<span class="n">cup</span> <span class="n">A_3</span><span class="p">)</span> <span class="o">&amp;=</span> <span class="o">~</span> <span class="n">P</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">A_3</span><span class="p">)</span> <span class="o">-</span> <span class="n">P</span><span class="p">(</span><span class="n">BA_3</span><span class="p">)</span> \\
-<span class="o">&amp;=</span> <span class="o">~</span> <span class="n">P</span><span class="p">(</span><span class="n">A_1</span><span class="p">)</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">A_2</span><span class="p">)</span> <span class="o">-</span> <span class="n">P</span><span class="p">(</span><span class="n">A_1A_2</span><span class="p">)</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">A_3</span><span class="p">)</span> <span class="o">-</span> <span class="n">P</span><span class="p">(</span><span class="n">A_1A_3</span> \<span class="n">cup</span> <span class="n">A_2A_3</span><span class="p">)</span>\\
-<span class="o">&amp;=</span> <span class="o">~</span> \<span class="n">sum_</span><span class="p">{</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span><span class="o">^</span><span class="mi">3</span> <span class="n">P</span><span class="p">(</span><span class="n">A_i</span><span class="p">)</span> <span class="o">-</span> \<span class="n">mathop</span><span class="p">{</span>\<span class="nb">sum</span> \<span class="nb">sum</span><span class="p">}</span><span class="n">_</span><span class="p">{</span><span class="mi">1</span> \<span class="n">le</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span> \<span class="n">le</span> <span class="mi">3</span><span class="p">}</span> <span class="n">P</span><span class="p">(</span><span class="n">A_iA_j</span><span class="p">)</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">A_1A_2A_3</span><span class="p">)</span>
-\<span class="n">end</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
-</code></pre></div></div>
-<!-- #endregion -->
-
-<!-- #region {"tags": ["popout"]} -->
-<p><strong>Note</strong>: If you print your page (using the print button), then mathematics may not show
-up properly in an output PDF. This is because MathJax isn’t able to render the math
-before converting to PDF. If you have a good idea for how to get around this, please do
-<a href="https://github.com/jupyter/jupyter-book/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">open an issue</a>!
-<!-- #endregion --></p>
-
-<h2 id="embedding-media">Embedding media</h2>
-
-<h3 id="adding-images">Adding images</h3>
-
-<p>You can reference external media like images from your markdown file. If you use
-relative paths, then they will continue to work when the markdown files are copied over,
-so long as they point to a file that’s inside of the repository.</p>
-
-<p>Here’s an image relative to the book content root</p>
-
-<p><img src="../images/C-3PO_droid.png" alt="" /></p>
-
-<h3 id="adding-movies">Adding movies</h3>
-
-<p>You can even embed references to movies on the web! For example, here’s a little gif for you!</p>
-
-<p><img src="https://media.giphy.com/media/yoJC2A59OCZHs1LXvW/giphy.gif" alt="" /></p>
-
-<p>This will be included in your book when it is built.</p>
-
-<h2 id="downloading-and-printing-pages">Downloading and Printing pages</h2>
-
-<p>✨<strong>experimental</strong>✨</p>
-
-<p>While interactivity is nice, sometimes you need a static version of your book
-that’s suitable for printing. Currently, Jupyter Book uses a tool called
-<a href="https://printjs.crabbly.com">PrintJS</a> to create rendered PDF versions of your
-book’s content.</p>
-
-<p>In the top of each page you’ll find a “download” button. Hovering over this button
-gives the reader an option to print to PDF. When clicked, PrintJS will convert
-<em>only the book’s content</em> (so no sidebar or in-page navigation) to PDF, and trigger
-a print action. Note that results for this vary between devices or browsers, and
-PRs that improve this functionality are welcome!</p>
+</main>
 
             </div>
             <nav class="c-page__nav">
   
+    
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/guide/08_exer.html">
+      〈 <span class="u-margin-right-tiny"></span> Exercícios
+    </a>
+  
 
+  
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="">
+       <span class="u-margin-right-tiny"></span> 〉
+    </a>
   
 </nav>
 

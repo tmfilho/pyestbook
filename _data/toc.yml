@@ -41,13 +41,13 @@
   - title: Exercícios
     url: /guide/08_exer
 
-# - title: Features and customization
-#   url: /features/features
-#   not_numbered: true
-#   expand_sections: true
-#   sections:
-#   - title: Markdown files
-#     url: /features/markdown
+- title: Objetos e Classes
+  url: /objects/01_first
+  # not_numbered: true
+  expand_sections: true
+  # sections:
+  # - title: OOP em Python
+  #   url: /objetos/02_cpyt
 #     not_numbered: true
 #   - title: Jupyter notebooks
 #     url: /features/notebooks
