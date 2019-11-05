@@ -47,7 +47,7 @@
   expand_sections: true
   # sections:
   # - title: OOP em Python
-  #   url: /objetos/02_cpyt
+  #   url: /objects/02_cpyt
 #     not_numbered: true
 #   - title: Jupyter notebooks
 #     url: /features/notebooks
@@ -77,14 +77,14 @@
 #     url: /features/limits
 #     not_numbered: true
 
-# - title: Advanced Topics
-#   url: /advanced/advanced
-#   not_numbered: true
-#   expand_sections: true
-#   sections:
-#   - title: Building, previewing, and publishing your book with CircleCI
-#     url: /advanced/circleci
-#     not_numbered: true
+- title: Soluções dos Exercícios
+  url: /solutions/intro
+  not_numbered: true
+  expand_sections: true
+  sections:
+  - title: Conceitos Fundamentais
+    url: /solutions/guide
+    not_numbered: true
 
 
 # - title: GitHub repository
