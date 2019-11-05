@@ -38,8 +38,10 @@
     url: /guide/06_cond
   - title: Funções
     url: /guide/07_func
+  - title: Módulos e Importação
+    url: /guide/08_modu
   - title: Exercícios
-    url: /guide/08_exer
+    url: /guide/09_exer
 
 - title: Objetos e Classes
   url: /objects/01_first

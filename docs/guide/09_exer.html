@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Objetos e Classes</title>
-  <meta name="description" content="Objetos e Classes A programação orientada a objetos (OOP - do inglês object oriented programming) é um paradigma de programação baseado no conceito de objeto...">
+  <title>Exercícios</title>
+  <meta name="description" content="Exerc&#237;cios 1.1. Calcule a área de um círculo de raio 2. Assuma pi = 3.14.    pass    1.2. Escreva uma função que verifica se um número é par. Se for, im...">
 
-  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/objects/01_first.html">
+  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/guide/09_exer.html">
   <link rel="alternate" type="application/rss+xml" title="Python para Estatísticos" href="https://tmfilho.github.io/pyestbook/feed.xml">
 
-  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/objects/01_first.html" />
+  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/guide/09_exer.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Objetos e Classes" />
-<meta property="og:description" content="Objetos e Classes A programação orientada a objetos (OOP - do inglês object oriented programming) é um paradigma de programação baseado no conceito de objeto..." />
+<meta property="og:title"       content="Exercícios" />
+<meta property="og:description" content="Exerc&#237;cios 1.1. Calcule a área de um círculo de raio 2. Assuma pi = 3.14.    pass    1.2. Escreva uma função que verifica se um número é par. Se for, im..." />
 <meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/objects/01_first.html",
-  "headline": "Objetos e Classes",
+  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/guide/09_exer.html",
+  "headline": "Exercícios",
   "datePublished": "2019-11-05T13:35:34-03:00",
   "dateModified": "2019-11-05T13:35:34-03:00",
-  "description": "Objetos e Classes A programação orientada a objetos (OOP - do inglês object oriented programming) é um paradigma de programação baseado no conceito de objeto...",
+  "description": "Exerc&#237;cios 1.1. Calcule a área de um círculo de raio 2. Assuma pi = 3.14.    pass    1.2. Escreva uma função que verifica se um número é par. Se for, im...",
   "author": {
     "@type": "Person",
     "name": "Telmo de Menezes e Silva Filho"
@@ -610,7 +610,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/pyestbook/guide/09_exer.html"
                 >
                   
@@ -640,7 +640,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry c-sidebar__entry--active"
+        <a class="c-sidebar__entry "
           href="/pyestbook/objects/01_first.html"
         >
           
@@ -755,7 +755,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><i class="fa fa-download"></i></button>
     <div class="download-buttons">
-        <a href="/pyestbook/content/objects/01_first.ipynb" download>
+        <a href="/pyestbook/content/guide/09_exer.ipynb" download>
         <button id="interact-button-download" class="interact-button">ORIG</button>
         </a>
         
@@ -789,59 +789,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Objetos-e-Classes">Objetos e Classes<a class="anchor-link" href="#Objetos-e-Classes"> </a></h1><p>A programação orientada a objetos (OOP - do inglês <em>object oriented programming</em>) é um paradigma de programação baseado no conceito de objetos, que, na maior parte das linguagens OOP, são manifestações concretas de abstrações, chamadas classes. As classes representam tipos de dados e quais são seus atributos ou propriedades, de forma que cada objeto é uma instância de uma classe e pode ter valores diferentes para seus atributos. Além disso, as classes determinam que ações os seus objetos podem realizar, por meio de funções chamadas de métodos. Os métodos são frequentemente definidos de forma que os dados armazenados nos atributos do objeto associado ou de outro objeto são modificados. Programas OOP são então desenvolvidos por meio da criação e da interação de objetos. Alguns exemplos de classes incluem:</p>
-<ol>
-<li>Carro:<ul>
-<li>Atributos:<ol>
-<li>Marca</li>
-<li>Modelo</li>
-<li>Ano</li>
-<li>Placa</li>
-<li>Opcionais (lista)</li>
-</ol>
-</li>
-<li>Métodos:<ol>
-<li>Ligar</li>
-<li>Desligar</li>
-<li>Acelerar</li>
-<li>Frear</li>
-<li>Ligar rádio</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>Distribuição Normal<ul>
-<li>Atributos:<ol>
-<li>Média</li>
-<li>Variância </li>
-</ol>
-</li>
-<li>Métodos<ol>
-<li>Calcular fdp</li>
-<li>Gerar amostra </li>
-<li>Calcular função de distribuição acumulada</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>Regressão Linear<ul>
-<li>Atributos:<ol>
-<li>Coeficientes</li>
-<li>Intercepto </li>
-</ol>
-</li>
-<li>Métodos<ol>
-<li>Ajustar a uma amostra</li>
-<li>Estimar valores para nova amostra </li>
-<li>Calcular $R^2$</li>
-<li>Realizar testes de hipótese</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-<p>Note que cada classe representa um conceito, sua descrição (atributos) e suas ações associadas (métodos). Assim, um objeto é uma realização concreta de um conceito de classe, i.e. uma instância de classe. Por exemplo: $X \sim N(3, 4)$ é um objeto que é uma instância de distribuição Normal com média <em>3</em> e variância <em>4</em>. Com esse objeto, podemos calcular o valor da fdp ou da função de distribuição acumulada para um dado valor (ou uma lista de valores) e gerar amostra(s) aleatórias.</p>
-
+<h1 id="Exerc&#237;cios">Exerc&#237;cios<a class="anchor-link" href="#Exerc&#237;cios"> </a></h1>
 </div>
 </div>
 </div>
@@ -851,14 +799,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Uma-breve-discuss&#227;o-sobre-escopo">Uma breve discuss&#227;o sobre escopo<a class="anchor-link" href="#Uma-breve-discuss&#227;o-sobre-escopo"> </a></h2><p>Antes de seguirmos com o estudo de classes e objetos, precisamos discutir o funcionamento de escopos e <em>namespaces</em> (espaços de nomes) em Python. Escopo é a região de código em que uma variável ou uma função existe. Cada escopo tem um <em>namespace</em> associado, que é o conjunto de nomes de vaiáveis ou funções que pertencem àquele escopo. Os <em>namespaces</em> são implementados por meio de dicionários, mas isso não costuma ser perceptível. A qualquer momento durate a execução de um script, existem vários escopos/<em>namespaces</em> aninhados e acessíveis:</p>
-<ul>
-<li>O escopo local</li>
-<li>O escopo de alguma função que envolva o escopo local</li>
-<li>O escopo global do script/módulo</li>
-<li>O escopo mais externo de todos, que contém palavras reservadas e identificadores integrados da linguagem</li>
-</ul>
-<p>Quando o código tenta acessar um identificador (por exemplo ao chamar uma função), o interpretador de Python busca pelo identificador do <em>namespace</em> do escopo mais interno até o mais externo, até encontrá-lo. Veja o seguinte exemplo:</p>
+<p>1.1. Calcule a área de um círculo de raio 2. Assuma <em>pi = 3.14</em>.</p>
 
 </div>
 </div>
@@ -872,33 +813,10 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="n">test</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>10
-10
-</pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -909,7 +827,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>O código acima define uma variável <em>t</em> com valor <em>10</em> no escopo global e outra variável com o mesmo nome e valor <em>5</em> no escopo da função <em>test</em>. Ao imprimir o valor de <em>t</em> dentro da função, o resultado é <em>5</em>. Após a chamada da função, o valor de <em>t</em> é impresso novamente, obtendo o valor de <em>t</em> no escopo global. Isso acontece porque uma <strong>atribuição</strong> a uma variável em um escopo interno sempre irá criar a variável dentro do <em>namespace</em> interno. Note que, se não houver a atribuição <em>t = 5</em>, o valor impresso dentro de <em>test</em> será o da variável <em>t</em> externa.</p>
+<p>1.2. Escreva uma função que verifica se um número é par. Se for, imprima uma mensagem. Se não for, imprima outra mensagem.</p>
 
 </div>
 </div>
@@ -923,32 +841,10 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="n">test</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>10
-10
-</pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -959,7 +855,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Podemos atribuir um valor à variável <em>t</em> do escopo global dentro do escopo da função <em>test</em> por meio do operador <strong>global</strong>. Nesse caso, é preciso declarar que a variável é global antes da atribuição. Note a mudança do valor de <em>t</em> global após a chamada da função.</p>
+<p>1.3. No exercício acima, se o número for par, verifique se ele é múltiplo de 4. Se for, exiba uma mensagem diferente.</p>
 
 </div>
 </div>
@@ -973,34 +869,10 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">t</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="n">test</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-5
-</pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -1011,7 +883,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note que o operador <strong>global</strong> faz com que a variável <em>t</em> "viva" no escopo global, o que permite que ela seja criada dentro da função e passe a existir no escopo global após a sua chamada.</p>
+<p>1.4. Escreva um código que imprima os elementos menores que 5 na seguinte lista:</p>
 
 </div>
 </div>
@@ -1025,32 +897,10 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">x</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="n">test</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">]</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-5
-</pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -1061,7 +911,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Agora observe o seguinte exemplo:</p>
+<p>1.5. Escreva um código que encontra todos os divisores do número 42.</p>
 
 </div>
 </div>
@@ -1075,39 +925,10 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">t</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="k">def</span> <span class="nf">test_nested</span><span class="p">():</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="mi">3</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    <span class="n">test_nested</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="n">test</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3
-5
-5
-</pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -1118,7 +939,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Há 3 atribuições à variável <em>t</em> no código acima. Na função <em>test</em>, o operador <strong>global</strong> faz com que a atribuição <em>t = 5</em> seja aplicada à variável <em>t</em> global. Mas isso não afeta a atribuição <em>t = 3</em> da função aninhada <em>test_nested</em>. Para que a terceira atribuiçãose aplique à mesma variável, é necessário usar <strong>global</strong> novamente.</p>
+<p>1.6. Calcule a multiplicação das duas matrizes abaixo sem usar laços:</p>
 
 </div>
 </div>
@@ -1132,40 +953,11 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">t</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="k">def</span> <span class="nf">test_nested</span><span class="p">():</span>
-        <span class="k">global</span> <span class="n">t</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="mi">3</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    <span class="n">test_nested</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="n">test</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3
-3
-3
-</pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -1176,7 +968,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>O operador <strong>global</strong>, como seu nome indica, só se aplica a variáveis do escopo global. Se a variável <em>t</em> tivesse sido definida na função <em>test</em>, a função <em>test_nested</em> não poderia atribuir um valor a ela por meio do uso de <strong>global</strong>. Exemplo:</p>
+<p>1.7. Calcule a multiplicação das duas matrizes acima usando laços</p>
 
 </div>
 </div>
@@ -1190,37 +982,10 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="k">def</span> <span class="nf">test_nested</span><span class="p">():</span>
-        <span class="k">global</span> <span class="n">t</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="mi">3</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    <span class="n">test_nested</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="n">test</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3
-5
-3
-</pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -1231,7 +996,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note que no código acima, a linha <strong>global</strong> <em>t</em> dentro de <em>test_nested</em> cria uma nova variável global e não modifica a variável <em>t</em> criada por <em>test</em>. Caso deseje-se modificar o valor da variável <em>t</em> definida no escopo acima, usa-se o operador <strong>nonlocal</strong>:</p>
+<p>1.8. Calcule o fatorial de 5 usando algum tipo de laço.</p>
 
 </div>
 </div>
@@ -1245,35 +1010,10 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="k">def</span> <span class="nf">test_nested</span><span class="p">():</span>
-        <span class="k">nonlocal</span> <span class="n">t</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="mi">3</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    <span class="n">test_nested</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="n">test</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3
-3
-</pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -1284,7 +1024,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Outro exemplo, retirado da <a href="https://docs.python.org/3/tutorial/classes.html">documentação de Python</a>.</p>
+<p>1.9. Dada uma variável $X \sim N(0, 4)$, calcule o valor da fdp para o valor 2.</p>
 
 </div>
 </div>
@@ -1298,28 +1038,461 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">scope_test</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">do_local</span><span class="p">():</span>
-        <span class="n">spam</span> <span class="o">=</span> <span class="s2">&quot;local spam&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
 
-    <span class="k">def</span> <span class="nf">do_nonlocal</span><span class="p">():</span>
-        <span class="k">nonlocal</span> <span class="n">spam</span>
-        <span class="n">spam</span> <span class="o">=</span> <span class="s2">&quot;nonlocal spam&quot;</span>
+    </div>
+</div>
+</div>
 
-    <span class="k">def</span> <span class="nf">do_global</span><span class="p">():</span>
-        <span class="k">global</span> <span class="n">spam</span>
-        <span class="n">spam</span> <span class="o">=</span> <span class="s2">&quot;global spam&quot;</span>
+</div>
+</div>
 
-    <span class="n">spam</span> <span class="o">=</span> <span class="s2">&quot;test spam&quot;</span>
-    <span class="n">do_local</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After local assignment:&quot;</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
-    <span class="n">do_nonlocal</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After nonlocal assignment:&quot;</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
-    <span class="n">do_global</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After global assignment:&quot;</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
+<div class="jb_cell">
 
-<span class="n">scope_test</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;In global scope:&quot;</span><span class="p">,</span> <span class="n">spam</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.10. Calcule a distância Euclidiana dos seguintes vetores:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.11. Imprima as potências de 2, começando em $2^0$, enquanto o resultado for menor do que 2000.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.12. Verifique se o número 79 é primo.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.13. Escreva uma linha de código Python que gere uma lista apenas com os valores divisíveis por 2 e por 5 na lista abaixo:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.14. Escreva um laço que resulte no sétimo elemento da <a href="https://pt.wikipedia.org/wiki/Sequ%C3%AAncia_de_Fibonacci">sequência de Fibonacci</a> (lembrando que em Python os índices começam em 0):</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.15. Escreva uma função que calcule o raio de um círculo, dado um valor de raio. Peça um valor de raio ao usuário e calcule o valor da função.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.16. Escreva uma função que recebe uma lista e um valor e retorna uma sub-lista apenas com os elementos menores do que o valor fornecido.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.17. Escreva uma função que calcula a multiplicação de duas matrizes usando laços, mas apenas se as dimensões das matrizes forem compatíveis.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.18. Escreva uma função que recebe um número e valores de média e de variância e calcula a fdp das distribuições normais correspondentes às médias e às variâncias fornecidas.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.19. Escreva uma função que verifica se um número é primo.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.20. Faça uma função que retorna todos os divisores de um número.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.21. Faça uma função que calcula o fatorial de um número.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.22. Faça uma função que calcula $P(X = x)$, tal que $X \sim Binomial(n, p)$. Escreva uma função auxiliar que calcula ${n}\choose{x}$ para chamar na função principal.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.23. Escreva uma função que calcula $P(X = x)$ ou $P(X &lt;= x)$ (o usuário escolhe), tal que $X \sim Binomial(n, p)$.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.24. Escreva uma função que recebe uma lista, um valor e uma função de comparação e retorna uma sub-lista apenas com os elementos para os quais a função fornecida retorna <strong>True</strong>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.25. (Desafio: Recursão). Recursão é uma abordagem para solucionar problemas que envolve dividir a tarefa em partes menores do mesmo tipo, i.e. é uma abordagem do tipo dividir-para-conquistar. Do ponto de vista computacional, um problema resolvido usando recursão envolve uma função que chama a si mesma até que o problema seja resolvido. Uma parte importante desse tipo de solução é a definição do ponto de parada da recursão, quando a função para de chamar a si mesma e começar a retornar os valores para as chamadas mais "acima". Vejamos um exemplo de recursão para o cálculo do fatorial de um número <em>n</em>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1332,15 +1505,182 @@ initFunction(initPrint)
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>After local assignment: test spam
-After nonlocal assignment: nonlocal spam
-After global assignment: nonlocal spam
-In global scope: global spam
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1, 1, 120)</pre>
+</div>
+
 </div>
 </div>
 </div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Agora implemente uma função recursiva que recebe um número e retorna o número correspondente na sequência de Fibonacci.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.26. (Algoritmo de ordenação: Bubble sort). Bubble sort é um algoritmo muito simples. Ele começa no início da lista e compara os dois primeiros elementos. Se o primeiro for maior do que o segundo, eles são trocados. Esse processo se repete para cada par subsequente, até o final da lista. Depois o algoritmo volta ao início da lista e recomeça o processo, repetindo-o até não haver mais trocas. Implemente uma função que recebe uma lista e retorna seus elementos ordenados usando o algoritmo bubble sort.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.27. (Algoritmo de ordenação: Insertion sort). Algoritmo relativamente eficiente para listas pequenas e comumente usado como parte de algoritmos mais sofisticados. Ele funciona da seguinte maneira: a cada iteração, o algoritmo remove um elemento da lista, encontra seu lugar na lista ordenada e insere o elemento. Assim, a parte ordenada da lista cresce a cada iteração. A ordenação é feita na própria lista. A cada posição da lista, o algoritmo compara seu valor com o maior valor da parte ordenada. Se for maior, o elemento é mntido e o algoritmo passa para a próxima posição. Se for menor, ele acha a posição correta do elemento na parte ordenada e move todos os valores maiores para abrir espaço e inserir o elemento. Implemente uma função que recebe uma lista e retorna seus elementos ordenados usando o algoritmo insertion sort.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>       
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.28. (Algoritmo de ordenação: Selection sort). O selection sort divide o array de entrada em duas partes: a parte ordenada, que ocupa a extremidade esquerda do array, e a parte não-ordenada, que ocupa a parte direita do array. O algoritmo busca o menor elemento da parte não-ordenada e o troca com o elemento mais à esquerda da parte não-ordenada, movendo a fronteira entre as duas partes do array uma posição para a direita. O selection sort é quadrático em todos os casos. Implemente uma função que recebe uma lista e retorna seus elementos ordenados usando o algoritmo selection sort.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>             
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.29. (Algoritmo de ordenação: Merge sort). Usa a abordagem dividir para conquistar, aproveitando-se da facilidade de unir duas listas ordenadas em uma nova lista. O algoritmo divide a lista em n listas, cada uma com um elemeno. Uma lista com 1 elemento é considerada ordenada. Depois, o algoritmo repetidamente une arrays adjacentes, produzindo novos arrays ordenados, até que o único array restante contenha todos os elementos ordenados. Para unir dois arrays ordenados, o algoritmo seleciona o menor elemento de cada array e os compara, colocando o menor na primeira posição livre do novo array, e comparando o elemento que sobrou com o novo menor elemento do outro array e assim sucessivamente. Implemente uma função que recebe uma lista e retorna seus elementos ordenados usando o algoritmo merge sort.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1.30. (Algoritmo de ordenação: Quicksort). Assim como o merge sort, o quicksort é um algoritmo que usa a abordagem dividir para conquistar, mais especificamente, uma abordagem de partição. O algoritmo seleciona um elemento, chamado de pivô, e coloca todos os elementos menores do que o pivô antes dele e todos os maiores depois dele. Os dois sub-arrays são então recursivamente ordenados, seguindo o mesmo processo. Implementações eficientes do quicksort estão entre os algoritmos de ordenação mais rápidos na prática. Implemente uma função que recebe uma lista e retorna seus elementos ordenados usando o algoritmo quicksort.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -1349,10 +1689,6 @@ In global scope: global spam
 
  
 
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {}, "version_major": 2, "version_minor": 0}
-</script>
-
 
 </main>
 
@@ -1360,15 +1696,15 @@ In global scope: global spam
             <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/guide/08_exer.html">
-      〈 <span class="u-margin-right-tiny"></span> Exercícios
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/guide/08_modu.html">
+      〈 <span class="u-margin-right-tiny"></span> Módulos e Importação
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/objects/02_cpyt.html">
-      OOP em Python <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/objects/01_first.html">
+      Objetos e Classes <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

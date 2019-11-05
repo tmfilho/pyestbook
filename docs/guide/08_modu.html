@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Conceitos Fundamentais</title>
-  <meta name="description" content="Conceitos Fundamentais Este Capítulo tem o objetivo de orientar o(a) leitor(a) sobre a instalação de Python e seus diversos ambientes de trabalho. Python já ...">
+  <title>Módulos e Importação</title>
+  <meta name="description" content="M&#243;dulos e Importa&#231;&#227;o Frequentemente é necessário desenvolver um programa mais complexo, usando um editor de texto para preparar um arquivo e e...">
 
-  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/guide/01_first.html">
+  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/guide/08_modu.html">
   <link rel="alternate" type="application/rss+xml" title="Python para Estatísticos" href="https://tmfilho.github.io/pyestbook/feed.xml">
 
-  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/guide/01_first.html" />
+  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/guide/08_modu.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Conceitos Fundamentais" />
-<meta property="og:description" content="Conceitos Fundamentais Este Capítulo tem o objetivo de orientar o(a) leitor(a) sobre a instalação de Python e seus diversos ambientes de trabalho. Python já ..." />
+<meta property="og:title"       content="Módulos e Importação" />
+<meta property="og:description" content="M&#243;dulos e Importa&#231;&#227;o Frequentemente é necessário desenvolver um programa mais complexo, usando um editor de texto para preparar um arquivo e e..." />
 <meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/guide/01_first.html",
-  "headline": "Conceitos Fundamentais",
+  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/guide/08_modu.html",
+  "headline": "Módulos e Importação",
   "datePublished": "2019-11-05T13:35:34-03:00",
   "dateModified": "2019-11-05T13:35:34-03:00",
-  "description": "Conceitos Fundamentais Este Capítulo tem o objetivo de orientar o(a) leitor(a) sobre a instalação de Python e seus diversos ambientes de trabalho. Python já ...",
+  "description": "M&#243;dulos e Importa&#231;&#227;o Frequentemente é necessário desenvolver um programa mais complexo, usando um editor de texto para preparar um arquivo e e...",
   "author": {
     "@type": "Person",
     "name": "Telmo de Menezes e Silva Filho"
@@ -453,7 +453,7 @@ initFunction(initPrint)
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry c-sidebar__entry--active"
+        <a class="c-sidebar__entry "
           href="/pyestbook/guide/01_first.html"
         >
           
@@ -591,7 +591,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/pyestbook/guide/08_modu.html"
                 >
                   
@@ -755,7 +755,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><i class="fa fa-download"></i></button>
     <div class="download-buttons">
-        <a href="/pyestbook/content/guide/01_first.ipynb" download>
+        <a href="/pyestbook/content/guide/08_modu.ipynb" download>
         <button id="interact-button-download" class="interact-button">ORIG</button>
         </a>
         
@@ -789,8 +789,9 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Conceitos-Fundamentais">Conceitos Fundamentais<a class="anchor-link" href="#Conceitos-Fundamentais"> </a></h1><p>Este Capítulo tem o objetivo de orientar o(a) leitor(a) sobre a instalação de Python e seus diversos ambientes de trabalho. Python já vem instalado de fábrica na maior parte das distribuições Linux, além de macOS e algumas instalações de Windows (a depender do fabricante). No entanto, essas instalações de Python não necessariamente fornecem a versão mais atualizada da linguagem. Assim, recomenda-se a instalação de Python por meio da distribuição <a href="https://docs.anaconda.com/anaconda/">Anaconda</a>.</p>
-<h2 id="Instalando-Python-com-Anaconda">Instalando Python com Anaconda<a class="anchor-link" href="#Instalando-Python-com-Anaconda"> </a></h2><p>Anaconda é um gerenciador de pacotes de ciência de dados para Python (e R). Gratuito e simples de instalar, ele permite instalar milhares de pacotes curados em versões estáveis. A sua instalação inclui mais de 200 pacotes automaticamente, com os outros podendo ser instalados conforme necessidade de uso. Caso o(a) usuário(a) necessite realizar uma instalação mais leve (cerca de 5 GB são necessários para download e instalação), também é possível instalar a versão mínima, chamada de <a href="https://conda.pydata.org/miniconda.html">Miniconda</a>. Para realizar o download, basta seguir para a <a href="https://docs.anaconda.com/anaconda/">página de instalação</a>. Depois é só seguir os passos do instalador.</p>
+<h1 id="M&#243;dulos-e-Importa&#231;&#227;o">M&#243;dulos e Importa&#231;&#227;o<a class="anchor-link" href="#M&#243;dulos-e-Importa&#231;&#227;o"> </a></h1><p>Frequentemente é necessário desenvolver um programa mais complexo, usando um editor de texto para preparar um arquivo e executando o arquivo usando o interpretador de Python. Esse arquivo é conhecido como <em>script</em>. À medida que o programa cresce, torna-se interessante dividí-lo em diversos arquivos, para facilitar a manutenção e a compreensão do código. Pode também ser necessário usar uma ou mais funções em diversos programas, sendo indesejável copiar o código da(s) função(ões) para cada programa.</p>
+<p>Python atende esses requisitos por meio de <em>scripts</em> chamados módulos. Definições criadas em um módulo podem ser <em>importadas</em> em outros módulos ou no módulo principal (<em>main</em>), que é o módulo que contém as variáveis e funções definidas no <em>script</em> executado.</p>
+<p>Um arquivo de módulo deve ter a extensão <em>.py</em>. Vejamos um exemplo retirado da <a href="https://docs.python.org/3/tutorial/modules.html">documentação de Python</a>. O código abaixo foi salvo em um arquivo chamado "fibo.py".</p>
 
 </div>
 </div>
@@ -799,9 +800,325 @@ initFunction(initPrint)
 
 <div class="jb_cell">
 
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fibonacci numbers module</span>
+
+<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>    <span class="c1"># write Fibonacci series up to n</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">fib2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>   <span class="c1"># return Fibonacci series up to n</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Uma outra vantagem de obter Python via Anaconda é a possibilidade de instalar e gerenciar diversos ambientes de desenvolvimento, com versões diferentes da linguagem e diferentes pacotes instalados, por exemplo uma versão para cada grande projeto desenvolvido, para evitar choques de dependências.</p>
+<p>Para importar o módulo correspondente, fazemos:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">fibo</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Após a importação, podemos usar as funções do módulo <em>fibo</em> da seguinte maneira:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fibo</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fibo</span><span class="o">.</span><span class="n">fib2</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>É possível importar as funções do módulo <em>fibo</em> diretamente. Assim, elas podem ser chamadas sem ser precedidas pelo nome do módulo:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fibo</span> <span class="k">import</span> <span class="n">fib</span><span class="p">,</span> <span class="n">fib2</span>
+<span class="n">fib</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 1 1 2 3 5 8 13 21 34 55 89 144 233 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note que dessa forma, para ter acesso a todas as funções do módulo, seria necessário declarar cada um dos seus nomes. Isso pode ser feito de forma mais direta usando um asterisco:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fibo</span> <span class="k">import</span> <span class="o">*</span>
+<span class="n">fib2</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Isso irá importar todos os identificadores do módulo que não começam com <em>underline</em> (_). A importação com asterisco não costuma ser muito usada, porque comumente resulta em código de difícil leitura.</p>
+<p>O comando <em>import</em> pode usar o operador <em>as</em> para atribuir um nome diferente ao módulo ou a uma função:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">fibo</span> <span class="k">as</span> <span class="nn">f</span>
+<span class="n">f</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 1 1 2 3 5 8 13 21 34 55 89 144 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fibo</span> <span class="k">import</span> <span class="n">fib</span> <span class="k">as</span> <span class="n">fibonacci</span>
+<span class="n">fibonacci</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 1 1 2 3 5 8 13 21 34 55 89 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="M&#243;dulos-da-biblioteca-padr&#227;o-de-Python">M&#243;dulos da biblioteca padr&#227;o de Python<a class="anchor-link" href="#M&#243;dulos-da-biblioteca-padr&#227;o-de-Python"> </a></h2><p>Python já vem de fábrica com uma enorme quantidade de módulos que podem ser importados para facilitar o trabalho de desenvolvimento. Recomendamos uma visita à lista de módulos da <a href="https://docs.python.org/3/library">biblioteca padrão</a>. Alguns módulos importantes:</p>
+<ul>
+<li><strong>math</strong>: Funções matemáticas</li>
+<li><strong>statistics</strong>: Funções estatísticas</li>
+<li><strong>random</strong>: Geração de números aleatórios</li>
+<li><strong>datetime</strong>: Tipos e funções básicos de datas</li>
+<li><strong>os</strong>: Funções de interação com o sistema operacional</li>
+<li><strong>sqlite3</strong>: Interface para bancos de dados SQLite</li>
+<li><strong>itertools</strong>: Funções para programação funcional</li>
+<li><strong>multiprocessing</strong>: Processamento paralelo</li>
+<li><strong>urllib</strong>: Funções para manipulação de URLs e requisições</li>
+</ul>
 
 </div>
 </div>
@@ -817,15 +1134,15 @@ initFunction(initPrint)
             <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/intro.html">
-      〈 <span class="u-margin-right-tiny"></span> Introdução
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/guide/07_func.html">
+      〈 <span class="u-margin-right-tiny"></span> Funções
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/guide/02_ides.html">
-      Ambientes de Trabalho <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/guide/09_exer.html">
+      Exercícios <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
