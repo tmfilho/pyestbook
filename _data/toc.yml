@@ -45,9 +45,9 @@
   url: /objects/01_first
   # not_numbered: true
   expand_sections: true
-  # sections:
-  # - title: OOP em Python
-  #   url: /objects/02_cpyt
+  sections:
+  - title: OOP em Python
+    url: /objects/02_cpyt
 #     not_numbered: true
 #   - title: Jupyter notebooks
 #     url: /features/notebooks
