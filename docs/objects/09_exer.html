@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Advanced Topics</title>
-  <meta name="description" content="Advanced topics and guides This section covers more advanced topics in building and configuring Jupyter Book. ">
+  <title>Exercícios</title>
+  <meta name="description" content="Exerc&#237;cios 2.1. Implemente a classe UniformDistribution como uma subclasse da classe DiscreteDistribution da Seção anterior.    pass    2.2. (Estrutura ...">
 
-  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/advanced/advanced.html">
+  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/objects/09_exer.html">
   <link rel="alternate" type="application/rss+xml" title="Python para Estatísticos" href="https://tmfilho.github.io/pyestbook/feed.xml">
 
-  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/advanced/advanced.html" />
+  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/objects/09_exer.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Advanced Topics" />
-<meta property="og:description" content="Advanced topics and guides This section covers more advanced topics in building and configuring Jupyter Book. " />
+<meta property="og:title"       content="Exercícios" />
+<meta property="og:description" content="Exerc&#237;cios 2.1. Implemente a classe UniformDistribution como uma subclasse da classe DiscreteDistribution da Seção anterior.    pass    2.2. (Estrutura ..." />
 <meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/advanced/advanced.html",
-  "headline": "Advanced Topics",
+  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/objects/09_exer.html",
+  "headline": "Exercícios",
   "datePublished": "2019-11-12T14:00:09-03:00",
   "dateModified": "2019-11-12T14:00:09-03:00",
-  "description": "Advanced topics and guides This section covers more advanced topics in building and configuring Jupyter Book. ",
+  "description": "Exerc&#237;cios 2.1. Implemente a classe UniformDistribution como uma subclasse da classe DiscreteDistribution da Seção anterior.    pass    2.2. (Estrutura ...",
   "author": {
     "@type": "Person",
     "name": "Telmo de Menezes e Silva Filho"
@@ -702,7 +702,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/pyestbook/objects/09_exer.html"
                 >
                   
@@ -793,7 +793,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><i class="fa fa-download"></i></button>
     <div class="download-buttons">
-        <a href="/pyestbook/content/advanced/advanced.ipynb" download>
+        <a href="/pyestbook/content/objects/09_exer.ipynb" download>
         <button id="interact-button-download" class="interact-button">ORIG</button>
         </a>
         
@@ -827,18 +827,79 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Advanced-topics-and-guides">Advanced topics and guides<a class="anchor-link" href="#Advanced-topics-and-guides"> </a></h1><p>This section covers more advanced topics in building and configuring Jupyter Book.</p>
+<h1 id="Exerc&#237;cios">Exerc&#237;cios<a class="anchor-link" href="#Exerc&#237;cios"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>2.1. Implemente a classe UniformDistribution como uma subclasse da classe DiscreteDistribution da Seção anterior.</p>
 
 </div>
 </div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>2.2. (Estrutura de dados: Lista encadeada). Uma lista encadeada é uma coleção de elementos em que cada elemento 'eum nó que "aponta" para o próximo membro da lista. Dessa forma, os elementos da lista formam uma cadeia cuja posição na memória não precisa ser contígua. Essa estrutura permite a inserção e a remoção eficiente de elementos em qualquer posição da lista, sem ser necessário deslocar "fisicamente" todos os outros membros. Uma desvatagem das listas é que o acesso a cada elemento não pode ser feita de forma direta, como em um array. É necessário navegar pela lista para encontrar o elemento desejado. Na sua forma mais simples, cada nó da lista contém dados e uma referência para o próximo elemento. Dessa forma, o último elemento da lista sempre apontará para uma referência nula. Variedades mais complexas adicionam referências extras, como para os elementos anteriores (lista duplamente encadeada). Implemente uma lista encadeada simples em Python, usando classes para a lista e para os nós, além das seguintes operações:</p>
+<ol>
+<li>Inserir elemento no início</li>
+<li>Inserir elemento no fim</li>
+<li>Inserir elemento em uma dada posição</li>
+<li>Verificar se um elemento está na lista</li>
+<li>Remover elemento com dado valor</li>
+<li>Remover começo da lista (cabeça) e retornar o seu valor</li>
+<li>Remover último elemento e retornar o seu valor</li>
+<li>Imprimir os valores da lista</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 </div>
 
  
-
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {}, "version_major": 2, "version_minor": 0}
-</script>
 
 
 </main>
@@ -847,15 +908,15 @@ initFunction(initPrint)
             <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/features/limits.html">
-      〈 <span class="u-margin-right-tiny"></span> Feature Limits
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/objects/03_inhe.html">
+      〈 <span class="u-margin-right-tiny"></span> Herança e Polimorfismo
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/advanced/circleci.html">
-      Building, previewing, and publishi... <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/solutions/intro.html">
+      Soluções dos Exercícios <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

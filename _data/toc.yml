@@ -53,6 +53,8 @@
 #     not_numbered: true
   - title: Herança e Polimorfismo
     url: /objects/03_inhe
+  - title: Exercícios
+    url: /objects/09_exer
 #     not_numbered: true
 #   - title: Hiding code blocks or entire cells
 #     url: /features/hiding
