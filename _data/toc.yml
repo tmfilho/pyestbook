@@ -53,6 +53,8 @@
 #     not_numbered: true
   - title: Herança e Polimorfismo
     url: /objects/03_inhe
+  - title: Erros e Exceçõs
+    url: /objects/04_erro
   - title: Exercícios
     url: /objects/09_exer
 #     not_numbered: true
@@ -88,6 +90,9 @@
   sections:
   - title: Conceitos Fundamentais
     url: /solutions/guide
+    not_numbered: true
+  - title: Objetos e Classes
+    url: /solutions/objects
     not_numbered: true
 
 

@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/search",
   "headline": "Search the site",
-  "datePublished": "2019-11-12T14:00:09-03:00",
-  "dateModified": "2019-11-12T14:00:09-03:00",
+  "datePublished": "2019-11-18T23:06:03-03:00",
+  "dateModified": "2019-11-18T23:06:03-03:00",
   "description": "        ",
   "author": {
     "@type": "Person",
@@ -703,10 +703,29 @@ initFunction(initPrint)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/pyestbook/objects/09_exer.html"
+                  href="/pyestbook/objects/04_erro.html"
                 >
                   
                     2.3
+                  
+                  Erros e Exceçõs
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/pyestbook/objects/09_exer.html"
+                >
+                  
+                    2.4
                   
                   Exercícios
                 </a>
@@ -759,6 +778,23 @@ initFunction(initPrint)
                 >
                   
                   Conceitos Fundamentais
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/pyestbook/solutions/objects.html"
+                >
+                  
+                  Objetos e Classes
                 </a>
 
                 
@@ -1276,6 +1312,14 @@ initFunction(initPrint)
         "tags": [],
         "url": "https://tmfilho.github.io/pyestbook/objects/03_inhe.html",
         "teaser":null},{
+        "title": "Erros e Exceçõs",
+        
+        "excerpt":
+            "Erros e Exce&#231;&#245;es Mesmo quando um comando está sintaticamente correto, é possível que ocorram erros em sua execução. Esses erros que ocorrem em tempo de execução são chamados de exceções e, se não tratados, resultam no final fatal do programa. Alguns exemplos de exceções comuns: 1 / 0 --------------------------------------------- ZeroDivisionErrorTraceback (most recent call last) &lt;ipython-input-5-bc757c3fda29&gt; in &lt;module&gt;() ----&gt; 1 1 / 0 ZeroDivisionError: division by zero mean * 3 --------------------------------------------- NameError Traceback (most recent call last) &lt;ipython-input-2-5221628d77d0&gt; in &lt;module&gt;() ----&gt; 1 mean * 3 NameError: name &#39;mean&#39; is not defined &#39;mean: &#39; + 1. --------------------------------------------- TypeError Traceback (most recent call...",
+        "categories": [],
+        "tags": [],
+        "url": "https://tmfilho.github.io/pyestbook/objects/04_erro.html",
+        "teaser":null},{
         "title": "Exercícios",
         
         "excerpt":
@@ -1299,6 +1343,14 @@ initFunction(initPrint)
         "categories": [],
         "tags": [],
         "url": "https://tmfilho.github.io/pyestbook/solutions/intro.html",
+        "teaser":null},{
+        "title": "Objetos e Classes",
+        
+        "excerpt":
+            "Objetos e Classes 2.1. Implemente a classe UniformDistribution como uma subclasse da classe DiscreteDistribution da Seção anterior. class DiscreteDistribution: def __init__(self, params): self.params = params def pmf(self, x): pass def cdf(self, x): total = 0 for v in range(x + 1): total += self.pmf(v) return total def mean(self): pass def variance(self): pass class UniformDistribution(DiscreteDistribution): def pmf(self, x): a, b = self.params[&#39;a&#39;], self.params[&#39;b&#39;] if a &lt;= x &lt;= b: return 1 / len(range(a, b + 1)) else: return 0 def mean(self): a, b = self.params[&#39;a&#39;], self.params[&#39;b&#39;] return (a + b) / 2 def variance(self): a, b = self.params[&#39;a&#39;], self.params[&#39;b&#39;] return ((b...",
+        "categories": [],
+        "tags": [],
+        "url": "https://tmfilho.github.io/pyestbook/solutions/objects.html",
         "teaser":null},]
 </script>
             </div>

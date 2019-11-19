@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/objects/09_exer.html",
   "headline": "Exercícios",
-  "datePublished": "2019-11-12T14:00:09-03:00",
-  "dateModified": "2019-11-12T14:00:09-03:00",
+  "datePublished": "2019-11-18T23:06:03-03:00",
+  "dateModified": "2019-11-18T23:06:03-03:00",
   "description": "Exerc&#237;cios 2.1. Implemente a classe UniformDistribution como uma subclasse da classe DiscreteDistribution da Seção anterior.    pass    2.2. (Estrutura ...",
   "author": {
     "@type": "Person",
@@ -702,11 +702,30 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/pyestbook/objects/04_erro.html"
+                >
+                  
+                    2.3
+                  
+                  Erros e Exceçõs
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
                 <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/pyestbook/objects/09_exer.html"
                 >
                   
-                    2.3
+                    2.4
                   
                   Exercícios
                 </a>
@@ -759,6 +778,23 @@ initFunction(initPrint)
                 >
                   
                   Conceitos Fundamentais
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/pyestbook/solutions/objects.html"
+                >
+                  
+                  Objetos e Classes
                 </a>
 
                 
@@ -899,6 +935,93 @@ initFunction(initPrint)
 </div>
 </div>
 
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>2.3. (Estruturas de dados: Fila e Pilha). Fila e pilha são dois tipos especiais de listas encadeadas que se diferenciam pelas suas formas de adicionar e remover elementos. Nas filas, o primeiro elemento que entra deve ser sempre o primeiro a ser removido, comportamento conhecido em inglês como <em>First In First Out</em> (FIFO). As operações de inserir e remover na fila são conhecidas como <em>enfileirar</em> (<em>enqueue</em>) e <em>desenfileirar</em> (<em>dequeue</em>). Por outro lado, nas pilhas, o último elemento que entra deve ser o primeiro a sair, ou seja <em>Last In First Out</em> (LIFO). As operações de inserir e remover na pilha são conhecidas como <em>empilhar</em> (<em>push</em>) e <em>desempilhar</em> (<em>pop</em>). Implemente fila e pilha como subclasses da lista encadeada implementada no exercício anterior.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>2.4. Pilhas e filas possuem bastantes usos em sistemas computacionais. Por exemplo: as operações de <em>desfazer</em> e <em>refazer</em> de editores de texto e de <em>voltar</em> e <em>avançar</em> em navegadores são comumente implementadas usando duas pilhas. Implemente um simulador de editor de texto usando a função <strong>input</strong> de Python. O script irá registrar a <em>string</em> digitada pelo usuário e imprimir as últimas <em>strings</em> fornecidas. O usuário poderá fornecer três "<em>strings</em> especiais" que funcionarão como comandos: 'ctrl+z' fará o script descartar a última <em>string</em> digitada, 'ctrl+y' fará o script recuperar a última <em>string</em> descartada e 'stop' irá parar o scripts. Veja abaixo um exemplo de execução do script:</p>
+<ol>
+<li><em>String</em> digitada: 'a'<ul>
+<li>Saída no console: 'a -&gt; '</li>
+</ul>
+</li>
+<li><em>String</em> digitada: 'b'<ul>
+<li>Saída no console: 'b -&gt; a -&gt; '</li>
+</ul>
+</li>
+<li><em>String</em> digitada: 'c'<ul>
+<li>Saída no console: 'c -&gt; b -&gt; a -&gt; '</li>
+</ul>
+</li>
+<li><em>String</em> digitada: 'ctrl+z'<ul>
+<li>Saída no console: 'b -&gt; a -&gt; '</li>
+</ul>
+</li>
+<li><em>String</em> digitada: 'ctrl+z'<ul>
+<li>Saída no console: 'a -&gt; '</li>
+</ul>
+</li>
+<li><em>String</em> digitada: 'ctrl+y'<ul>
+<li>Saída no console: 'b -&gt; a -&gt; '</li>
+</ul>
+</li>
+<li><em>String</em> digitada: 'ctrl+y'<ul>
+<li>Saída no console: 'c -&gt; b -&gt; a -&gt; '</li>
+</ul>
+</li>
+<li><em>String</em> digitada: 'stop'</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
  
 
 
@@ -908,8 +1031,8 @@ initFunction(initPrint)
             <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/objects/03_inhe.html">
-      〈 <span class="u-margin-right-tiny"></span> Herança e Polimorfismo
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/objects/04_erro.html">
+      〈 <span class="u-margin-right-tiny"></span> Erros e Exceçõs
     </a>
   
 
