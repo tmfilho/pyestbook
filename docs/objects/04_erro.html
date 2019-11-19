@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/objects/04_erro.html",
   "headline": "Erros e Exceçõs",
-  "datePublished": "2019-11-18T23:06:03-03:00",
-  "dateModified": "2019-11-18T23:06:03-03:00",
+  "datePublished": "2019-11-19T13:58:47-03:00",
+  "dateModified": "2019-11-19T13:58:47-03:00",
   "description": "Erros e Exce&#231;&#245;es Mesmo quando um comando está sintaticamente correto, é possível que ocorram erros em sua execução. Esses erros que ocorrem em temp...",
   "author": {
     "@type": "Person",
@@ -708,7 +708,7 @@ initFunction(initPrint)
                   
                     2.3
                   
-                  Erros e Exceçõs
+                  Erros e Exceções
                 </a>
 
                 
@@ -728,6 +728,60 @@ initFunction(initPrint)
                     2.4
                   
                   Exercícios
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/pyestbook/math/01_first.html"
+        >
+          
+            3.
+          
+          Computação Matemática e Científica
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/pyestbook/math/02_nump.html"
+                >
+                  
+                    3.1
+                  
+                  NumPy
                 </a>
 
                 
@@ -1330,6 +1384,69 @@ Valor digitado não usou vírgula para decimais: 2.1
 
 </div>
 </div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="O-operador-finally">O operador <strong>finally</strong><a class="anchor-link" href="#O-operador-finally"> </a></h2><p>Além do <strong>except</strong>, o operador <strong>try</strong> pode ser associado a outro operador opcional, chamado <strong>finally</strong>, que é usado para definir ações que devem ser executadas sob quaisquer circunstâncias. Por exemplo, se uma conexão com um servidor for aberta, ela deve ser fechada após o seu uso, tendo ou não ocorrido erros. O bloco de código associado ao comando <strong>finally</strong> será sempre executado, mesmo que ocorra alguma exceção. Por exemplo:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Lançando um erro&#39;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Adeus&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Adeus
+</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>  Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-db61d8c95e81&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Lançando um erro&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>     print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Adeus&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">ValueError</span>: Lançando um erro</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 
