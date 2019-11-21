@@ -605,12 +605,12 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[0.98568836 0.80077108 0.1462651 ]
- [0.06303428 0.99853742 0.53075369]
- [0.255289   0.16000957 0.91127901]
- [0.84189027 0.06056232 0.62080762]
- [0.9433355  0.26335913 0.56801377]]
-Soma: 8.149596125661022, Média: 0.5433064083774014, Desvio-padrão: 0.3454624877515235
+<pre>[[0.23212101 0.91462662 0.91540541]
+ [0.57452843 0.95238774 0.42597797]
+ [0.1072103  0.53177664 0.36938877]
+ [0.18792794 0.46956383 0.92813154]
+ [0.88990463 0.62508447 0.03784651]]
+Soma: 8.161881792579557, Média: 0.5441254528386371, Desvio-padrão: 0.30961707078112033
 </pre>
 </div>
 </div>
@@ -655,13 +655,13 @@ Soma: 8.149596125661022, Média: 0.5433064083774014, Desvio-padrão: 0.345462487
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[3.08923741 2.28323953 2.77711919]
-[0.64424151 0.53077513 0.44219253 0.50775341 0.59156947]
-[[0.98568836 0.80077108 0.1462651 ]
- [1.04872264 1.7993085  0.67701879]
- [1.30401164 1.95931807 1.58829779]
- [2.14590191 2.01988039 2.20910542]
- [3.08923741 2.28323953 2.77711919]]
+<pre>[1.99169231 3.49343929 2.67675019]
+[0.68738435 0.65096471 0.33612524 0.5285411  0.51761187]
+[[0.23212101 0.91462662 0.91540541]
+ [0.80664944 1.86701436 1.34138337]
+ [0.91385974 2.398791   1.71077215]
+ [1.10178768 2.86835482 2.63890369]
+ [1.99169231 3.49343929 2.67675019]]
 </pre>
 </div>
 </div>
@@ -795,20 +795,20 @@ Soma: 8.149596125661022, Média: 0.5433064083774014, Desvio-padrão: 0.345462487
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[0.41423251 0.3556371  0.42781765 0.7554641 ]
- [0.5707557  0.77237167 0.86258203 0.51908006]
- [0.71319899 0.20102344 0.99802802 0.6255533 ]
- [0.37952529 0.97534884 0.15708233 0.85141563]
- [0.97825692 0.04680751 0.89085038 0.57704229]]
+<pre>[[0.07422871 0.98991576 0.75504541 0.04575127]
+ [0.37423932 0.20386125 0.78009502 0.89139556]
+ [0.43186859 0.65060262 0.55278012 0.61055091]
+ [0.85672426 0.85429927 0.11882156 0.0044845 ]
+ [0.38750379 0.85236982 0.13323144 0.76114493]]
 
-0.6255533043403108
+0.610550913146224
 
-[0.3556371  0.77237167 0.20102344 0.97534884 0.04680751]
+[0.98991576 0.20386125 0.65060262 0.85429927 0.85236982]
 
-[0.3556371  0.77237167 0.20102344 0.97534884]
+[0.98991576 0.20386125 0.65060262 0.85429927]
 
-[[0.5707557  0.77237167 0.86258203 0.51908006]
- [0.71319899 0.20102344 0.99802802 0.6255533 ]]
+[[0.37423932 0.20386125 0.78009502 0.89139556]
+ [0.43186859 0.65060262 0.55278012 0.61055091]]
 </pre>
 </div>
 </div>
@@ -853,9 +853,237 @@ Soma: 8.149596125661022, Média: 0.5433064083774014, Desvio-padrão: 0.345462487
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[0.97825692 0.04680751 0.89085038 0.57704229]
-[0.97825692 0.04680751 0.89085038 0.57704229]
-[0.97825692 0.04680751 0.89085038 0.57704229]
+<pre>[0.38750379 0.85236982 0.13323144 0.76114493]
+[0.38750379 0.85236982 0.13323144 0.76114493]
+[0.38750379 0.85236982 0.13323144 0.76114493]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>NumPy oferece mais formas de indexar os seus <em>arrays</em>, usando listas ou <em>arrays</em> de inteiros ou booleanos. Quando o <em>array</em> <em>b</em> é multidimensional, a indexação usando uma única lista de índices se refere à primeira dimensão de <em>b</em>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>  <span class="c1"># Segunda e quinta linhas da matriz b, equivale a b[[1, 4], :]</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>  <span class="c1"># Segunda e terceira colunas da matriz b</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>  <span class="c1"># Indexação pareada, equivale a [b[1,1], b[4, 2]]</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">]</span>
+<span class="n">j</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span>  <span class="c1"># Indexação pareada, segunda e terceira colunas da segunda e quinta linhas</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span>
+    <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">]],</span>  <span class="c1"># Equivale a b[i, j], note que o array</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>       <span class="c1"># de índices do primeiro eixo é bidimensional</span>
+<span class="p">])</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># As posições indexadas podem receber valores</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0.07422871 0.98991576 0.75504541 0.04575127]
+ [0.37423932 0.20386125 0.78009502 0.89139556]
+ [0.43186859 0.65060262 0.55278012 0.61055091]
+ [0.85672426 0.85429927 0.11882156 0.0044845 ]
+ [0.38750379 0.85236982 0.13323144 0.76114493]]
+
+[[0.37423932 0.20386125 0.78009502 0.89139556]
+ [0.38750379 0.85236982 0.13323144 0.76114493]]
+
+[[0.98991576 0.75504541]
+ [0.20386125 0.78009502]
+ [0.65060262 0.55278012]
+ [0.85429927 0.11882156]
+ [0.85236982 0.13323144]]
+
+[0.20386125 0.13323144]
+
+[[0.20386125 0.78009502]
+ [0.85236982 0.13323144]]
+
+[[0.20386125 0.78009502]
+ [0.85236982 0.13323144]]
+
+[[0.07422871 0.98991576 0.75504541 0.04575127]
+ [0.37423932 0.         0.         0.89139556]
+ [0.43186859 0.65060262 0.55278012 0.61055091]
+ [0.85672426 0.85429927 0.11882156 0.0044845 ]
+ [0.38750379 0.         0.         0.76114493]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para indexar <em>arrays</em> usando <em>arrays</em> ou listas de booleanos, pode-se usar um <em>array</em> com exatamente a mesma quantidade de elementos que o <em>array</em> indexado. Isso pode ser muito útil para fazer atribuições. Exemplo:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mf">0.5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>  <span class="c1"># array unidimensional com os elementos selecionados</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="n">b</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[ True False False  True]
+ [ True  True  True False]
+ [ True False False False]
+ [False False  True  True]
+ [ True  True  True False]]
+
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+
+[[0.         0.98991576 0.75504541 0.        ]
+ [0.         0.         0.         0.89139556]
+ [0.         0.65060262 0.55278012 0.61055091]
+ [0.85672426 0.85429927 0.         0.        ]
+ [0.         0.         0.         0.76114493]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Também é possível indexar cada dimensão usando <em>arrays</em> unidimensionais de booleanos com o mesmo tamanho da dimensão indexada:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">b1</span><span class="p">])</span>  <span class="c1"># Equivale a b[b1, :]</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[:,</span> <span class="n">b2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">b1</span><span class="p">,</span><span class="n">b2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0.         0.98991576 0.75504541 0.        ]
+ [0.         0.65060262 0.55278012 0.61055091]]
+
+[[0.         0.98991576]
+ [0.         0.        ]
+ [0.         0.65060262]
+ [0.85672426 0.85429927]
+ [0.         0.        ]]
+
+[0.         0.65060262]
+
 </pre>
 </div>
 </div>
@@ -899,11 +1127,11 @@ Soma: 8.149596125661022, Média: 0.5433064083774014, Desvio-padrão: 0.345462487
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[0.41423251 0.3556371  0.42781765 0.7554641 ]
-[0.5707557  0.77237167 0.86258203 0.51908006]
-[0.71319899 0.20102344 0.99802802 0.6255533 ]
-[0.37952529 0.97534884 0.15708233 0.85141563]
-[0.97825692 0.04680751 0.89085038 0.57704229]
+<pre>[0.70968361 0.47216499 0.62903357 0.23256923]
+[0.15019964 0.99036884 0.32071652 0.39608505]
+[0.0282208  0.86358171 0.84650532 0.49235815]
+[0.40869514 0.32478269 0.97010913 0.90962194]
+[0.93522107 0.31236502 0.47480294 0.93315187]
 </pre>
 </div>
 </div>
@@ -911,6 +1139,442 @@ Soma: 8.149596125661022, Média: 0.5433064083774014, Desvio-padrão: 0.345462487
 </div>
 </div>
 
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Redimensionando-arrays">Redimensionando <em>arrays</em><a class="anchor-link" href="#Redimensionando-arrays"> </a></h3><p>Como vimos acima, o tamanho das dimensões do <em>array</em> pode ser obtido por meio do atributo <em>shape</em>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ 0  1  2  3  4  5  6  7  8  9 10 11]
+(12,)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>No entanto, a forma do <em>array</em> não é fixa e pode ser modificada de diversas formas, retornando um novo <em>array</em> com os mesmos elementos do <em>array</em> original, mas reposicionados para se adequar à nova forma.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>  <span class="c1"># retorna o array &quot;achatado&quot; </span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>  <span class="c1"># retorna o array transposto</span>
+<span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[ 0  1  2]
+ [ 3  4  5]
+ [ 6  7  8]
+ [ 9 10 11]]
+
+[ 0  1  2  3  4  5  6  7  8  9 10 11]
+
+[[ 0  3  6  9]
+ [ 1  4  7 10]
+ [ 2  5  8 11]]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A função <em>reshape</em> retorna um novo <em>array</em>. Para modificar o próprio <em>array</em>, pode-se usar a função <em>resize</em>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[ 0  1  2]
+ [ 3  4  5]
+ [ 6  7  8]
+ [ 9 10 11]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Se alguma dimensão receber o valor <em>-1</em> para uma operação de redimensionamento, o seu novo tamanho será automaticamente calculado. Por exemplo, se quisermos que <em>a</em> tenha <em>2</em> linhas e o número necessário de colunas, podemos fazer:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0,  1,  2,  3,  4,  5],
+       [ 6,  7,  8,  9, 10, 11]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Se tentarmos tranpor um <em>array</em> unidimensional usando o atributo <em>T</em>, ele continuará sendo unidimensional. Portanto, para realizar a transposição, podemos usar o método <em>reshape</em>, com <em>-1</em> no número de linhas, gerando um vetor coluna com o número necessário de linhas:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ 0  1  2  3  4  5  6  7  8  9 10 11]
+[ 0  1  2  3  4  5  6  7  8  9 10 11]
+[[ 0]
+ [ 1]
+ [ 2]
+ [ 3]
+ [ 4]
+ [ 5]
+ [ 6]
+ [ 7]
+ [ 8]
+ [ 9]
+ [10]
+ [11]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Outra forma de transpor um <em>array</em> unidimensional para obter um vetor coluna é usando o atalho de NumPy para criar novos eixos:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0],
+       [ 1],
+       [ 2],
+       [ 3],
+       [ 4],
+       [ 5],
+       [ 6],
+       [ 7],
+       [ 8],
+       [ 9],
+       [10],
+       [11]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Concatenando-arrays">Concatenando <em>arrays</em><a class="anchor-link" href="#Concatenando-arrays"> </a></h3><p>As funções <em>vstack</em> e <em>hstack</em> permitem concatenar dois ou mais <em>arrays</em> verticalmente e horizontalmente, respectivamente:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0.         1.        ]
+ [2.         3.        ]
+ [4.         5.        ]
+ [0.10739744 0.52628882]
+ [0.69224407 0.01864132]
+ [0.08691252 0.48103772]]
+[[0.         1.         0.10739744 0.52628882]
+ [2.         3.         0.69224407 0.01864132]
+ [4.         5.         0.08691252 0.48103772]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A função <em>column_stack</em> concatena dois ou mais <em>arrays</em> unidimensionais na forma de colunas em um array 2D resultante:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>  <span class="c1"># resultado diferente</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0.         0.54017077]
+ [1.         0.79932955]
+ [2.         0.19442395]]
+
+[0.         1.         2.         0.54017077 0.79932955 0.19442395]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Essas funções de concatenação são todas casos especiais de uso mais comum da função <em>concatenate</em>, que permite definir o eixo sobre o qual ocorrerá a concatenação.</p>
+
+</div>
+</div>
 </div>
 </div>
 
