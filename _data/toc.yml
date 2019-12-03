@@ -66,8 +66,8 @@
   #   url: /objects/03_inhe
   # - title: Erros e Exceçõs
   #   url: /objects/04_erro
-  # - title: Exercícios
-  #   url: /objects/09_exer
+  - title: Exercícios
+    url: /math/09_exer
 
 - title: Soluções dos Exercícios
   url: /solutions/intro
