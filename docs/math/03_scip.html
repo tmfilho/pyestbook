@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Exercícios</title>
-  <meta name="description" content="Exerc&#237;cios 3.1. Use NumPy para gerar 1000 valores aleatórios em um vetor $\vec{x}$. Depois gere um vetor $\vec{y}$, tal que $y_i = 3x_i + 10 + e_i$, ond...">
+  <title>SciPy</title>
+  <meta name="description" content="SciPy A biblioteca SciPy disponibiliza muitas funcionalidades de computação científica implementadas de forma eficiente, incluindo integração numérica, inter...">
 
-  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/math/09_exer.html">
+  <link rel="canonical" href="https://tmfilho.github.io/pyestbook/math/03_scip.html">
   <link rel="alternate" type="application/rss+xml" title="Python para Estatísticos" href="https://tmfilho.github.io/pyestbook/feed.xml">
 
-  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/math/09_exer.html" />
+  <meta property="og:url"         content="https://tmfilho.github.io/pyestbook/math/03_scip.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Exercícios" />
-<meta property="og:description" content="Exerc&#237;cios 3.1. Use NumPy para gerar 1000 valores aleatórios em um vetor $\vec{x}$. Depois gere um vetor $\vec{y}$, tal que $y_i = 3x_i + 10 + e_i$, ond..." />
+<meta property="og:title"       content="SciPy" />
+<meta property="og:description" content="SciPy A biblioteca SciPy disponibiliza muitas funcionalidades de computação científica implementadas de forma eficiente, incluindo integração numérica, inter..." />
 <meta property="og:image"       content="https://tmfilho.github.io/pyestbook/assets/images/logo-arte.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/math/09_exer.html",
-  "headline": "Exercícios",
+  "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/math/03_scip.html",
+  "headline": "SciPy",
   "datePublished": "2020-02-06T13:58:12-03:00",
   "dateModified": "2020-02-06T13:58:12-03:00",
-  "description": "Exerc&#237;cios 3.1. Use NumPy para gerar 1000 valores aleatórios em um vetor $\vec{x}$. Depois gere um vetor $\vec{y}$, tal que $y_i = 3x_i + 10 + e_i$, ond...",
+  "description": "SciPy A biblioteca SciPy disponibiliza muitas funcionalidades de computação científica implementadas de forma eficiente, incluindo integração numérica, inter...",
   "author": {
     "@type": "Person",
     "name": "Telmo de Menezes e Silva Filho"
@@ -794,7 +794,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/pyestbook/math/03_scip.html"
                 >
                   
@@ -813,7 +813,7 @@ initFunction(initPrint)
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
+                <a class="c-sidebar__entry "
                   href="/pyestbook/math/09_exer.html"
                 >
                   
@@ -921,7 +921,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><i class="fa fa-download"></i></button>
     <div class="download-buttons">
-        <a href="/pyestbook/content/math/09_exer.ipynb" download>
+        <a href="/pyestbook/content/math/03_scip.ipynb" download>
         <button id="interact-button-download" class="interact-button">ORIG</button>
         </a>
         
@@ -955,45 +955,20 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Exerc&#237;cios">Exerc&#237;cios<a class="anchor-link" href="#Exerc&#237;cios"> </a></h1>
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>3.1. Use NumPy para gerar 1000 valores aleatórios em um vetor $\vec{x}$. Depois gere um vetor $\vec{y}$, tal que $y_i = 3x_i + 10 + e_i$, onde $e_i \sim N(0, 1)$. Por fim, estime um modelo de regressão simples de $Y$ em função de $X$.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>3.2. Faça uma função que gera uma matriz aleatória $X$ (escolha a distribuição) com $n$ linhas e $p$ colunas e um vetor $\vec{y}$, cujos valores são função das linhas de $X$ com adição de ruído normal, de média $0$ e variância $1$, e.g. $y_i = 3x_{i1} + 5x_{i2} + 10 + e_i$, onde $e_i \sim N(0, 1)$. Os parâmetros da função geradora devem incluir $n$, $p$ e a função geradora de $y$ (dica: use o operador <strong>lambda</strong>).</p>
+<h1 id="SciPy">SciPy<a class="anchor-link" href="#SciPy"> </a></h1><p>A biblioteca SciPy disponibiliza muitas funcionalidades de computação científica implementadas de forma eficiente, incluindo integração numérica, interpolação, otimização, álgebra linear e Estatística. A documentação completa pode ser encontrada em <a href="https://docs.scipy.org/doc/">docs.scipy.org/doc</a>. Os módulos disponíveis no SciPy incluem:</p>
+<ol>
+<li><em>cluster</em>: Algoritmos de agrupamento hierárquicos e por quantização vetorial</li>
+<li><em>constants</em>: Constantes físicas e matemáticas</li>
+<li><em>fftpack</em>: Funções relacionadas à transformada rápida de Fourier</li>
+<li><em>integrate</em>: Funções para calcular integrais e equações diferenciais ordinárias</li>
+<li><em>interpolate</em>: Interpolação e <em>splines</em> de suavização</li>
+<li><em>linalg</em>: Álgebra linear</li>
+<li><em>optimize</em>: Otimização e funções para encontrar raízes</li>
+<li><em>signal</em>: Processamento de sinais</li>
+<li><em>spatial</em>: Algoritmos, estruturas de dados espaciais e distâncias</li>
+<li><em>stats</em>: Funções e distribuições estatísticas</li>
+</ol>
+<h2 id="Fun&#231;&#245;es-para-integra&#231;&#227;o">Fun&#231;&#245;es para integra&#231;&#227;o<a class="anchor-link" href="#Fun&#231;&#245;es-para-integra&#231;&#227;o"> </a></h2><p>O módulo <em>integrate</em> oferece diversas funções para calcular integrais. A primeira delas é a função <em>quad</em>, que permite computar uma integral definida de uma variável:</p>
 
 </div>
 </div>
@@ -1007,10 +982,68 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="k">import</span> <span class="n">quad</span>
+
+<span class="n">x2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">integral</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;resultado: </span><span class="si">{}</span><span class="s1">, erro: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">integral</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">integral</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>resultado: 2.666666666666667, erro: 2.960594732333751e-14
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">normal_fdp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma_2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma_2</span><span class="p">))</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">sigma_2</span><span class="p">)</span>
+
+<span class="n">standard_fdp</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">normal_fdp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">integral</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">standard_fdp</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;P(0 &lt; X &lt; 2): </span><span class="si">{}</span><span class="s1">, erro: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">integral</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">integral</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>P(0 &lt; X &lt; 2): 0.9973002039367399, erro: 1.1072256503105314e-14
+</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -1021,13 +1054,18 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>3.3. Implemente uma classe <em>LinearRegression</em>, com os métodos:</p>
-<ul>
-<li><em>fit</em> que recebe uma matriz $X$ e um vetor $\vec{y}$ e ajusta uma regressão linear pelo <a href="https://pt.wikipedia.org/wiki/M%C3%A9todo_dos_m%C3%ADnimos_quadrados">método dos mínimos quadrados</a>, guardando os coeficientes e o intercept como atributos</li>
-<li><em>predict</em> que recebe uma matriz $X$ e estima os valores $\hat{y}$ correspondentes</li>
-<li><em>score</em> que recebe uma matriz $X$ e um vetor $\vec{y}$ e calcula o <a href="https://pt.wikipedia.org/wiki/Erro_quadr%C3%A1tico_m%C3%A9dio">erro quadrático médio</a> de estimação</li>
-</ul>
-<p>Use a função geradora da questão anterior para gerar $X_1$ e $\vec{y}_1$ e ajustar o seu modelo e depois gerar $X_2$ e $\vec{y}_2$ e avaliar o modelo ajustado.</p>
+<p>Para computar integrais duplas, triplas e sobre múltiplas variáveis, o módulo oferece respectivamente as funções <em>dblquad</em>, <em>tplquad</em> e <em>nquad</em>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fun&#231;&#245;es-para-interpola&#231;&#227;o">Fun&#231;&#245;es para interpola&#231;&#227;o<a class="anchor-link" href="#Fun&#231;&#245;es-para-interpola&#231;&#227;o"> </a></h2><p>Para interpolar funções 1D, o ódulo <em>interpolate</em> possui a função <em>interp1d</em>. Essa função é chamada com dois vetores <em>x</em> e <em>y</em> e retorna uma função que pode ser chamda para usar interpolação e encontrar novos valores de <em>y</em> para novos valores de <em>x</em>.</p>
 
 </div>
 </div>
@@ -1041,10 +1079,38 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="k">import</span> <span class="n">interp1d</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span> <span class="o">/</span> <span class="mf">3.0</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">x_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y_new</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">x_new</span><span class="p">,</span> <span class="n">y_new</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/math/03_scip_5_0.png"
+>
+</div>
+
+</div>
+</div>
 </div>
 </div>
 
@@ -1055,7 +1121,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>3.4. Faça uma função que executa o exercício 3.3 em uma simulação de Monte Carlo com $m$ repetições, armazenando os erros de estimação dos $m$ modelos ajustados. A função deve retornar os $m$ valores de erros obtidos, sua média e seu desvio-padrão.</p>
+<h2 id="Fun&#231;&#245;es-espaciais">Fun&#231;&#245;es espaciais<a class="anchor-link" href="#Fun&#231;&#245;es-espaciais"> </a></h2><p>O módulo <em>spatial</em> contém diversas funções para calcular distâncias, realizar transformações espaciais, encontrar envólucros convexos, etc. As masis de 20 funções de distâncias são encontradas no submódulo <em>spatial.distance</em> e incluem distâncias entre vetores e entre linhas de matrizes. A função <em>pdist</em> permite calcular as distâncias par-a-par entre as linhas de uma matriz <em>X</em>:</p>
 
 </div>
 </div>
@@ -1069,10 +1135,28 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="k">import</span> <span class="n">pdist</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pdist</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ 5.19615242 10.39230485 15.58845727  5.19615242 10.39230485  5.19615242]
+</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -1083,7 +1167,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>3.5. Faça uma função que aproxima a integral de uma função qualquer em um intervalo $[a, b]$, usando a <a href="https://pt.wikipedia.org/wiki/Integra%C3%A7%C3%A3o_num%C3%A9rica">regra de Simpson</a>. Use essa função em uma outra função que deve calcular $P(X &lt; x_i)$, para $i = 1, \ldots, n$, onde $X \sim N(\mu, \sigma^2)$.</p>
+<p>O retorno da função <em>pdist</em> é uma matriz condensada na forma de um vetor, para economizar espaço. A ideia é que a matriz de distâncias original tem diagonal <em>0</em> e valores espelhados. Para recuperar a matriz quadrada original, pode-se usar a função <em>squareform</em>:</p>
 
 </div>
 </div>
@@ -1097,10 +1181,340 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">pass</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="k">import</span> <span class="n">squareform</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">squareform</span><span class="p">(</span><span class="n">pdist</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[ 0.          5.19615242 10.39230485 15.58845727]
+ [ 5.19615242  0.          5.19615242 10.39230485]
+ [10.39230485  5.19615242  0.          5.19615242]
+ [15.58845727 10.39230485  5.19615242  0.        ]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A função <em>pdist</em> permite escolher a métrica de distância utilizada, tendo a distância Euclidiana como padrão. Por exemplo, para se calcular a distância Euclidiana quadrática, pode-se fazer:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">squareform</span><span class="p">(</span><span class="n">pdist</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;sqeuclidean&#39;</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[  0.  27. 108. 243.]
+ [ 27.   0.  27. 108.]
+ [108.  27.   0.  27.]
+ [243. 108.  27.   0.]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para calcular as distâncias entre as linhas de uma matriz $A$ e as de uma matriz $B$, usa-se a função <em>cdist</em>, que, assim como a função <em>pdist</em>, permite escolher a métrica.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="k">import</span> <span class="n">cdist</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">cdist</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;cityblock&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[ 1.34456146  2.86959699  2.62154191  2.99312365]
+ [ 9.7159794  10.21055376 10.69500693 10.57217568]
+ [18.7159794  19.21055376 19.69500693 19.57217568]
+ [27.7159794  28.21055376 28.69500693 28.57217568]
+ [36.7159794  37.21055376 37.69500693 37.57217568]
+ [45.7159794  46.21055376 46.69500693 46.57217568]
+ [54.7159794  55.21055376 55.69500693 55.57217568]
+ [63.7159794  64.21055376 64.69500693 64.57217568]
+ [72.7159794  73.21055376 73.69500693 73.57217568]
+ [81.7159794  82.21055376 82.69500693 82.57217568]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fun&#231;&#245;es-de-otimiza&#231;&#227;o">Fun&#231;&#245;es de otimiza&#231;&#227;o<a class="anchor-link" href="#Fun&#231;&#245;es-de-otimiza&#231;&#227;o"> </a></h2><p>O módulo <em>optimize</em> oferece funções para minimização ou maximização de funções objetivo, com a possibilidade de forçar restrições. A principal função desse módulo é a <em>minimize</em>, que precisa receber como parâmetros uma função que será minimizada e uma solução inicial. Outros parâmetros incluem argumentos extras para a função minimizada, o método de minimização escolhido (padrão <em>BFGS</em>), possíveis restrições, uma função para calcular a Hessiana, um parâmetro e tolerância para critério de parada, entre outros.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="k">import</span> <span class="n">minimize</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[-4.14270251e-08]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[-7.45036449e-09]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">bounds</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">)]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[2.88291837e-15]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">bounds</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">)]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0.]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A função <em>minimize</em> pode ser usada para estimar modelos. Por exemplo, vamos usá-la para estimar um modelo de regressão linear:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">X</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">betas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">sq_err</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(((</span><span class="n">x</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">sq_err</span><span class="p">,</span> <span class="n">betas</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[2.17478032 2.84521493]
+</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -1116,15 +1530,15 @@ initFunction(initPrint)
             <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/math/03_scip.html">
-      〈 <span class="u-margin-right-tiny"></span> SciPy
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/pyestbook/math/02_nump.html">
+      〈 <span class="u-margin-right-tiny"></span> NumPy
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/solutions/intro.html">
-      Soluções dos Exercícios <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/pyestbook/math/09_exer.html">
+      Exercícios <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

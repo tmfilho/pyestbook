@@ -62,8 +62,8 @@
   sections:
   - title: NumPy
     url: /math/02_nump
-  # - title: Herança e Polimorfismo
-  #   url: /objects/03_inhe
+  - title: SciPy
+    url: /math/03_scip
   # - title: Erros e Exceçõs
   #   url: /objects/04_erro
   - title: Exercícios
