@@ -64,8 +64,8 @@
     url: /math/02_nump
   - title: SciPy
     url: /math/03_scip
-  # - title: Erros e Exceçõs
-  #   url: /objects/04_erro
+  - title: Pandas
+    url: /math/04_pand
   - title: Exercícios
     url: /math/09_exer
 
