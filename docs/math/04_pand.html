@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://tmfilho.github.io/pyestbook/math/04_pand.html",
   "headline": "Pandas",
-  "datePublished": "2020-02-11T13:44:47-03:00",
-  "dateModified": "2020-02-11T13:44:47-03:00",
+  "datePublished": "2020-02-13T14:03:00-03:00",
+  "dateModified": "2020-02-13T14:03:00-03:00",
   "description": "Pandas O pacote pandas é uma das ferramentas de Python mais importantes para cientistas e analistas de dados atualmente. Ele é a base da maior parte dos proj...",
   "author": {
     "@type": "Person",
@@ -5682,6 +5682,2368 @@ Name: E, dtype: object</pre>
       <td>max</td>
       <td>NaN</td>
       <td>3.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Cada uma das funções separadas de estatística descritiva pode ser calculada para um dado eixo (<em>axis</em>), assim como <em>NumPy</em>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">])</span>
+<span class="p">})</span>
+
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+      <th>three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>a</td>
+      <td>0.638285</td>
+      <td>-0.155528</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>-0.020091</td>
+      <td>0.244664</td>
+      <td>0.942384</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>-1.107497</td>
+      <td>0.297267</td>
+      <td>-0.528672</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>NaN</td>
+      <td>1.094053</td>
+      <td>0.508036</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>one     -0.163101
+two      0.370114
+three    0.307250
+dtype: float64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>a    0.241379
+b    0.388986
+c   -0.446301
+d    0.801044
+dtype: float64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Diferente de <em>NumPy</em>, se o eixo não for informado, o padrão é <em>axis=0</em> (<em>NumPy</em> calcula a média para o <em>array</em> todo).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>one     -0.163101
+two      0.370114
+three    0.307250
+dtype: float64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note que os valores <em>NaN</em> são descartados. Isso pode ser controlado pelo argumento <em>skipna</em>, que é <em>True</em> por padrão:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>one           NaN
+two      0.370114
+three         NaN
+dtype: float64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Combinando comportameto aritmético e <em>broadcasting</em>, é possível realizar operações estatísticas, como a padronização (média 0 e desvio 1), de forma concisa:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_stand</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span> <span class="o">-</span> <span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="n">df_stand</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>one      1.0
+two      1.0
+three    1.0
+dtype: float64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_stand</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">df_stand</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>a    1.0
+b    1.0
+c    1.0
+d    1.0
+dtype: float64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Métodos como <em>cumsum</em> (soma acumulada) e <em>cumprod</em> (produto acumulado) preservam a posição de valores <em>NaN</em>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+      <th>three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>a</td>
+      <td>0.638285</td>
+      <td>-0.155528</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>0.618194</td>
+      <td>0.089136</td>
+      <td>0.942384</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>-0.489303</td>
+      <td>0.386403</td>
+      <td>0.413712</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>NaN</td>
+      <td>1.480456</td>
+      <td>0.921749</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">cumprod</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+      <th>three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>a</td>
+      <td>0.638285</td>
+      <td>-0.099271</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>-0.020091</td>
+      <td>-0.004916</td>
+      <td>-0.004632</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>-1.107497</td>
+      <td>-0.329222</td>
+      <td>0.174051</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>NaN</td>
+      <td>1.094053</td>
+      <td>0.555819</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A tabela abaixo oferece um sumário de funções comumente usadas:</p>
+<table>
+<thead><tr>
+<th>Função</th>
+<th>Convenção</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>count</em></td>
+<td>número de observações não-<em>NaN</em></td>
+</tr>
+<tr>
+<td><em>sum</em></td>
+<td>soma dos valores</td>
+</tr>
+<tr>
+<td><em>mean</em></td>
+<td>média dos valores</td>
+</tr>
+<tr>
+<td><em>mad</em></td>
+<td>desvio absoluto médio</td>
+</tr>
+<tr>
+<td><em>median</em></td>
+<td>mediana dos valores</td>
+</tr>
+<tr>
+<td><em>min</em></td>
+<td>mínimo</td>
+</tr>
+<tr>
+<td><em>max</em></td>
+<td>máximo</td>
+</tr>
+<tr>
+<td><em>mode</em></td>
+<td>moda</td>
+</tr>
+<tr>
+<td><em>abs</em></td>
+<td>valores absolutos</td>
+</tr>
+<tr>
+<td><em>prod</em></td>
+<td>produto dos valores</td>
+</tr>
+<tr>
+<td><em>std</em></td>
+<td>desvio padrão amostral</td>
+</tr>
+<tr>
+<td><em>var</em></td>
+<td>variância amostral</td>
+</tr>
+<tr>
+<td><em>skew</em></td>
+<td>assimetria amostral</td>
+</tr>
+<tr>
+<td><em>kurt</em></td>
+<td>curtose amostral</td>
+</tr>
+<tr>
+<td><em>quantile</em></td>
+<td>quantis amostrais</td>
+</tr>
+<tr>
+<td><em>cumsum</em></td>
+<td>soma acumulada</td>
+</tr>
+<tr>
+<td><em>cumprod</em></td>
+<td>produto acumulado</td>
+</tr>
+<tr>
+<td><em>cummax</em></td>
+<td>máximo acumulado</td>
+</tr>
+<tr>
+<td><em>cummin</em></td>
+<td>mínimo acumulado</td>
+</tr>
+</tbody>
+</table>
+<p>As funções <em>idxmin</em> e <em>idxmax</em> retornam os índices dos menores e maiores valores, respectivamente, através do eixo informado:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">idxmin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>one      c
+two      a
+three    c
+dtype: object</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">idxmax</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>a      one
+b    three
+c      two
+d      two
+dtype: object</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Os objetos do tipo <em>Series</em> disponibilizam um método chamado <em>value_counts</em> (que também pode ser usado como uma função) que computa um histograma de um <em>array</em> unidimensional:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1, 6, 0, 6, 0, 1, 1, 0, 6, 1, 2, 1, 2, 0, 2, 3, 4, 3, 4, 5, 1, 6,
+       6, 5, 1, 6, 1, 3, 5, 5, 4, 2, 5, 2, 1, 3, 1, 0, 1, 4, 4, 3, 1, 6,
+       3, 2, 1, 1, 1, 1])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1    16
+6     7
+3     6
+2     6
+5     5
+4     5
+0     5
+dtype: int64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1    16
+6     7
+3     6
+2     6
+5     5
+4     5
+0     5
+dtype: int64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Valores contínuos podem ser discretizados usando as funções <em>cut</em> (intervalos baseados nos valores) e <em>qcut</em> (intervalos baseados nos quantis).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">factor</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="n">factor</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(0.337, 1.177], (0.337, 1.177], (-0.503, 0.337], (0.337, 1.177], (-1.346, -0.503], ..., (-1.346, -0.503], (0.337, 1.177], (0.337, 1.177], (-1.346, -0.503], (0.337, 1.177]]
+Length: 20
+Categories (4, interval[float64]): [(-1.346, -0.503] &lt; (-0.503, 0.337] &lt; (0.337, 1.177] &lt; (1.177, 2.017]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">factor</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+<span class="n">factor</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(0, 1], (0, 1], (-1, 0], (0, 1], (-1, 0], ..., (-1, 0], (0, 1], (0, 1], (-1, 0], (0, 1]]
+Length: 20
+Categories (4, interval[int64]): [(-5, -1] &lt; (-1, 0] &lt; (0, 1] &lt; (1, 5]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">factor</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(0, 1]      11
+(-1, 0]      5
+(1, 5]       2
+(-5, -1]     2
+dtype: int64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">factor</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">.</span><span class="mi">25</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">.</span><span class="mi">75</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">factor</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(0.479, 0.81], (0.479, 0.81], (-0.496, 0.479], (0.479, 0.81], (-1.3439999999999999, -0.496], ..., (-1.3439999999999999, -0.496], (0.479, 0.81], (0.479, 0.81], (-1.3439999999999999, -0.496], (-0.496, 0.479]]
+Length: 20
+Categories (4, interval[float64]): [(-1.3439999999999999, -0.496] &lt; (-0.496, 0.479] &lt; (0.479, 0.81] &lt; (0.81, 2.017]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">factor</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(0.81, 2.017]                    5
+(0.479, 0.81]                    5
+(-0.496, 0.479]                  5
+(-1.3439999999999999, -0.496]    5
+dtype: int64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ordenando-valores">Ordenando valores<a class="anchor-link" href="#Ordenando-valores"> </a></h2><p>Três formas de ordenação estão disponíveis em <em>pandas</em>: pelos índices, pelas colunas e pelas duas coisas. Os métodos <em>Series.sort_index()</em> e <em>DataFrame.sort_index()</em> são usados para ordenar objetos <em>pandas</em> pelos seus índices:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+     <span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]),</span>
+     <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]),</span>
+     <span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">])</span>
+<span class="p">})</span>
+
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+      <th>three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>a</td>
+      <td>0.669671</td>
+      <td>0.715358</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>0.549019</td>
+      <td>0.537880</td>
+      <td>0.648253</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>-1.126294</td>
+      <td>-0.480376</td>
+      <td>0.290042</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>NaN</td>
+      <td>-0.577900</td>
+      <td>0.704539</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+      <th>three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>d</td>
+      <td>NaN</td>
+      <td>-0.577900</td>
+      <td>0.704539</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>-1.126294</td>
+      <td>-0.480376</td>
+      <td>0.290042</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>0.549019</td>
+      <td>0.537880</td>
+      <td>0.648253</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>0.669671</td>
+      <td>0.715358</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>three</th>
+      <th>two</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>a</td>
+      <td>0.669671</td>
+      <td>NaN</td>
+      <td>0.715358</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>0.549019</td>
+      <td>0.648253</td>
+      <td>0.537880</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>-1.126294</td>
+      <td>0.290042</td>
+      <td>-0.480376</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>NaN</td>
+      <td>0.704539</td>
+      <td>-0.577900</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;three&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>d    0.704539
+c    0.290042
+b    0.648253
+a         NaN
+Name: three, dtype: float64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O método <em>Series.sort_values()</em> é usado para ordenar uma <em>Series</em> pelos seus valores. Já o método <em>DataFrame.sort_values()</em> pode ser usado para ordenar uma <em>DataFrame</em> pelos valores das linhas ou das colunas e tem um parâmetro opcional <em>by=</em> que serve para especificar uma ou mais colunas para determinar a ordem.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                    <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                    <span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]})</span>
+
+<span class="n">df1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+      <th>three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1</td>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;two&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+      <th>three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1</td>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1</span><span class="p">[[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+      <th>three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1</td>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Esses métodos tem um tratamento especial para valores faltantes, por meio do parâmetro <em>na_position</em>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">&#39;Aaba&#39;</span><span class="p">,</span> <span class="s1">&#39;Baca&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">&#39;CABA&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">],</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;object&quot;</span>
+<span class="p">)</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0       A
+3    Aaba
+1       B
+4    Baca
+6    CABA
+8     cat
+7     dog
+2     NaN
+5     NaN
+dtype: object</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">na_position</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2     NaN
+5     NaN
+0       A
+3    Aaba
+1       B
+4    Baca
+6    CABA
+8     cat
+7     dog
+dtype: object</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Strings passadas para o argumento <em>by=</em> podem se referir a colunas ou nomes de índices. Aliás, esse é um bom momento para introduzir índices múltiplos:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span>
+    <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="p">)</span>
+
+<span class="n">idx</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="s1">&#39;second&#39;</span><span class="p">]</span>
+
+<span class="n">df_multi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)},</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">idx</span>
+<span class="p">)</span>
+
+<span class="n">df_multi</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>A</th>
+    </tr>
+    <tr>
+      <th>first</th>
+      <th>second</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3" valign="top">a</td>
+      <td>1</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td rowspan="3" valign="top">b</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_multi</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;second&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>A</th>
+    </tr>
+    <tr>
+      <th>first</th>
+      <th>second</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2" valign="top">b</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>1</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="top">a</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>Series</em> também oferece os métodos <em>nsmallest()</em> e <em>nlargest()</em>, que retornam os menores ou maiores <em>n</em> valores, o que pode ser bem mais eficiente do que ordenar a <em>Series</em> toda só para chamar <em>tail(n)</em> ou <em>head(n)</em> no resultado. Esses métodos também são oferecidos por <em>DataFrames</em> e é preciso informar a(s) coluna(s) desejada(s).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">s</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    4
+1    5
+2    9
+3    2
+4    7
+5    0
+6    6
+7    8
+8    1
+9    3
+dtype: int64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5    0
+8    1
+3    2
+9    3
+0    4
+1    5
+6    6
+4    7
+7    8
+2    9
+dtype: int64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">nsmallest</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5    0
+8    1
+3    2
+dtype: int64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2    9
+7    8
+dtype: int64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                   <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abdceff&#39;</span><span class="p">),</span>
+                   <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]})</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>-2</td>
+      <td>a</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>-1</td>
+      <td>b</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1</td>
+      <td>d</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>10</td>
+      <td>c</td>
+      <td>3.2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>8</td>
+      <td>e</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>11</td>
+      <td>f</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>-1</td>
+      <td>f</td>
+      <td>4.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>11</td>
+      <td>f</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>10</td>
+      <td>c</td>
+      <td>3.2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>8</td>
+      <td>e</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">nsmallest</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>-2</td>
+      <td>a</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>-1</td>
+      <td>b</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>-1</td>
+      <td>f</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1</td>
+      <td>d</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>8</td>
+      <td>e</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
