@@ -66,6 +66,8 @@
     url: /math/03_scip
   - title: Pandas
     url: /math/04_pand
+  - title: Matplotlib
+    url: /math/05_matp
   - title: Exercícios
     url: /math/09_exer
 
