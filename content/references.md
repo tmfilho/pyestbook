@@ -1,0 +1,5 @@
+# Referências
+
+```{bibliography}
+:style: unsrt
+```

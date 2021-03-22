@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.1.4. Exercícios &#8212; Python para Estatísticos</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://tmfilho.github.io/pyestbook/objects/05_exer.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Computação Matemática e Científica" href="../math/01_first.html" />
+    <link rel="prev" title="2.1.3. Erros e Exceções" href="04_erro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://tmfilho.github.io/pyestbook/objects/05_exer.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Exercícios" />
+<meta property="og:description" content="Exercícios  2.1. Implemente a classe UniformDistribution como uma subclasse da classe DiscreteDistribution da Seção anterior.  pass  2.2. (Estrutura de dados: L" />
+<meta property="og:image"       content="https://tmfilho.github.io/pyestbook/_static/logo-arte.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo-arte.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Python para Estatísticos</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Python para Estatísticos
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../guide/01_first.html">
+   1. Conceitos Fundamentais
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guide/02_ides.html">
+     1.1. Ambientes de Trabalho
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guide/03_var.html">
+     1.2. Variáveis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guide/04_oper.html">
+     1.3. Operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guide/05_cole.html">
+     1.4. Coleções
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guide/06_cond.html">
+     1.5. Condições e Laços
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guide/07_func.html">
+     1.6. Funções
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guide/08_modu.html">
+     1.7. Módulos e Importação
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guide/09_exer.html">
+     1.8. Exercícios
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="01_first.html">
+   2. Objetos e Classes
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_cpyt.html">
+     2.1.1. Classes em Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_inhe.html">
+     2.1.2. Herança e Polimorfismo
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_erro.html">
+     2.1.3. Erros e Exceções
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.1.4. Exercícios
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../math/01_first.html">
+   3. Computação Matemática e Científica
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../math/02_nump.html">
+     3.1. NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../math/03_scip.html">
+     3.2. SciPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../math/04_pand.html">
+     3.3. Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../math/05_matp.html">
+     3.4. Matplotlib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../math/06_exer.html">
+     3.5. Exercícios
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../solutions/intro.html">
+   4. Soluções dos Exercícios
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../solutions/guide.html">
+     4.1. Conceitos Fundamentais
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../solutions/objects.html">
+     4.2. Objetos e Classes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   5. Referências
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/objects/05_exer.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/tmfilho/pyestbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/tmfilho/pyestbook/issues/new?title=Issue%20on%20page%20%2Fobjects/05_exer.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tmfilho/pyestbook/master?urlpath=tree/objects/05_exer.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/tmfilho/pyestbook/blob/master/objects/05_exer.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercicios">
+<h1><span class="section-number">2.1.4. </span>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h1>
+<p>2.1. Implemente a classe UniformDistribution como uma subclasse da classe DiscreteDistribution da Seção anterior.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.2. (Estrutura de dados: Lista encadeada). Uma lista encadeada é uma coleção de elementos em que cada elemento ‘eum nó que “aponta” para o próximo membro da lista. Dessa forma, os elementos da lista formam uma cadeia cuja posição na memória não precisa ser contígua. Essa estrutura permite a inserção e a remoção eficiente de elementos em qualquer posição da lista, sem ser necessário deslocar “fisicamente” todos os outros membros. Uma desvatagem das listas é que o acesso a cada elemento não pode ser feita de forma direta, como em um array. É necessário navegar pela lista para encontrar o elemento desejado. Na sua forma mais simples, cada nó da lista contém dados e uma referência para o próximo elemento. Dessa forma, o último elemento da lista sempre apontará para uma referência nula. Variedades mais complexas adicionam referências extras, como para os elementos anteriores (lista duplamente encadeada). Implemente uma lista encadeada simples em Python, usando classes para a lista e para os nós, além das seguintes operações:</p>
+<ol class="simple">
+<li><p>Inserir elemento no início</p></li>
+<li><p>Inserir elemento no fim</p></li>
+<li><p>Inserir elemento em uma dada posição</p></li>
+<li><p>Verificar se um elemento está na lista</p></li>
+<li><p>Remover elemento com dado valor</p></li>
+<li><p>Remover começo da lista (cabeça) e retornar o seu valor</p></li>
+<li><p>Remover último elemento e retornar o seu valor</p></li>
+<li><p>Imprimir os valores da lista</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.3. (Estruturas de dados: Fila e Pilha). Fila e pilha são dois tipos especiais de listas encadeadas que se diferenciam pelas suas formas de adicionar e remover elementos. Nas filas, o primeiro elemento que entra deve ser sempre o primeiro a ser removido, comportamento conhecido em inglês como <em>First In First Out</em> (FIFO). As operações de inserir e remover na fila são conhecidas como <em>enfileirar</em> (<em>enqueue</em>) e <em>desenfileirar</em> (<em>dequeue</em>). Por outro lado, nas pilhas, o último elemento que entra deve ser o primeiro a sair, ou seja <em>Last In First Out</em> (LIFO). As operações de inserir e remover na pilha são conhecidas como <em>empilhar</em> (<em>push</em>) e <em>desempilhar</em> (<em>pop</em>). Implemente fila e pilha como subclasses da lista encadeada implementada no exercício anterior.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.4. Pilhas e filas possuem bastantes usos em sistemas computacionais. Por exemplo: as operações de <em>desfazer</em> e <em>refazer</em> de editores de texto e de <em>voltar</em> e <em>avançar</em> em navegadores são comumente implementadas usando duas pilhas. Implemente um simulador de editor de texto usando a função <strong>input</strong> de Python. O script irá registrar a <em>string</em> digitada pelo usuário e imprimir as últimas <em>strings</em> fornecidas. O usuário poderá fornecer três “<em>strings</em> especiais” que funcionarão como comandos: ‘ctrl+z’ fará o script descartar a última <em>string</em> digitada, ‘ctrl+y’ fará o script recuperar a última <em>string</em> descartada e ‘stop’ irá parar o scripts. Veja abaixo um exemplo de execução do script:</p>
+<ol class="simple">
+<li><p><em>String</em> digitada: ‘a’</p>
+<ul class="simple">
+<li><p>Saída no console: ‘a -&gt; ‘</p></li>
+</ul>
+</li>
+<li><p><em>String</em> digitada: ‘b’</p>
+<ul class="simple">
+<li><p>Saída no console: ‘b -&gt; a -&gt; ‘</p></li>
+</ul>
+</li>
+<li><p><em>String</em> digitada: ‘c’</p>
+<ul class="simple">
+<li><p>Saída no console: ‘c -&gt; b -&gt; a -&gt; ‘</p></li>
+</ul>
+</li>
+<li><p><em>String</em> digitada: ‘ctrl+z’</p>
+<ul class="simple">
+<li><p>Saída no console: ‘b -&gt; a -&gt; ‘</p></li>
+</ul>
+</li>
+<li><p><em>String</em> digitada: ‘ctrl+z’</p>
+<ul class="simple">
+<li><p>Saída no console: ‘a -&gt; ‘</p></li>
+</ul>
+</li>
+<li><p><em>String</em> digitada: ‘ctrl+y’</p>
+<ul class="simple">
+<li><p>Saída no console: ‘b -&gt; a -&gt; ‘</p></li>
+</ul>
+</li>
+<li><p><em>String</em> digitada: ‘ctrl+y’</p>
+<ul class="simple">
+<li><p>Saída no console: ‘c -&gt; b -&gt; a -&gt; ‘</p></li>
+</ul>
+</li>
+<li><p><em>String</em> digitada: ‘stop’</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./objects"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="04_erro.html" title="previous page"><span class="section-number">2.1.3. </span>Erros e Exceções</a>
+    <a class='right-next' id="next-link" href="../math/01_first.html" title="next page"><span class="section-number">3. </span>Computação Matemática e Científica</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Telmo de Menezes e Silva Filho<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

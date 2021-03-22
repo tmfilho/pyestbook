@@ -1,152 +1,92 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+#######################################################################################
+# A default configuration that will be loaded for all jupyter books
+# Users are expected to override these values in their own `_config.yml` file.
+# This is also the "master list" of all allowed keys and values.
 
 #######################################################################################
-# Jekyll site settings
-title: Python para Estatísticos
-author: Telmo de Menezes e Silva Filho
-email: telmo@de.ufpb.br
-description: >- # this means to ignore newlines until "baseurl:"
-  This is an example book built with Jupyter Books.
-
-baseurl: "/pyestbook" # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-url: "https://tmfilho.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
-
-#######################################################################################
-# Jupyter Book settings
-
-# Main page settings
-footer_text               : Escrito por Telmo de Menezes e Silva Filho (telmo@de.ufpb.br) # This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a>
-
-# Sidebar settings
-show_sidebar              : true  # Show the sidebar. Only set to false if your only wish to host a single page.
-collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar
-textbook_logo             : assets/images/logo-arte.png  # A logo to be displayed at the top of your textbook sidebar. Should be square
-textbook_logo_link        : http://www.de.ufpb.br  # A link for the logo.
-sidebar_footer_text       : 'Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a>'
-number_toc_chapters       : true  # Whether to add numbers to chapterse in your Table of Contents. If true, you can control this at the Chapter level in _data/toc.yml
-
-# Search settings
-search_max_words_in_content : 100  # In the search function, use at most this many words (too many words will make search slow)
+# Book settings
+title                       : Python para Estatísticos  # The title of the book. Will be placed in the left navbar.
+author                      : Telmo de Menezes e Silva Filho  # The author of the book
+copyright                   : "2021"  # Copyright year to be placed in the footer
+logo                        : "images/logo-arte.png"  # A path to the book logo
+# Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
+# Auto-exclude files not in the toc
+only_build_toc_files        : true
 
 #######################################################################################
-# Interact link settings
-
-# General interact settings
-use_jupyterlab                   : false  # If 'true', interact links will use JupyterLab as the interface
-
-# Jupyterhub link settings
-use_jupyterhub_button            : false  # If 'true', display a button that will direct users to a JupyterHub (that you provide)
-jupyterhub_url                   : ""  # The URL for your JupyterHub. If no URL, use ""
-jupyterhub_interact_text         : "Interact"  # The text that interact buttons will contain.
-
-# Binder link settings
-use_binder_button                : false  # If 'true', add a binder button for interactive links
-binderhub_url                    : ""  # The URL for your BinderHub. If no URL, use ""
-binder_repo_base                 : "https://github.com/"  # The site on which the textbook repository is hosted
-binder_repo_org                  : "tmfilho"  # The username or organization that owns this repository
-binder_repo_name                 : "pyestbook"  # The name of the repository on the web
-binder_repo_branch               : "master"  # The branch on which your textbook is hosted.
-binderhub_interact_text          : "Interact"  # The text that interact buttons will contain.
-
-# Thebelab settings
-use_thebelab_button              : true  # If 'true', display a button to allow in-page running code cells with Thebelab
-thebelab_button_text             : "Interagir"  # The text to display inside the Thebelab initialization button
-codemirror_theme                 : "abcdef"  # Theme for codemirror cells, for options see https://codemirror.net/doc/manual.html#config
-
-# nbinteract settings
-use_show_widgets_button              : true  # If 'true', display a button to allow in-page running code cells with nbinteract
-
-# Download settings
-use_download_button              : true  # If 'true', display a button to download a zip file for the notebook
-download_button_text             : "Download" # The text that download buttons will contain
+# Execution settings
+execute:
+  execute_notebooks         : auto  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  cache                     : ""    # A path to the jupyter cache that will be used to store execution artifacts. Defaults to `_build/.jupyter_cache/`
+  exclude_patterns          : []    # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
+  timeout                   : 30    # The maximum time (in seconds) each notebook cell is allowed to run.
+  run_in_temp               : false # If `True`, then a temporary directory will be created and used as the command working directory (cwd),
+                                    # otherwise the notebook's parent directory will be the cwd.
+  allow_errors              : true # If `False`, when a code cell raises an error the execution is stopped, otherwise all cells are always run.
+  stderr_output             : show  # One of 'show', 'remove', 'remove-warn', 'warn', 'error', 'severe'
 
 #######################################################################################
-# Jupyter book extensions and additional features
+# Parse and render settings
+parse:
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    # - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
 
-# Bibliography and citation settings. See https://github.com/inukshuk/jekyll-scholar#configuration for options
-scholar:
-  style: apa
-
-#######################################################################################
-# Option to add a Goggle analytics tracking code
-
-# Navigate to https://analytics.google.com, add a new property for your jupyter book and copy the tracking id here.
-google_analytics:
-  mytrackingcode: UA-52617120-7
-
-#######################################################################################
-# Jupyter book settings you probably don't need to change
-
-content_folder_name       : "content"  # The folder where your raw content (notebooks/markdown files) are located
-images_url                : "/assets/images" # Path to static image files
-css_url                   : "/assets/css" # Path to static CSS files
-js_url                    : "/assets/js" # Path to JS files
-custom_static_url         : "/assets/custom" # Path to user's custom CSS/JS files
-
+  myst_url_schemes          : [mailto, http, https]  # URI schemes that will be recognised as external URLs in Markdown links
 
 #######################################################################################
-# Jekyll build settings (only modify if you know what you're doing)
+# HTML-specific settings
+html:
+  favicon                   : "images/favicon.ico"  # A path to a favicon image
+  use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
+  use_repository_button     : true  # Whether to add a link to your repository button
+  use_issues_button         : true  # Whether to add an "open an issue" button
+  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
+  extra_footer              : ""  # Will be displayed underneath the footer.
+  google_analytics_id       : ""  # A GA id that can be used to track book views.
+  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  baseurl                   : "https://tmfilho.github.io/pyestbook"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  comments:
+    hypothesis              : false
+    utterances              : false
 
-# Site settings
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-      toc: true
-      toc_label: "  On this page"
-      toc_icon: "list-ul"
-      excerpt: ''
+#######################################################################################
+# LaTeX-specific settings
+latex:
+  latex_engine              : pdflatex  # one of 'pdflatex', 'xelatex' (recommended for unicode), 'luatex', 'platex', 'uplatex'
+  use_jupyterbook_latex     : true # use jupyterbook-latex for pdf builds as default
 
-favicon_path: "images/logo/favicon.ico"
+#######################################################################################
+# Launch button settings
+launch_buttons:
+  notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url             : https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+  jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+  thebe                     : true  # Add a thebe button to pages (requires the repository to run on Binder)
+  colab_url                 : https://colab.research.google.com # The URL of Google Colab (https://colab.research.google.com)
 
-# Markdown Processing
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+repository:
+  url                       : https://github.com/tmfilho/pyestbook  # The URL to your book's repository
+  path_to_book              : ""  # A path to your book's folder, relative to the repository root.
+  branch                    : master  # Which branch of the repository should be used when creating links
 
-sass:
-  style: compressed
+#######################################################################################
+# References
+bibtex_bibfiles:
+   - _bibliography/references.bib
 
-collections:
-  build:
-    output: true
-    permalink: /:path.html
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-exclude:
-  - scripts/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-
-plugins:
-  - jekyll-redirect-from
-  - jekyll-scholar
-
-destination: "docs"
-
-# Jupyter Book version - DO NOT CHANGE THIS. It is generated when a new book is created
-jupyter_book_version: "0.6.2"
+#######################################################################################
+# Advanced and power-user settings
+# sphinx:
+  # extra_extensions          :   # A list of extra extensions to load by Sphinx (added to those already used by JB).
+  # local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items
+  # config                    :   # key-value pairs to directly over-ride the Sphinx configuration

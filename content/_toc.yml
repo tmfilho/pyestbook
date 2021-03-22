@@ -1,0 +1,45 @@
+- file: intro
+  numbered: true
+
+- file: guide/01_first
+  sections:
+  - file: guide/02_ides
+  - file: guide/03_var
+  - file: guide/04_oper
+  - file: guide/05_cole
+  - file: guide/06_cond
+  - file: guide/07_func
+  - file: guide/08_modu
+  - file: guide/09_exer
+
+- file: objects/01_first
+  sections:
+  - file: objects/02_cpyt
+  - file: objects/03_inhe
+  - file: objects/04_erro
+  - file: objects/05_exer
+
+- file: math/01_first
+  sections:
+  - file: math/02_nump
+  - file: math/03_scip
+  - file: math/04_pand
+  - file: math/05_matp
+  - file: math/06_exer
+
+- file: solutions/intro
+  numbered: false
+  sections:
+  - file: solutions/guide
+    numbered: false
+  - file: solutions/objects
+    numbered: false
+
+- file: references
+
+# - part: Reference and test pages
+#   chapters:
+#   - file: test_pages/test
+#     sections:
+#       - file: test_pages/layout_elements
+#       - file: test_pages/equations
