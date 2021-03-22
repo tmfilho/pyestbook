@@ -47,9 +47,9 @@
     <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -323,7 +323,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tmfilho/pyestbook/master?urlpath=tree/math/03_scip.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tmfilho/pyestbook/master?urlpath=tree/content/math/03_scip.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -331,11 +331,14 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/tmfilho/pyestbook/blob/master/math/03_scip.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/tmfilho/pyestbook/blob/master/content/math/03_scip.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -544,16 +547,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.9404205   2.31192602  1.91593257  2.95758485]
- [10.92084664  9.77998367  9.51659719 10.04698058]
- [19.92084664 18.77998367 18.51659719 19.04698058]
- [28.92084664 27.77998367 27.51659719 28.04698058]
- [37.92084664 36.77998367 36.51659719 37.04698058]
- [46.92084664 45.77998367 45.51659719 46.04698058]
- [55.92084664 54.77998367 54.51659719 55.04698058]
- [64.92084664 63.77998367 63.51659719 64.04698058]
- [73.92084664 72.77998367 72.51659719 73.04698058]
- [82.92084664 81.77998367 81.51659719 82.04698058]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.52809672  1.63984835  2.31942528  3.41131768]
+ [10.41198138 10.04482752 10.02786752 10.5210289 ]
+ [19.41198138 19.04482752 19.02786752 19.5210289 ]
+ [28.41198138 28.04482752 28.02786752 28.5210289 ]
+ [37.41198138 37.04482752 37.02786752 37.5210289 ]
+ [46.41198138 46.04482752 46.02786752 46.5210289 ]
+ [55.41198138 55.04482752 55.02786752 55.5210289 ]
+ [64.41198138 64.04482752 64.02786752 64.5210289 ]
+ [73.41198138 73.04482752 73.02786752 73.5210289 ]
+ [82.41198138 82.04482752 82.02786752 82.5210289 ]]
 </pre></div>
 </div>
 </div>
@@ -1117,7 +1120,7 @@ Rejeita a hipótese nula: Ks_2sampResult(statistic=0.68, pvalue=2.66794071405996
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "tmfilho/pyestbook",
             ref: "master",
         },
         codeMirrorConfig: {

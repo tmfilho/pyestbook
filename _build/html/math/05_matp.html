@@ -47,9 +47,9 @@
     <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -323,7 +323,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tmfilho/pyestbook/master?urlpath=tree/math/05_matp.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tmfilho/pyestbook/master?urlpath=tree/content/math/05_matp.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -331,11 +331,14 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/tmfilho/pyestbook/blob/master/math/05_matp.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/tmfilho/pyestbook/blob/master/content/math/05_matp.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -465,7 +468,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faae9a3f668&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f2447b61518&gt;]
 </pre></div>
 </div>
 <img alt="../_images/05_matp_3_1.png" src="../_images/05_matp_3_1.png" />
@@ -648,7 +651,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faac3201278&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f242cd63668&gt;]
 </pre></div>
 </div>
 <img alt="../_images/05_matp_17_1.png" src="../_images/05_matp_17_1.png" />
@@ -663,7 +666,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faac305bd68&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f242c351b00&gt;]
 </pre></div>
 </div>
 <img alt="../_images/05_matp_18_1.png" src="../_images/05_matp_18_1.png" />
@@ -695,7 +698,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faac2fe9ef0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f242c306b38&gt;]
 </pre></div>
 </div>
 <img alt="../_images/05_matp_22_1.png" src="../_images/05_matp_22_1.png" />
@@ -744,7 +747,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faac3336160&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f242cd81630&gt;]
 </pre></div>
 </div>
 <img alt="../_images/05_matp_28_1.png" src="../_images/05_matp_28_1.png" />
@@ -759,7 +762,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7faac325c320&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f242c2a70f0&gt;
 </pre></div>
 </div>
 <img alt="../_images/05_matp_29_1.png" src="../_images/05_matp_29_1.png" />
@@ -775,7 +778,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7faac32a6a58&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f242cdb1278&gt;
 </pre></div>
 </div>
 <img alt="../_images/05_matp_30_1.png" src="../_images/05_matp_30_1.png" />
@@ -791,7 +794,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faac2f4bb70&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f242c250390&gt;]
 </pre></div>
 </div>
 <img alt="../_images/05_matp_31_1.png" src="../_images/05_matp_31_1.png" />
@@ -909,7 +912,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faac2d8ae10&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f242c08e898&gt;]
 </pre></div>
 </div>
 <img alt="../_images/05_matp_39_1.png" src="../_images/05_matp_39_1.png" />
@@ -991,7 +994,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faac14d1eb8&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f24205c8da0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/05_matp_47_1.png" src="../_images/05_matp_47_1.png" />
@@ -1374,7 +1377,7 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "tmfilho/pyestbook",
             ref: "master",
         },
         codeMirrorConfig: {
